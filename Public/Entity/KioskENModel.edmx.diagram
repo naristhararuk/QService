@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c33075c996514ca4a6981a43cfaf8026" Name="Diagram1">
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_building" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_com" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_computer" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_control" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_locat" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_map_qexpress" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_q_log" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_transdetail_appoint" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_transdetail_clinic_choose" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_transhead" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_user" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_user_group" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kiosk_Chula_iPadModel.kiosk_transdetail_MissAppoint" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <AssociationConnector Association="Kiosk_Chula_iPadModel.FK_KIOSK_LO_REF_20_KIOSK_BU" ManuallyRouted="false" />
+        <AssociationConnector Association="Kiosk_Chula_iPadModel.FK_kiosk_com_kiosk_locat" ManuallyRouted="false" />
+        <AssociationConnector Association="Kiosk_Chula_iPadModel.FK_KIOSK_US_REF_12_KIOSK_US" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

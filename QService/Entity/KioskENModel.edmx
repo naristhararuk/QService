@@ -1,0 +1,1438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Kiosk_Chula_iPadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="kiosk_building">
+          <Key>
+            <PropertyRef Name="building_code" />
+          </Key>
+          <Property Name="building_code" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="building_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="active_flag" Type="char" MaxLength="1" />
+          <Property Name="crtd_dttm" Type="datetime" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="20" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="kiosk_com">
+          <Key>
+            <PropertyRef Name="com_code" />
+          </Key>
+          <Property Name="com_code" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="locat_code" Type="nvarchar" MaxLength="15" />
+          <Property Name="computer_code" Type="int" Nullable="false" />
+          <Property Name="com_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="kiosk_asset_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="building_code" Type="nvarchar" MaxLength="5" />
+          <Property Name="slip_qty" Type="int" />
+          <Property Name="slip_alert_qty" Type="int" />
+          <Property Name="slip_print_qty" Type="int" />
+          <Property Name="a4_qty" Type="int" />
+          <Property Name="a4_alert_qty" Type="int" />
+          <Property Name="a4_print_qty" Type="int" />
+          <Property Name="active_flag" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="20" />
+          <Property Name="kiosk_group_code" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="kiosk_computer">
+          <Key>
+            <PropertyRef Name="computer_code" />
+          </Key>
+          <Property Name="computer_code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="com_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="com_asset_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="com_mac_addr" Type="nvarchar" MaxLength="50" />
+          <Property Name="com_serial_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="active_flag" Type="char" MaxLength="1" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="20" />
+          <Property Name="kiosk_group_code" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="kiosk_control">
+          <Key>
+            <PropertyRef Name="locat_code" />
+            <PropertyRef Name="year" />
+          </Key>
+          <Property Name="locat_code" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="year" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="sequence" Type="nvarchar" MaxLength="8" Nullable="false" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="kiosk_locat">
+          <Key>
+            <PropertyRef Name="locat_code" />
+          </Key>
+          <Property Name="locat_code" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="locat_type_code" Type="int" Nullable="false" />
+          <Property Name="locat_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="locat_name_en" Type="nvarchar" MaxLength="50" />
+          <Property Name="building_code" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="floor" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="zone" Type="nvarchar" MaxLength="2" />
+          <Property Name="kiosk_group_code" Type="nvarchar" MaxLength="20" />
+          <Property Name="active_flag" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="kiosk_map_qexpress">
+          <Key>
+            <PropertyRef Name="map_qexpress_seq" />
+          </Key>
+          <Property Name="map_qexpress_seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="slip_no_qexpress" Type="nvarchar" MaxLength="25" />
+          <Property Name="queue_no_qexpress" Type="nvarchar" MaxLength="5" />
+          <Property Name="slip_no_q" Type="nvarchar" MaxLength="25" />
+          <Property Name="queue_no_q" Type="nvarchar" MaxLength="5" />
+          <Property Name="trans_dtm" Type="datetime" />
+          <Property Name="active_flag" Type="char" MaxLength="1" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="kiosk_q_log">
+          <Key>
+            <PropertyRef Name="q_log_seq" />
+          </Key>
+          <Property Name="q_log_seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="q_trans_dtm" Type="datetime" Nullable="false" />
+          <Property Name="queue_no" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="flag_queue" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="q_action" Type="char" MaxLength="1" />
+          <Property Name="action_by" Type="nvarchar" MaxLength="50" />
+          <Property Name="channel_no" Type="int" />
+          <Property Name="slip_seq" Type="int" />
+          <Property Name="com_code" Type="nvarchar" MaxLength="12" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="kiosk_transdetail_appoint">
+          <Key>
+            <PropertyRef Name="transdetail_appoint_seq" />
+          </Key>
+          <Property Name="transdetail_appoint_seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="slip_seq" Type="int" Nullable="false" />
+          <Property Name="appoint_date" Type="datetime" />
+          <Property Name="appoint_time_start" Type="time" Precision="7" />
+          <Property Name="appoint_time_end" Type="time" Precision="7" />
+          <Property Name="appoint_clinic_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="appoint_clinic_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="appoint_clinic_location" Type="nvarchar" MaxLength="500" />
+          <Property Name="appoint_doctor_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="appoint_doctor_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="make_appoint_date" Type="datetime" />
+          <Property Name="make_appoint_time" Type="time" Precision="7" />
+          <Property Name="appoint_status_code" Type="nvarchar" MaxLength="20" />
+          <Property Name="appoint_status_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="appoint_right_group_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="appoint_right_group_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="appoint_right_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="appoint_right_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="appoint_contact_type" Type="nvarchar" MaxLength="10" />
+          <Property Name="appoint_right_cont_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="appoint_right_cont_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="appoint_right_start_date" Type="datetime" />
+          <Property Name="appoint_right_e_date" Type="datetime" />
+          <Property Name="appoint_right_ref_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="flag_first_clinic_contact" Type="char" MaxLength="1" />
+          <Property Name="flag_expire" Type="char" MaxLength="1" />
+          <Property Name="flag_pay" Type="char" MaxLength="1" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="kiosk_transdetail_clinic_choose">
+          <Key>
+            <PropertyRef Name="transdetail_clinic_choose_seq" />
+          </Key>
+          <Property Name="transdetail_clinic_choose_seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="slip_seq" Type="int" Nullable="false" />
+          <Property Name="clinic_seq" Type="int" Nullable="false" />
+          <Property Name="clinic_code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="clinic_name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="clinic_location" Type="nvarchar" MaxLength="500" />
+          <Property Name="clinic_desc" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="clinic_type" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="flag_clinic_open" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="flag_clinic_quota_full" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="flag_is_quota_full" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="kiosk_transdetail_MissAppoint">
+          <Key>
+            <PropertyRef Name="transdetail_missappoint_seq" />
+            <PropertyRef Name="slip_seq" />
+            <PropertyRef Name="crtd_dttm" />
+            <PropertyRef Name="crtd_by" />
+          </Key>
+          <Property Name="transdetail_missappoint_seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="slip_seq" Type="int" Nullable="false" />
+          <Property Name="missappoint_date" Type="datetime" />
+          <Property Name="missappoint_time_start" Type="time" Precision="7" />
+          <Property Name="missappoint_time_end" Type="time" Precision="7" />
+          <Property Name="missappoint_clinic_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="missappoint_clinic_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="missappoint_clinic_location" Type="nvarchar" MaxLength="500" />
+          <Property Name="missappoint_doctor_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="missappoint_doctor_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="make_appoint_date" Type="datetime" />
+          <Property Name="make_appoint_time" Type="time" Precision="7" />
+          <Property Name="missappoint_status_code" Type="nvarchar" MaxLength="20" />
+          <Property Name="missappoint_status_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="missappoint_right_group_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="missappoint_right_group_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="missappoint_right_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="missappoint_right_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="missappoint_contact_type" Type="nvarchar" MaxLength="10" />
+          <Property Name="missappoint_right_cont_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="missappoint_right_cont_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="missappoint_right_start_date" Type="datetime" />
+          <Property Name="missappoint_right_e_date" Type="datetime" />
+          <Property Name="missappoint_right_ref_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="flag_first_clinic_contact" Type="char" MaxLength="1" />
+          <Property Name="flag_expire" Type="char" MaxLength="1" />
+          <Property Name="flag_pay" Type="char" MaxLength="1" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="kiosk_transhead">
+          <Key>
+            <PropertyRef Name="slip_seq" />
+          </Key>
+          <Property Name="slip_seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="slip_no" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="slip_type" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="slip_type_detail" Type="char" MaxLength="3" />
+          <Property Name="slip_type_flag" Type="char" MaxLength="1" />
+          <Property Name="slip_dtm" Type="datetime" Nullable="false" />
+          <Property Name="register_date" Type="datetime" />
+          <Property Name="register_time" Type="time" Precision="7" />
+          <Property Name="out_time" Type="time" Precision="7" />
+          <Property Name="client_log_seq" Type="int" />
+          <Property Name="building_code" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="floor" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="zone" Type="nvarchar" MaxLength="2" />
+          <Property Name="locat_code" Type="nvarchar" MaxLength="9" Nullable="false" />
+          <Property Name="locat_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="com_code" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="computer_code" Type="int" Nullable="false" />
+          <Property Name="kiosk_group_code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="time_type" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="idcard_no" Type="nvarchar" MaxLength="20" />
+          <Property Name="hn_no" Type="nvarchar" MaxLength="20" />
+          <Property Name="pateint_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="pateint_dob" Type="datetime" />
+          <Property Name="patient_file_location_type" Type="nvarchar" MaxLength="10" />
+          <Property Name="patient_file_location_status" Type="nvarchar" MaxLength="20" />
+          <Property Name="patient_file_location_code" Type="nvarchar" MaxLength="10" />
+          <Property Name="patient_file_location_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="patient_file_asof" Type="datetime" />
+          <Property Name="queue_no" Type="nvarchar" MaxLength="5" />
+          <Property Name="flag_queue" Type="char" MaxLength="1" />
+          <Property Name="queue_status" Type="char" MaxLength="1" />
+          <Property Name="waiting_qno" Type="int" />
+          <Property Name="time_gen_waiting_qno" Type="time" Precision="7" />
+          <Property Name="pateint_flag" Type="char" MaxLength="1" />
+          <Property Name="pateint_service_flag" Type="char" MaxLength="1" />
+          <Property Name="flag_change_right" Type="char" MaxLength="1" />
+          <Property Name="flag_choose_right" Type="char" MaxLength="2" />
+          <Property Name="flag_lab_xray" Type="char" MaxLength="1" />
+          <Property Name="flag_remark_right" Type="char" MaxLength="1" />
+          <Property Name="flag_remark_right_group2" Type="char" MaxLength="1" />
+          <Property Name="flag_general_pateint" Type="char" MaxLength="1" />
+          <Property Name="flag_nosend_approve" Type="char" MaxLength="1" />
+          <Property Name="flag_have_right_approved" Type="char" MaxLength="1" />
+          <Property Name="flag_dct_ins_treatment_order" Type="char" MaxLength="1" />
+          <Property Name="q_channel_group_id" Type="int" />
+          <Property Name="q_period_no" Type="int" />
+          <Property Name="flag_print_q_report" Type="char" MaxLength="1" />
+          <Property Name="print_q_report_last_dttm" Type="datetime" />
+          <Property Name="print_result" Type="nvarchar(max)" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="kiosk_user">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="surname" Type="nvarchar" MaxLength="50" />
+          <Property Name="email_addr" Type="nvarchar(max)" />
+          <Property Name="mobilephone_no" Type="nvarchar" MaxLength="12" />
+          <Property Name="user_group_code" Type="int" Nullable="false" />
+          <Property Name="active_flag" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="kiosk_user_group">
+          <Key>
+            <PropertyRef Name="user_group_code" />
+          </Key>
+          <Property Name="user_group_code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_group_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="user_group_desc" Type="nvarchar" MaxLength="255" />
+          <Property Name="building_code" Type="nvarchar" MaxLength="5" />
+          <Property Name="location_floor" Type="nvarchar" MaxLength="2" />
+          <Property Name="active_flag" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_kiosk_com_kiosk_locat">
+          <End Role="kiosk_locat" Type="Self.kiosk_locat" Multiplicity="0..1" />
+          <End Role="kiosk_com" Type="Self.kiosk_com" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kiosk_locat">
+              <PropertyRef Name="locat_code" />
+            </Principal>
+            <Dependent Role="kiosk_com">
+              <PropertyRef Name="locat_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KIOSK_LO_REF_20_KIOSK_BU">
+          <End Role="kiosk_building" Type="Self.kiosk_building" Multiplicity="1" />
+          <End Role="kiosk_locat" Type="Self.kiosk_locat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kiosk_building">
+              <PropertyRef Name="building_code" />
+            </Principal>
+            <Dependent Role="kiosk_locat">
+              <PropertyRef Name="building_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KIOSK_US_REF_12_KIOSK_US">
+          <End Role="kiosk_user_group" Type="Self.kiosk_user_group" Multiplicity="1" />
+          <End Role="kiosk_user" Type="Self.kiosk_user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kiosk_user_group">
+              <PropertyRef Name="user_group_code" />
+            </Principal>
+            <Dependent Role="kiosk_user">
+              <PropertyRef Name="user_group_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="q_expr_ins_kiosk_map_qexpress_ipad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="slipSeq_Express" Type="int" Mode="In" />
+          <Parameter Name="queue_no_Express" Type="nvarchar" Mode="In" />
+          <Parameter Name="slipSeq_Q" Type="int" Mode="In" />
+          <Parameter Name="queue_no_q" Type="nvarchar" Mode="In" />
+          <Parameter Name="active_flag" Type="char" Mode="In" />
+          <Parameter Name="crtd_by" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="q_expr_ins_kiosk_qExpress_log_ipad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="queue_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="flag_queue" Type="char" Mode="In" />
+          <Parameter Name="q_action" Type="char" Mode="In" />
+          <Parameter Name="crtd_by" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="q_expr_ins_kiosk_transdetail_right" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="slip_seq" Type="int" Mode="In" />
+          <Parameter Name="right_group_code" Type="nvarchar" Mode="In" />
+          <Parameter Name="right_group_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="right_code" Type="nvarchar" Mode="In" />
+          <Parameter Name="right_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="contact_type" Type="nvarchar" Mode="In" />
+          <Parameter Name="right_cont_code" Type="nvarchar" Mode="In" />
+          <Parameter Name="right_cont_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="right_start_date" Type="datetime" Mode="In" />
+          <Parameter Name="right_e_date" Type="datetime" Mode="In" />
+          <Parameter Name="right_last_date" Type="datetime" Mode="In" />
+          <Parameter Name="crtd_by" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="q_expr_ins_kiosk_transhead_ipad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="slip_type" Type="char" Mode="In" />
+          <Parameter Name="slip_type_detail" Type="char" Mode="In" />
+          <Parameter Name="slip_type_flag" Type="char" Mode="In" />
+          <Parameter Name="register_date" Type="datetime" Mode="In" />
+          <Parameter Name="register_time" Type="time" Mode="In" />
+          <Parameter Name="out_time" Type="time" Mode="In" />
+          <Parameter Name="building_code" Type="nvarchar" Mode="In" />
+          <Parameter Name="floor" Type="nvarchar" Mode="In" />
+          <Parameter Name="zone" Type="nvarchar" Mode="In" />
+          <Parameter Name="locat_code" Type="nvarchar" Mode="In" />
+          <Parameter Name="locat_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="com_code" Type="nvarchar" Mode="In" />
+          <Parameter Name="computer_code" Type="int" Mode="In" />
+          <Parameter Name="computer_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="kiosk_group_code" Type="nvarchar" Mode="In" />
+          <Parameter Name="time_type" Type="char" Mode="In" />
+          <Parameter Name="idcard_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="hn_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="pateint_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="pateint_dob" Type="datetime" Mode="In" />
+          <Parameter Name="patient_file_location_type" Type="nvarchar" Mode="In" />
+          <Parameter Name="patient_file_location_code" Type="nvarchar" Mode="In" />
+          <Parameter Name="patient_file_location_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="patient_file_asof" Type="datetime" Mode="In" />
+          <Parameter Name="queue_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="flag_queue" Type="char" Mode="In" />
+          <Parameter Name="queue_status" Type="char" Mode="In" />
+          <Parameter Name="pateint_flag" Type="char" Mode="In" />
+          <Parameter Name="flag_change_right" Type="char" Mode="In" />
+          <Parameter Name="flag_choose_right" Type="char" Mode="In" />
+          <Parameter Name="flag_remark_right" Type="char" Mode="In" />
+          <Parameter Name="print_result" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="crtd_by" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="q_expr_search_kiosk_trans_ipad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="hn_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="queue_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="cur_date" Type="nvarchar" Mode="In" />
+          <Parameter Name="missappoint_month_not_exceed" Type="int" Mode="In" />
+        </Function>
+        <Function Name="q_expr_sel_kiosk_com_cat_ipad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="computer_name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="q_expr_sel_kiosk_trans_all_ipad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="hn_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="queue_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="cur_date" Type="nvarchar" Mode="In" />
+          <Parameter Name="missappoint_month_not_exceed" Type="int" Mode="In" />
+        </Function>
+        <Function Name="q_expr_sel_login_ipad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="username" Type="nvarchar" Mode="In" />
+          <Parameter Name="password" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="q_expr_upd_kiosk_transhead_queue_status_ipad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="slip_seq" Type="int" Mode="In" />
+          <Parameter Name="queue_status" Type="char" Mode="In" />
+          <Parameter Name="last_chg_by" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="Kiosk_Chula_iPadModelStoreContainer">
+          <EntitySet Name="kiosk_building" EntityType="Self.kiosk_building" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_com" EntityType="Self.kiosk_com" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_computer" EntityType="Self.kiosk_computer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_control" EntityType="Self.kiosk_control" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_locat" EntityType="Self.kiosk_locat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_map_qexpress" EntityType="Self.kiosk_map_qexpress" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_q_log" EntityType="Self.kiosk_q_log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_transdetail_appoint" EntityType="Self.kiosk_transdetail_appoint" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_transdetail_clinic_choose" EntityType="Self.kiosk_transdetail_clinic_choose" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_transhead" EntityType="Self.kiosk_transhead" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_user" EntityType="Self.kiosk_user" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_user_group" EntityType="Self.kiosk_user_group" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_transdetail_MissAppoint" EntityType="Self.kiosk_transdetail_MissAppoint" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [kiosk_transdetail_MissAppoint].[transdetail_missappoint_seq] AS [transdetail_missappoint_seq], 
+    [kiosk_transdetail_MissAppoint].[slip_seq] AS [slip_seq], 
+    [kiosk_transdetail_MissAppoint].[missappoint_date] AS [missappoint_date], 
+    [kiosk_transdetail_MissAppoint].[missappoint_time_start] AS [missappoint_time_start], 
+    [kiosk_transdetail_MissAppoint].[missappoint_time_end] AS [missappoint_time_end], 
+    [kiosk_transdetail_MissAppoint].[missappoint_clinic_code] AS [missappoint_clinic_code], 
+    [kiosk_transdetail_MissAppoint].[missappoint_clinic_name] AS [missappoint_clinic_name], 
+    [kiosk_transdetail_MissAppoint].[missappoint_clinic_location] AS [missappoint_clinic_location], 
+    [kiosk_transdetail_MissAppoint].[missappoint_doctor_code] AS [missappoint_doctor_code], 
+    [kiosk_transdetail_MissAppoint].[missappoint_doctor_name] AS [missappoint_doctor_name], 
+    [kiosk_transdetail_MissAppoint].[make_appoint_date] AS [make_appoint_date], 
+    [kiosk_transdetail_MissAppoint].[make_appoint_time] AS [make_appoint_time], 
+    [kiosk_transdetail_MissAppoint].[missappoint_status_code] AS [missappoint_status_code], 
+    [kiosk_transdetail_MissAppoint].[missappoint_status_name] AS [missappoint_status_name], 
+    [kiosk_transdetail_MissAppoint].[missappoint_right_group_code] AS [missappoint_right_group_code], 
+    [kiosk_transdetail_MissAppoint].[missappoint_right_group_name] AS [missappoint_right_group_name], 
+    [kiosk_transdetail_MissAppoint].[missappoint_right_code] AS [missappoint_right_code], 
+    [kiosk_transdetail_MissAppoint].[missappoint_right_name] AS [missappoint_right_name], 
+    [kiosk_transdetail_MissAppoint].[missappoint_contact_type] AS [missappoint_contact_type], 
+    [kiosk_transdetail_MissAppoint].[missappoint_right_cont_code] AS [missappoint_right_cont_code], 
+    [kiosk_transdetail_MissAppoint].[missappoint_right_cont_name] AS [missappoint_right_cont_name], 
+    [kiosk_transdetail_MissAppoint].[missappoint_right_start_date] AS [missappoint_right_start_date], 
+    [kiosk_transdetail_MissAppoint].[missappoint_right_e_date] AS [missappoint_right_e_date], 
+    [kiosk_transdetail_MissAppoint].[missappoint_right_ref_no] AS [missappoint_right_ref_no], 
+    [kiosk_transdetail_MissAppoint].[flag_first_clinic_contact] AS [flag_first_clinic_contact], 
+    [kiosk_transdetail_MissAppoint].[flag_expire] AS [flag_expire], 
+    [kiosk_transdetail_MissAppoint].[flag_pay] AS [flag_pay], 
+    [kiosk_transdetail_MissAppoint].[crtd_dttm] AS [crtd_dttm], 
+    [kiosk_transdetail_MissAppoint].[crtd_by] AS [crtd_by], 
+    [kiosk_transdetail_MissAppoint].[last_chg_dttm] AS [last_chg_dttm], 
+    [kiosk_transdetail_MissAppoint].[last_chg_by] AS [last_chg_by]
+    FROM [dbo].[kiosk_transdetail_MissAppoint] AS [kiosk_transdetail_MissAppoint]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_kiosk_com_kiosk_locat" Association="Self.FK_kiosk_com_kiosk_locat">
+            <End Role="kiosk_locat" EntitySet="kiosk_locat" />
+            <End Role="kiosk_com" EntitySet="kiosk_com" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KIOSK_LO_REF_20_KIOSK_BU" Association="Self.FK_KIOSK_LO_REF_20_KIOSK_BU">
+            <End Role="kiosk_building" EntitySet="kiosk_building" />
+            <End Role="kiosk_locat" EntitySet="kiosk_locat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KIOSK_US_REF_12_KIOSK_US" Association="Self.FK_KIOSK_US_REF_12_KIOSK_US">
+            <End Role="kiosk_user_group" EntitySet="kiosk_user_group" />
+            <End Role="kiosk_user" EntitySet="kiosk_user" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Kiosk_Chula_iPadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="kiosk_building">
+          <Key>
+            <PropertyRef Name="building_code" />
+          </Key>
+          <Property Name="building_code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="building_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="active_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="crtd_dttm" Type="DateTime" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="kiosk_locat" Relationship="Self.FK_KIOSK_LO_REF_20_KIOSK_BU" FromRole="kiosk_building" ToRole="kiosk_locat" />
+        </EntityType>
+        <EntityType Name="kiosk_com">
+          <Key>
+            <PropertyRef Name="com_code" />
+          </Key>
+          <Property Name="com_code" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="locat_code" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="computer_code" Type="Int32" Nullable="false" />
+          <Property Name="com_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kiosk_asset_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="building_code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="slip_qty" Type="Int32" />
+          <Property Name="slip_alert_qty" Type="Int32" />
+          <Property Name="slip_print_qty" Type="Int32" />
+          <Property Name="a4_qty" Type="Int32" />
+          <Property Name="a4_alert_qty" Type="Int32" />
+          <Property Name="a4_print_qty" Type="Int32" />
+          <Property Name="active_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="kiosk_group_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="kiosk_locat" Relationship="Self.FK_kiosk_com_kiosk_locat" FromRole="kiosk_com" ToRole="kiosk_locat" />
+        </EntityType>
+        <EntityType Name="kiosk_computer">
+          <Key>
+            <PropertyRef Name="computer_code" />
+          </Key>
+          <Property Name="computer_code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="com_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="com_asset_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="com_mac_addr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="com_serial_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="active_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="kiosk_group_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="kiosk_control">
+          <Key>
+            <PropertyRef Name="locat_code" />
+            <PropertyRef Name="year" />
+          </Key>
+          <Property Name="locat_code" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="year" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sequence" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="kiosk_locat">
+          <Key>
+            <PropertyRef Name="locat_code" />
+          </Key>
+          <Property Name="locat_code" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="locat_type_code" Type="Int32" Nullable="false" />
+          <Property Name="locat_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="locat_name_en" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="building_code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="floor" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="zone" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="kiosk_group_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="active_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="kiosk_building" Relationship="Self.FK_KIOSK_LO_REF_20_KIOSK_BU" FromRole="kiosk_locat" ToRole="kiosk_building" />
+          <NavigationProperty Name="kiosk_com" Relationship="Self.FK_kiosk_com_kiosk_locat" FromRole="kiosk_locat" ToRole="kiosk_com" />
+        </EntityType>
+        <EntityType Name="kiosk_map_qexpress">
+          <Key>
+            <PropertyRef Name="map_qexpress_seq" />
+          </Key>
+          <Property Name="map_qexpress_seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="slip_no_qexpress" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="queue_no_qexpress" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="slip_no_q" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="queue_no_q" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="trans_dtm" Type="DateTime" Precision="3" />
+          <Property Name="active_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="kiosk_q_log">
+          <Key>
+            <PropertyRef Name="q_log_seq" />
+          </Key>
+          <Property Name="q_log_seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="q_trans_dtm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="queue_no" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="flag_queue" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="q_action" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="action_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="channel_no" Type="Int32" />
+          <Property Name="slip_seq" Type="Int32" />
+          <Property Name="com_code" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="kiosk_transdetail_appoint">
+          <Key>
+            <PropertyRef Name="transdetail_appoint_seq" />
+          </Key>
+          <Property Name="transdetail_appoint_seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="slip_seq" Type="Int32" Nullable="false" />
+          <Property Name="appoint_date" Type="DateTime" Precision="3" />
+          <Property Name="appoint_time_start" Type="Time" Precision="7" />
+          <Property Name="appoint_time_end" Type="Time" Precision="7" />
+          <Property Name="appoint_clinic_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_clinic_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_clinic_location" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_doctor_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_doctor_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="make_appoint_date" Type="DateTime" Precision="3" />
+          <Property Name="make_appoint_time" Type="Time" Precision="7" />
+          <Property Name="appoint_status_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_status_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_right_group_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_right_group_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_right_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_right_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_contact_type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_right_cont_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_right_cont_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="appoint_right_start_date" Type="DateTime" Precision="3" />
+          <Property Name="appoint_right_e_date" Type="DateTime" Precision="3" />
+          <Property Name="appoint_right_ref_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="flag_first_clinic_contact" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_expire" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_pay" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="kiosk_transdetail_clinic_choose">
+          <Key>
+            <PropertyRef Name="transdetail_clinic_choose_seq" />
+          </Key>
+          <Property Name="transdetail_clinic_choose_seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="slip_seq" Type="Int32" Nullable="false" />
+          <Property Name="clinic_seq" Type="Int32" Nullable="false" />
+          <Property Name="clinic_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="clinic_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="clinic_location" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="clinic_desc" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="clinic_type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="flag_clinic_open" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="flag_clinic_quota_full" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="flag_is_quota_full" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="kiosk_transhead">
+          <Key>
+            <PropertyRef Name="slip_seq" />
+          </Key>
+          <Property Name="slip_seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="slip_no" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="slip_type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="slip_type_detail" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="slip_type_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="slip_dtm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="register_date" Type="DateTime" Precision="3" />
+          <Property Name="register_time" Type="Time" Precision="7" />
+          <Property Name="out_time" Type="Time" Precision="7" />
+          <Property Name="client_log_seq" Type="Int32" />
+          <Property Name="building_code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="floor" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="zone" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="locat_code" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="locat_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="com_code" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="computer_code" Type="Int32" Nullable="false" />
+          <Property Name="kiosk_group_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="time_type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="idcard_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="hn_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="pateint_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="pateint_dob" Type="DateTime" Precision="3" />
+          <Property Name="patient_file_location_type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="patient_file_location_status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="patient_file_location_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="patient_file_location_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="patient_file_asof" Type="DateTime" Precision="3" />
+          <Property Name="queue_no" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="flag_queue" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="queue_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="waiting_qno" Type="Int32" />
+          <Property Name="time_gen_waiting_qno" Type="Time" Precision="7" />
+          <Property Name="pateint_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pateint_service_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_change_right" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_choose_right" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="flag_lab_xray" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_remark_right" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_remark_right_group2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_general_pateint" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_nosend_approve" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_have_right_approved" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_dct_ins_treatment_order" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="q_channel_group_id" Type="Int32" />
+          <Property Name="q_period_no" Type="Int32" />
+          <Property Name="flag_print_q_report" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="print_q_report_last_dttm" Type="DateTime" Precision="3" />
+          <Property Name="print_result" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="kiosk_user">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email_addr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mobilephone_no" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="user_group_code" Type="Int32" Nullable="false" />
+          <Property Name="active_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="kiosk_user_group" Relationship="Self.FK_KIOSK_US_REF_12_KIOSK_US" FromRole="kiosk_user" ToRole="kiosk_user_group" />
+        </EntityType>
+        <EntityType Name="kiosk_user_group">
+          <Key>
+            <PropertyRef Name="user_group_code" />
+          </Key>
+          <Property Name="user_group_code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_group_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="user_group_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="building_code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="location_floor" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="active_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="kiosk_user" Relationship="Self.FK_KIOSK_US_REF_12_KIOSK_US" FromRole="kiosk_user_group" ToRole="kiosk_user" />
+        </EntityType>
+        <EntityType Name="kiosk_transdetail_MissAppoint">
+          <Key>
+            <PropertyRef Name="transdetail_missappoint_seq" />
+            <PropertyRef Name="slip_seq" />
+            <PropertyRef Name="crtd_dttm" />
+            <PropertyRef Name="crtd_by" />
+          </Key>
+          <Property Name="transdetail_missappoint_seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="slip_seq" Type="Int32" Nullable="false" />
+          <Property Name="missappoint_date" Type="DateTime" Precision="3" />
+          <Property Name="missappoint_time_start" Type="Time" Precision="7" />
+          <Property Name="missappoint_time_end" Type="Time" Precision="7" />
+          <Property Name="missappoint_clinic_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_clinic_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_clinic_location" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_doctor_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_doctor_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="make_appoint_date" Type="DateTime" Precision="3" />
+          <Property Name="make_appoint_time" Type="Time" Precision="7" />
+          <Property Name="missappoint_status_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_status_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_right_group_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_right_group_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_right_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_right_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_contact_type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_right_cont_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_right_cont_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="missappoint_right_start_date" Type="DateTime" Precision="3" />
+          <Property Name="missappoint_right_e_date" Type="DateTime" Precision="3" />
+          <Property Name="missappoint_right_ref_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="flag_first_clinic_contact" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_expire" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="flag_pay" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_KIOSK_LO_REF_20_KIOSK_BU">
+          <End Role="kiosk_building" Type="Self.kiosk_building" Multiplicity="1" />
+          <End Role="kiosk_locat" Type="Self.kiosk_locat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kiosk_building">
+              <PropertyRef Name="building_code" />
+            </Principal>
+            <Dependent Role="kiosk_locat">
+              <PropertyRef Name="building_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_kiosk_com_kiosk_locat">
+          <End Role="kiosk_locat" Type="Self.kiosk_locat" Multiplicity="0..1" />
+          <End Role="kiosk_com" Type="Self.kiosk_com" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kiosk_locat">
+              <PropertyRef Name="locat_code" />
+            </Principal>
+            <Dependent Role="kiosk_com">
+              <PropertyRef Name="locat_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KIOSK_US_REF_12_KIOSK_US">
+          <End Role="kiosk_user_group" Type="Self.kiosk_user_group" Multiplicity="1" />
+          <End Role="kiosk_user" Type="Self.kiosk_user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kiosk_user_group">
+              <PropertyRef Name="user_group_code" />
+            </Principal>
+            <Dependent Role="kiosk_user">
+              <PropertyRef Name="user_group_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Kiosk_Chula_iPadEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="kiosk_building" EntityType="Self.kiosk_building" />
+          <EntitySet Name="kiosk_com" EntityType="Self.kiosk_com" />
+          <EntitySet Name="kiosk_computer" EntityType="Self.kiosk_computer" />
+          <EntitySet Name="kiosk_control" EntityType="Self.kiosk_control" />
+          <EntitySet Name="kiosk_locat" EntityType="Self.kiosk_locat" />
+          <EntitySet Name="kiosk_map_qexpress" EntityType="Self.kiosk_map_qexpress" />
+          <EntitySet Name="kiosk_q_log" EntityType="Self.kiosk_q_log" />
+          <EntitySet Name="kiosk_transdetail_appoint" EntityType="Self.kiosk_transdetail_appoint" />
+          <EntitySet Name="kiosk_transdetail_clinic_choose" EntityType="Self.kiosk_transdetail_clinic_choose" />
+          <EntitySet Name="kiosk_transhead" EntityType="Self.kiosk_transhead" />
+          <EntitySet Name="kiosk_user" EntityType="Self.kiosk_user" />
+          <EntitySet Name="kiosk_user_group" EntityType="Self.kiosk_user_group" />
+          <EntitySet Name="kiosk_transdetail_MissAppoint" EntityType="Self.kiosk_transdetail_MissAppoint" />
+          <AssociationSet Name="FK_KIOSK_LO_REF_20_KIOSK_BU" Association="Self.FK_KIOSK_LO_REF_20_KIOSK_BU">
+            <End Role="kiosk_building" EntitySet="kiosk_building" />
+            <End Role="kiosk_locat" EntitySet="kiosk_locat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_kiosk_com_kiosk_locat" Association="Self.FK_kiosk_com_kiosk_locat">
+            <End Role="kiosk_locat" EntitySet="kiosk_locat" />
+            <End Role="kiosk_com" EntitySet="kiosk_com" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KIOSK_US_REF_12_KIOSK_US" Association="Self.FK_KIOSK_US_REF_12_KIOSK_US">
+            <End Role="kiosk_user_group" EntitySet="kiosk_user_group" />
+            <End Role="kiosk_user" EntitySet="kiosk_user" />
+          </AssociationSet>
+          <FunctionImport Name="q_expr_ins_kiosk_map_qexpress_ipad">
+            <Parameter Name="slipSeq_Express" Mode="In" Type="Int32" />
+            <Parameter Name="queue_no_Express" Mode="In" Type="String" />
+            <Parameter Name="slipSeq_Q" Mode="In" Type="Int32" />
+            <Parameter Name="queue_no_q" Mode="In" Type="String" />
+            <Parameter Name="active_flag" Mode="In" Type="String" />
+            <Parameter Name="crtd_by" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="q_expr_ins_kiosk_qExpress_log_ipad">
+            <Parameter Name="queue_no" Mode="In" Type="String" />
+            <Parameter Name="flag_queue" Mode="In" Type="String" />
+            <Parameter Name="q_action" Mode="In" Type="String" />
+            <Parameter Name="crtd_by" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="q_expr_ins_kiosk_transdetail_right">
+            <Parameter Name="slip_seq" Mode="In" Type="Int32" />
+            <Parameter Name="right_group_code" Mode="In" Type="String" />
+            <Parameter Name="right_group_name" Mode="In" Type="String" />
+            <Parameter Name="right_code" Mode="In" Type="String" />
+            <Parameter Name="right_name" Mode="In" Type="String" />
+            <Parameter Name="contact_type" Mode="In" Type="String" />
+            <Parameter Name="right_cont_code" Mode="In" Type="String" />
+            <Parameter Name="right_cont_name" Mode="In" Type="String" />
+            <Parameter Name="right_start_date" Mode="In" Type="DateTime" />
+            <Parameter Name="right_e_date" Mode="In" Type="DateTime" />
+            <Parameter Name="right_last_date" Mode="In" Type="DateTime" />
+            <Parameter Name="crtd_by" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="q_expr_ins_kiosk_transhead_ipad" ReturnType="Collection(Decimal)">
+            <Parameter Name="slip_type" Mode="In" Type="String" />
+            <Parameter Name="slip_type_detail" Mode="In" Type="String" />
+            <Parameter Name="slip_type_flag" Mode="In" Type="String" />
+            <Parameter Name="register_date" Mode="In" Type="DateTime" />
+            <Parameter Name="register_time" Mode="In" Type="Time" />
+            <Parameter Name="out_time" Mode="In" Type="Time" />
+            <Parameter Name="building_code" Mode="In" Type="String" />
+            <Parameter Name="floor" Mode="In" Type="String" />
+            <Parameter Name="zone" Mode="In" Type="String" />
+            <Parameter Name="locat_code" Mode="In" Type="String" />
+            <Parameter Name="locat_name" Mode="In" Type="String" />
+            <Parameter Name="com_code" Mode="In" Type="String" />
+            <Parameter Name="computer_code" Mode="In" Type="Int32" />
+            <Parameter Name="computer_name" Mode="In" Type="String" />
+            <Parameter Name="kiosk_group_code" Mode="In" Type="String" />
+            <Parameter Name="time_type" Mode="In" Type="String" />
+            <Parameter Name="idcard_no" Mode="In" Type="String" />
+            <Parameter Name="hn_no" Mode="In" Type="String" />
+            <Parameter Name="pateint_name" Mode="In" Type="String" />
+            <Parameter Name="pateint_dob" Mode="In" Type="DateTime" />
+            <Parameter Name="patient_file_location_type" Mode="In" Type="String" />
+            <Parameter Name="patient_file_location_code" Mode="In" Type="String" />
+            <Parameter Name="patient_file_location_name" Mode="In" Type="String" />
+            <Parameter Name="patient_file_asof" Mode="In" Type="DateTime" />
+            <Parameter Name="queue_no" Mode="In" Type="String" />
+            <Parameter Name="flag_queue" Mode="In" Type="String" />
+            <Parameter Name="queue_status" Mode="In" Type="String" />
+            <Parameter Name="pateint_flag" Mode="In" Type="String" />
+            <Parameter Name="flag_change_right" Mode="In" Type="String" />
+            <Parameter Name="flag_choose_right" Mode="In" Type="String" />
+            <Parameter Name="flag_remark_right" Mode="In" Type="String" />
+            <Parameter Name="print_result" Mode="In" Type="String" />
+            <Parameter Name="crtd_by" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="q_expr_search_kiosk_trans_ipad" ReturnType="Collection(Kiosk_Chula_iPadModel.q_expr_search_kiosk_trans_ipad_Result)">
+            <Parameter Name="hn_no" Mode="In" Type="String" />
+            <Parameter Name="queue_no" Mode="In" Type="String" />
+            <Parameter Name="cur_date" Mode="In" Type="String" />
+            <Parameter Name="missappoint_month_not_exceed" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="q_expr_sel_kiosk_com_cat_ipad" ReturnType="Collection(Kiosk_Chula_iPadModel.q_expr_sel_kiosk_com_cat_ipad_Result)">
+            <Parameter Name="computer_name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="q_expr_sel_kiosk_trans_all_ipad" ReturnType="Collection(Kiosk_Chula_iPadModel.q_expr_sel_kiosk_trans_all_ipad_Result)">
+            <Parameter Name="hn_no" Mode="In" Type="String" />
+            <Parameter Name="queue_no" Mode="In" Type="String" />
+            <Parameter Name="cur_date" Mode="In" Type="String" />
+            <Parameter Name="missappoint_month_not_exceed" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="q_expr_sel_login_ipad" ReturnType="Collection(String)">
+            <Parameter Name="username" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="q_expr_upd_kiosk_transhead_queue_status_ipad">
+            <Parameter Name="slip_seq" Mode="In" Type="Int32" />
+            <Parameter Name="queue_status" Mode="In" Type="String" />
+            <Parameter Name="last_chg_by" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="q_expr_search_kiosk_trans_ipad_Result">
+          <Property Type="Int32" Name="slip_seq" Nullable="false" />
+          <Property Type="String" Name="hn_no" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="queue_no" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="slip_dtm_time" Nullable="true" MaxLength="8" />
+          <Property Type="DateTime" Name="slip_dtm_date" Nullable="true" />
+          <Property Type="String" Name="slip_type_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="slip_type_detail" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="flag_choose_right" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="pateint_name" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="transdetail_appoint_seq" Nullable="true" />
+          <Property Type="DateTime" Name="appoint_date" Nullable="true" Precision="23" />
+          <Property Type="Time" Name="appoint_time_start" Nullable="true" />
+          <Property Type="Time" Name="appoint_time_end" Nullable="true" />
+          <Property Type="String" Name="appoint_clinic_name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="appoint_clinic_location" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="transdetail_missappoint_seq" Nullable="true" />
+          <Property Type="DateTime" Name="missappoint_date" Nullable="true" Precision="23" />
+          <Property Type="Time" Name="missappoint_time_start" Nullable="true" />
+          <Property Type="Time" Name="missappoint_time_end" Nullable="true" />
+          <Property Type="String" Name="missappoint_clinic_name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="missappoint_clinic_location" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="transdetail_clinic_choose_seq" Nullable="true" />
+          <Property Type="String" Name="clinic_desc" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="flag_clinic_quota_full" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="flag_is_quota_full" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="clinic_type" Nullable="true" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="q_expr_sel_kiosk_com_cat_ipad_Result">
+          <Property Type="String" Name="building_code" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="floor" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="zone" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="locat_code" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="locat_name" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="com_code" Nullable="false" MaxLength="12" />
+          <Property Type="Int32" Name="computer_code" Nullable="false" />
+          <Property Type="String" Name="kiosk_group_code" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="q_expr_sel_kiosk_trans_all_ipad_Result">
+          <Property Type="Int32" Name="slip_seq" Nullable="false" />
+          <Property Type="String" Name="hn_no" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="queue_no" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="slip_dtm_time" Nullable="true" MaxLength="8" />
+          <Property Type="DateTime" Name="slip_dtm_date" Nullable="true" />
+          <Property Type="String" Name="slip_type_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="flag_choose_right" Nullable="true" MaxLength="2" />
+          <Property Type="Int32" Name="transdetail_appoint_seq" Nullable="true" />
+          <Property Type="DateTime" Name="appoint_date" Nullable="true" Precision="23" />
+          <Property Type="Time" Name="appoint_time_start" Nullable="true" />
+          <Property Type="Time" Name="appoint_time_end" Nullable="true" />
+          <Property Type="String" Name="appoint_clinic_name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="appoint_clinic_location" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="transdetail_missappoint_seq" Nullable="true" />
+          <Property Type="DateTime" Name="missappoint_date" Nullable="true" Precision="23" />
+          <Property Type="Time" Name="missappoint_time_start" Nullable="true" />
+          <Property Type="Time" Name="missappoint_time_end" Nullable="true" />
+          <Property Type="String" Name="missappoint_clinic_name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="missappoint_clinic_location" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="transdetail_clinic_choose_seq" Nullable="true" />
+          <Property Type="String" Name="clinic_desc" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="flag_clinic_quota_full" Nullable="true" MaxLength="1" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Kiosk_Chula_iPadModelStoreContainer" CdmEntityContainer="Kiosk_Chula_iPadEntities">
+          <EntitySetMapping Name="kiosk_building">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_building">
+              <MappingFragment StoreEntitySet="kiosk_building">
+                <ScalarProperty Name="building_code" ColumnName="building_code" />
+                <ScalarProperty Name="building_name" ColumnName="building_name" />
+                <ScalarProperty Name="active_flag" ColumnName="active_flag" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_com">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_com">
+              <MappingFragment StoreEntitySet="kiosk_com">
+                <ScalarProperty Name="com_code" ColumnName="com_code" />
+                <ScalarProperty Name="locat_code" ColumnName="locat_code" />
+                <ScalarProperty Name="computer_code" ColumnName="computer_code" />
+                <ScalarProperty Name="com_name" ColumnName="com_name" />
+                <ScalarProperty Name="kiosk_asset_no" ColumnName="kiosk_asset_no" />
+                <ScalarProperty Name="building_code" ColumnName="building_code" />
+                <ScalarProperty Name="slip_qty" ColumnName="slip_qty" />
+                <ScalarProperty Name="slip_alert_qty" ColumnName="slip_alert_qty" />
+                <ScalarProperty Name="slip_print_qty" ColumnName="slip_print_qty" />
+                <ScalarProperty Name="a4_qty" ColumnName="a4_qty" />
+                <ScalarProperty Name="a4_alert_qty" ColumnName="a4_alert_qty" />
+                <ScalarProperty Name="a4_print_qty" ColumnName="a4_print_qty" />
+                <ScalarProperty Name="active_flag" ColumnName="active_flag" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+                <ScalarProperty Name="kiosk_group_code" ColumnName="kiosk_group_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_computer">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_computer">
+              <MappingFragment StoreEntitySet="kiosk_computer">
+                <ScalarProperty Name="computer_code" ColumnName="computer_code" />
+                <ScalarProperty Name="com_name" ColumnName="com_name" />
+                <ScalarProperty Name="com_asset_no" ColumnName="com_asset_no" />
+                <ScalarProperty Name="com_mac_addr" ColumnName="com_mac_addr" />
+                <ScalarProperty Name="com_serial_no" ColumnName="com_serial_no" />
+                <ScalarProperty Name="active_flag" ColumnName="active_flag" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+                <ScalarProperty Name="kiosk_group_code" ColumnName="kiosk_group_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_control">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_control">
+              <MappingFragment StoreEntitySet="kiosk_control">
+                <ScalarProperty Name="locat_code" ColumnName="locat_code" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="sequence" ColumnName="sequence" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_locat">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_locat">
+              <MappingFragment StoreEntitySet="kiosk_locat">
+                <ScalarProperty Name="locat_code" ColumnName="locat_code" />
+                <ScalarProperty Name="locat_type_code" ColumnName="locat_type_code" />
+                <ScalarProperty Name="locat_name" ColumnName="locat_name" />
+                <ScalarProperty Name="locat_name_en" ColumnName="locat_name_en" />
+                <ScalarProperty Name="building_code" ColumnName="building_code" />
+                <ScalarProperty Name="floor" ColumnName="floor" />
+                <ScalarProperty Name="zone" ColumnName="zone" />
+                <ScalarProperty Name="kiosk_group_code" ColumnName="kiosk_group_code" />
+                <ScalarProperty Name="active_flag" ColumnName="active_flag" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_map_qexpress">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_map_qexpress">
+              <MappingFragment StoreEntitySet="kiosk_map_qexpress">
+                <ScalarProperty Name="map_qexpress_seq" ColumnName="map_qexpress_seq" />
+                <ScalarProperty Name="slip_no_qexpress" ColumnName="slip_no_qexpress" />
+                <ScalarProperty Name="queue_no_qexpress" ColumnName="queue_no_qexpress" />
+                <ScalarProperty Name="slip_no_q" ColumnName="slip_no_q" />
+                <ScalarProperty Name="queue_no_q" ColumnName="queue_no_q" />
+                <ScalarProperty Name="trans_dtm" ColumnName="trans_dtm" />
+                <ScalarProperty Name="active_flag" ColumnName="active_flag" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_q_log">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_q_log">
+              <MappingFragment StoreEntitySet="kiosk_q_log">
+                <ScalarProperty Name="q_log_seq" ColumnName="q_log_seq" />
+                <ScalarProperty Name="q_trans_dtm" ColumnName="q_trans_dtm" />
+                <ScalarProperty Name="queue_no" ColumnName="queue_no" />
+                <ScalarProperty Name="flag_queue" ColumnName="flag_queue" />
+                <ScalarProperty Name="q_action" ColumnName="q_action" />
+                <ScalarProperty Name="action_by" ColumnName="action_by" />
+                <ScalarProperty Name="channel_no" ColumnName="channel_no" />
+                <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
+                <ScalarProperty Name="com_code" ColumnName="com_code" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_transdetail_appoint">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_transdetail_appoint">
+              <MappingFragment StoreEntitySet="kiosk_transdetail_appoint">
+                <ScalarProperty Name="transdetail_appoint_seq" ColumnName="transdetail_appoint_seq" />
+                <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
+                <ScalarProperty Name="appoint_date" ColumnName="appoint_date" />
+                <ScalarProperty Name="appoint_time_start" ColumnName="appoint_time_start" />
+                <ScalarProperty Name="appoint_time_end" ColumnName="appoint_time_end" />
+                <ScalarProperty Name="appoint_clinic_code" ColumnName="appoint_clinic_code" />
+                <ScalarProperty Name="appoint_clinic_name" ColumnName="appoint_clinic_name" />
+                <ScalarProperty Name="appoint_clinic_location" ColumnName="appoint_clinic_location" />
+                <ScalarProperty Name="appoint_doctor_code" ColumnName="appoint_doctor_code" />
+                <ScalarProperty Name="appoint_doctor_name" ColumnName="appoint_doctor_name" />
+                <ScalarProperty Name="make_appoint_date" ColumnName="make_appoint_date" />
+                <ScalarProperty Name="make_appoint_time" ColumnName="make_appoint_time" />
+                <ScalarProperty Name="appoint_status_code" ColumnName="appoint_status_code" />
+                <ScalarProperty Name="appoint_status_name" ColumnName="appoint_status_name" />
+                <ScalarProperty Name="appoint_right_group_code" ColumnName="appoint_right_group_code" />
+                <ScalarProperty Name="appoint_right_group_name" ColumnName="appoint_right_group_name" />
+                <ScalarProperty Name="appoint_right_code" ColumnName="appoint_right_code" />
+                <ScalarProperty Name="appoint_right_name" ColumnName="appoint_right_name" />
+                <ScalarProperty Name="appoint_contact_type" ColumnName="appoint_contact_type" />
+                <ScalarProperty Name="appoint_right_cont_code" ColumnName="appoint_right_cont_code" />
+                <ScalarProperty Name="appoint_right_cont_name" ColumnName="appoint_right_cont_name" />
+                <ScalarProperty Name="appoint_right_start_date" ColumnName="appoint_right_start_date" />
+                <ScalarProperty Name="appoint_right_e_date" ColumnName="appoint_right_e_date" />
+                <ScalarProperty Name="appoint_right_ref_no" ColumnName="appoint_right_ref_no" />
+                <ScalarProperty Name="flag_first_clinic_contact" ColumnName="flag_first_clinic_contact" />
+                <ScalarProperty Name="flag_expire" ColumnName="flag_expire" />
+                <ScalarProperty Name="flag_pay" ColumnName="flag_pay" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_transdetail_clinic_choose">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_transdetail_clinic_choose">
+              <MappingFragment StoreEntitySet="kiosk_transdetail_clinic_choose">
+                <ScalarProperty Name="transdetail_clinic_choose_seq" ColumnName="transdetail_clinic_choose_seq" />
+                <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
+                <ScalarProperty Name="clinic_seq" ColumnName="clinic_seq" />
+                <ScalarProperty Name="clinic_code" ColumnName="clinic_code" />
+                <ScalarProperty Name="clinic_name" ColumnName="clinic_name" />
+                <ScalarProperty Name="clinic_location" ColumnName="clinic_location" />
+                <ScalarProperty Name="clinic_desc" ColumnName="clinic_desc" />
+                <ScalarProperty Name="clinic_type" ColumnName="clinic_type" />
+                <ScalarProperty Name="flag_clinic_open" ColumnName="flag_clinic_open" />
+                <ScalarProperty Name="flag_clinic_quota_full" ColumnName="flag_clinic_quota_full" />
+                <ScalarProperty Name="flag_is_quota_full" ColumnName="flag_is_quota_full" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_transhead">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_transhead">
+              <MappingFragment StoreEntitySet="kiosk_transhead">
+                <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
+                <ScalarProperty Name="slip_no" ColumnName="slip_no" />
+                <ScalarProperty Name="slip_type" ColumnName="slip_type" />
+                <ScalarProperty Name="slip_type_detail" ColumnName="slip_type_detail" />
+                <ScalarProperty Name="slip_type_flag" ColumnName="slip_type_flag" />
+                <ScalarProperty Name="slip_dtm" ColumnName="slip_dtm" />
+                <ScalarProperty Name="register_date" ColumnName="register_date" />
+                <ScalarProperty Name="register_time" ColumnName="register_time" />
+                <ScalarProperty Name="out_time" ColumnName="out_time" />
+                <ScalarProperty Name="client_log_seq" ColumnName="client_log_seq" />
+                <ScalarProperty Name="building_code" ColumnName="building_code" />
+                <ScalarProperty Name="floor" ColumnName="floor" />
+                <ScalarProperty Name="zone" ColumnName="zone" />
+                <ScalarProperty Name="locat_code" ColumnName="locat_code" />
+                <ScalarProperty Name="locat_name" ColumnName="locat_name" />
+                <ScalarProperty Name="com_code" ColumnName="com_code" />
+                <ScalarProperty Name="computer_code" ColumnName="computer_code" />
+                <ScalarProperty Name="kiosk_group_code" ColumnName="kiosk_group_code" />
+                <ScalarProperty Name="time_type" ColumnName="time_type" />
+                <ScalarProperty Name="idcard_no" ColumnName="idcard_no" />
+                <ScalarProperty Name="hn_no" ColumnName="hn_no" />
+                <ScalarProperty Name="pateint_name" ColumnName="pateint_name" />
+                <ScalarProperty Name="pateint_dob" ColumnName="pateint_dob" />
+                <ScalarProperty Name="patient_file_location_type" ColumnName="patient_file_location_type" />
+                <ScalarProperty Name="patient_file_location_status" ColumnName="patient_file_location_status" />
+                <ScalarProperty Name="patient_file_location_code" ColumnName="patient_file_location_code" />
+                <ScalarProperty Name="patient_file_location_name" ColumnName="patient_file_location_name" />
+                <ScalarProperty Name="patient_file_asof" ColumnName="patient_file_asof" />
+                <ScalarProperty Name="queue_no" ColumnName="queue_no" />
+                <ScalarProperty Name="flag_queue" ColumnName="flag_queue" />
+                <ScalarProperty Name="queue_status" ColumnName="queue_status" />
+                <ScalarProperty Name="waiting_qno" ColumnName="waiting_qno" />
+                <ScalarProperty Name="time_gen_waiting_qno" ColumnName="time_gen_waiting_qno" />
+                <ScalarProperty Name="pateint_flag" ColumnName="pateint_flag" />
+                <ScalarProperty Name="pateint_service_flag" ColumnName="pateint_service_flag" />
+                <ScalarProperty Name="flag_change_right" ColumnName="flag_change_right" />
+                <ScalarProperty Name="flag_choose_right" ColumnName="flag_choose_right" />
+                <ScalarProperty Name="flag_lab_xray" ColumnName="flag_lab_xray" />
+                <ScalarProperty Name="flag_remark_right" ColumnName="flag_remark_right" />
+                <ScalarProperty Name="flag_remark_right_group2" ColumnName="flag_remark_right_group2" />
+                <ScalarProperty Name="flag_general_pateint" ColumnName="flag_general_pateint" />
+                <ScalarProperty Name="flag_nosend_approve" ColumnName="flag_nosend_approve" />
+                <ScalarProperty Name="flag_have_right_approved" ColumnName="flag_have_right_approved" />
+                <ScalarProperty Name="flag_dct_ins_treatment_order" ColumnName="flag_dct_ins_treatment_order" />
+                <ScalarProperty Name="q_channel_group_id" ColumnName="q_channel_group_id" />
+                <ScalarProperty Name="q_period_no" ColumnName="q_period_no" />
+                <ScalarProperty Name="flag_print_q_report" ColumnName="flag_print_q_report" />
+                <ScalarProperty Name="print_q_report_last_dttm" ColumnName="print_q_report_last_dttm" />
+                <ScalarProperty Name="print_result" ColumnName="print_result" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_user">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_user">
+              <MappingFragment StoreEntitySet="kiosk_user">
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="email_addr" ColumnName="email_addr" />
+                <ScalarProperty Name="mobilephone_no" ColumnName="mobilephone_no" />
+                <ScalarProperty Name="user_group_code" ColumnName="user_group_code" />
+                <ScalarProperty Name="active_flag" ColumnName="active_flag" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_user_group">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_user_group">
+              <MappingFragment StoreEntitySet="kiosk_user_group">
+                <ScalarProperty Name="user_group_code" ColumnName="user_group_code" />
+                <ScalarProperty Name="user_group_name" ColumnName="user_group_name" />
+                <ScalarProperty Name="user_group_desc" ColumnName="user_group_desc" />
+                <ScalarProperty Name="building_code" ColumnName="building_code" />
+                <ScalarProperty Name="location_floor" ColumnName="location_floor" />
+                <ScalarProperty Name="active_flag" ColumnName="active_flag" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_transdetail_MissAppoint">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_transdetail_MissAppoint">
+              <MappingFragment StoreEntitySet="kiosk_transdetail_MissAppoint">
+                <ScalarProperty Name="transdetail_missappoint_seq" ColumnName="transdetail_missappoint_seq" />
+                <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
+                <ScalarProperty Name="missappoint_date" ColumnName="missappoint_date" />
+                <ScalarProperty Name="missappoint_time_start" ColumnName="missappoint_time_start" />
+                <ScalarProperty Name="missappoint_time_end" ColumnName="missappoint_time_end" />
+                <ScalarProperty Name="missappoint_clinic_code" ColumnName="missappoint_clinic_code" />
+                <ScalarProperty Name="missappoint_clinic_name" ColumnName="missappoint_clinic_name" />
+                <ScalarProperty Name="missappoint_clinic_location" ColumnName="missappoint_clinic_location" />
+                <ScalarProperty Name="missappoint_doctor_code" ColumnName="missappoint_doctor_code" />
+                <ScalarProperty Name="missappoint_doctor_name" ColumnName="missappoint_doctor_name" />
+                <ScalarProperty Name="make_appoint_date" ColumnName="make_appoint_date" />
+                <ScalarProperty Name="make_appoint_time" ColumnName="make_appoint_time" />
+                <ScalarProperty Name="missappoint_status_code" ColumnName="missappoint_status_code" />
+                <ScalarProperty Name="missappoint_status_name" ColumnName="missappoint_status_name" />
+                <ScalarProperty Name="missappoint_right_group_code" ColumnName="missappoint_right_group_code" />
+                <ScalarProperty Name="missappoint_right_group_name" ColumnName="missappoint_right_group_name" />
+                <ScalarProperty Name="missappoint_right_code" ColumnName="missappoint_right_code" />
+                <ScalarProperty Name="missappoint_right_name" ColumnName="missappoint_right_name" />
+                <ScalarProperty Name="missappoint_contact_type" ColumnName="missappoint_contact_type" />
+                <ScalarProperty Name="missappoint_right_cont_code" ColumnName="missappoint_right_cont_code" />
+                <ScalarProperty Name="missappoint_right_cont_name" ColumnName="missappoint_right_cont_name" />
+                <ScalarProperty Name="missappoint_right_start_date" ColumnName="missappoint_right_start_date" />
+                <ScalarProperty Name="missappoint_right_e_date" ColumnName="missappoint_right_e_date" />
+                <ScalarProperty Name="missappoint_right_ref_no" ColumnName="missappoint_right_ref_no" />
+                <ScalarProperty Name="flag_first_clinic_contact" ColumnName="flag_first_clinic_contact" />
+                <ScalarProperty Name="flag_expire" ColumnName="flag_expire" />
+                <ScalarProperty Name="flag_pay" ColumnName="flag_pay" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_map_qexpress_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_ins_kiosk_map_qexpress_ipad" />
+          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_qExpress_log_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_ins_kiosk_qExpress_log_ipad" />
+          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_transdetail_right" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_ins_kiosk_transdetail_right" />
+          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_transhead_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_ins_kiosk_transhead_ipad" />
+          <FunctionImportMapping FunctionImportName="q_expr_search_kiosk_trans_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_search_kiosk_trans_ipad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Kiosk_Chula_iPadModel.q_expr_search_kiosk_trans_ipad_Result">
+                <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
+                <ScalarProperty Name="hn_no" ColumnName="hn_no" />
+                <ScalarProperty Name="queue_no" ColumnName="queue_no" />
+                <ScalarProperty Name="slip_dtm_time" ColumnName="slip_dtm_time" />
+                <ScalarProperty Name="slip_dtm_date" ColumnName="slip_dtm_date" />
+                <ScalarProperty Name="slip_type_flag" ColumnName="slip_type_flag" />
+                <ScalarProperty Name="slip_type_detail" ColumnName="slip_type_detail" />
+                <ScalarProperty Name="flag_choose_right" ColumnName="flag_choose_right" />
+                <ScalarProperty Name="pateint_name" ColumnName="pateint_name" />
+                <ScalarProperty Name="transdetail_appoint_seq" ColumnName="transdetail_appoint_seq" />
+                <ScalarProperty Name="appoint_date" ColumnName="appoint_date" />
+                <ScalarProperty Name="appoint_time_start" ColumnName="appoint_time_start" />
+                <ScalarProperty Name="appoint_time_end" ColumnName="appoint_time_end" />
+                <ScalarProperty Name="appoint_clinic_name" ColumnName="appoint_clinic_name" />
+                <ScalarProperty Name="appoint_clinic_location" ColumnName="appoint_clinic_location" />
+                <ScalarProperty Name="transdetail_missappoint_seq" ColumnName="transdetail_missappoint_seq" />
+                <ScalarProperty Name="missappoint_date" ColumnName="missappoint_date" />
+                <ScalarProperty Name="missappoint_time_start" ColumnName="missappoint_time_start" />
+                <ScalarProperty Name="missappoint_time_end" ColumnName="missappoint_time_end" />
+                <ScalarProperty Name="missappoint_clinic_name" ColumnName="missappoint_clinic_name" />
+                <ScalarProperty Name="missappoint_clinic_location" ColumnName="missappoint_clinic_location" />
+                <ScalarProperty Name="transdetail_clinic_choose_seq" ColumnName="transdetail_clinic_choose_seq" />
+                <ScalarProperty Name="clinic_desc" ColumnName="clinic_desc" />
+                <ScalarProperty Name="flag_clinic_quota_full" ColumnName="flag_clinic_quota_full" />
+                <ScalarProperty Name="flag_is_quota_full" ColumnName="flag_is_quota_full" />
+                <ScalarProperty Name="clinic_type" ColumnName="clinic_type" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="q_expr_sel_kiosk_com_cat_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_sel_kiosk_com_cat_ipad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Kiosk_Chula_iPadModel.q_expr_sel_kiosk_com_cat_ipad_Result">
+                <ScalarProperty Name="building_code" ColumnName="building_code" />
+                <ScalarProperty Name="floor" ColumnName="floor" />
+                <ScalarProperty Name="zone" ColumnName="zone" />
+                <ScalarProperty Name="locat_code" ColumnName="locat_code" />
+                <ScalarProperty Name="locat_name" ColumnName="locat_name" />
+                <ScalarProperty Name="com_code" ColumnName="com_code" />
+                <ScalarProperty Name="computer_code" ColumnName="computer_code" />
+                <ScalarProperty Name="kiosk_group_code" ColumnName="kiosk_group_code" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="q_expr_sel_kiosk_trans_all_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_sel_kiosk_trans_all_ipad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Kiosk_Chula_iPadModel.q_expr_sel_kiosk_trans_all_ipad_Result">
+                <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
+                <ScalarProperty Name="hn_no" ColumnName="hn_no" />
+                <ScalarProperty Name="queue_no" ColumnName="queue_no" />
+                <ScalarProperty Name="slip_dtm_time" ColumnName="slip_dtm_time" />
+                <ScalarProperty Name="slip_dtm_date" ColumnName="slip_dtm_date" />
+                <ScalarProperty Name="slip_type_flag" ColumnName="slip_type_flag" />
+                <ScalarProperty Name="flag_choose_right" ColumnName="flag_choose_right" />
+                <ScalarProperty Name="transdetail_appoint_seq" ColumnName="transdetail_appoint_seq" />
+                <ScalarProperty Name="appoint_date" ColumnName="appoint_date" />
+                <ScalarProperty Name="appoint_time_start" ColumnName="appoint_time_start" />
+                <ScalarProperty Name="appoint_time_end" ColumnName="appoint_time_end" />
+                <ScalarProperty Name="appoint_clinic_name" ColumnName="appoint_clinic_name" />
+                <ScalarProperty Name="appoint_clinic_location" ColumnName="appoint_clinic_location" />
+                <ScalarProperty Name="transdetail_missappoint_seq" ColumnName="transdetail_missappoint_seq" />
+                <ScalarProperty Name="missappoint_date" ColumnName="missappoint_date" />
+                <ScalarProperty Name="missappoint_time_start" ColumnName="missappoint_time_start" />
+                <ScalarProperty Name="missappoint_time_end" ColumnName="missappoint_time_end" />
+                <ScalarProperty Name="missappoint_clinic_name" ColumnName="missappoint_clinic_name" />
+                <ScalarProperty Name="missappoint_clinic_location" ColumnName="missappoint_clinic_location" />
+                <ScalarProperty Name="transdetail_clinic_choose_seq" ColumnName="transdetail_clinic_choose_seq" />
+                <ScalarProperty Name="clinic_desc" ColumnName="clinic_desc" />
+                <ScalarProperty Name="flag_clinic_quota_full" ColumnName="flag_clinic_quota_full" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="q_expr_sel_login_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_sel_login_ipad" />
+          <FunctionImportMapping FunctionImportName="q_expr_upd_kiosk_transhead_queue_status_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_upd_kiosk_transhead_queue_status_ipad" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
