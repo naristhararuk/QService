@@ -407,12 +407,6 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
           <Parameter Name="print_result" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="crtd_by" Type="nvarchar" Mode="In" />
         </Function>
-        <Function Name="q_expr_search_kiosk_trans_ipad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="hn_no" Type="nvarchar" Mode="In" />
-          <Parameter Name="queue_no" Type="nvarchar" Mode="In" />
-          <Parameter Name="cur_date" Type="nvarchar" Mode="In" />
-          <Parameter Name="missappoint_month_not_exceed" Type="int" Mode="In" />
-        </Function>
         <Function Name="q_expr_sel_kiosk_com_cat_ipad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="computer_name" Type="nvarchar" Mode="In" />
         </Function>
@@ -929,12 +923,6 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             <Parameter Name="print_result" Mode="In" Type="String" />
             <Parameter Name="crtd_by" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="q_expr_search_kiosk_trans_ipad" ReturnType="Collection(Kiosk_Chula_iPadModel.q_expr_search_kiosk_trans_ipad_Result)">
-            <Parameter Name="hn_no" Mode="In" Type="String" />
-            <Parameter Name="queue_no" Mode="In" Type="String" />
-            <Parameter Name="cur_date" Mode="In" Type="String" />
-            <Parameter Name="missappoint_month_not_exceed" Mode="In" Type="Int32" />
-          </FunctionImport>
           <FunctionImport Name="q_expr_sel_kiosk_com_cat_ipad" ReturnType="Collection(Kiosk_Chula_iPadModel.q_expr_sel_kiosk_com_cat_ipad_Result)">
             <Parameter Name="computer_name" Mode="In" Type="String" />
           </FunctionImport>
@@ -954,34 +942,6 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             <Parameter Name="last_chg_by" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
-        <ComplexType Name="q_expr_search_kiosk_trans_ipad_Result">
-          <Property Type="Int32" Name="slip_seq" Nullable="false" />
-          <Property Type="String" Name="hn_no" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="queue_no" Nullable="true" MaxLength="5" />
-          <Property Type="String" Name="slip_dtm_time" Nullable="true" MaxLength="8" />
-          <Property Type="DateTime" Name="slip_dtm_date" Nullable="true" />
-          <Property Type="String" Name="slip_type_flag" Nullable="true" MaxLength="1" />
-          <Property Type="String" Name="slip_type_detail" Nullable="true" MaxLength="3" />
-          <Property Type="String" Name="flag_choose_right" Nullable="true" MaxLength="2" />
-          <Property Type="String" Name="pateint_name" Nullable="true" MaxLength="100" />
-          <Property Type="Int32" Name="transdetail_appoint_seq" Nullable="true" />
-          <Property Type="DateTime" Name="appoint_date" Nullable="true" Precision="23" />
-          <Property Type="Time" Name="appoint_time_start" Nullable="true" />
-          <Property Type="Time" Name="appoint_time_end" Nullable="true" />
-          <Property Type="String" Name="appoint_clinic_name" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="appoint_clinic_location" Nullable="true" MaxLength="500" />
-          <Property Type="Int32" Name="transdetail_missappoint_seq" Nullable="true" />
-          <Property Type="DateTime" Name="missappoint_date" Nullable="true" Precision="23" />
-          <Property Type="Time" Name="missappoint_time_start" Nullable="true" />
-          <Property Type="Time" Name="missappoint_time_end" Nullable="true" />
-          <Property Type="String" Name="missappoint_clinic_name" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="missappoint_clinic_location" Nullable="true" MaxLength="500" />
-          <Property Type="Int32" Name="transdetail_clinic_choose_seq" Nullable="true" />
-          <Property Type="String" Name="clinic_desc" Nullable="true" MaxLength="1000" />
-          <Property Type="String" Name="flag_clinic_quota_full" Nullable="true" MaxLength="1" />
-          <Property Type="String" Name="flag_is_quota_full" Nullable="true" MaxLength="1" />
-          <Property Type="String" Name="clinic_type" Nullable="true" MaxLength="1" />
-        </ComplexType>
         <ComplexType Name="q_expr_sel_kiosk_com_cat_ipad_Result">
           <Property Type="String" Name="building_code" Nullable="false" MaxLength="5" />
           <Property Type="String" Name="floor" Nullable="false" MaxLength="2" />
@@ -1336,38 +1296,6 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
           <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_qExpress_log_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_ins_kiosk_qExpress_log_ipad" />
           <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_transdetail_right" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_ins_kiosk_transdetail_right" />
           <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_transhead_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_ins_kiosk_transhead_ipad" />
-          <FunctionImportMapping FunctionImportName="q_expr_search_kiosk_trans_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_search_kiosk_trans_ipad">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="Kiosk_Chula_iPadModel.q_expr_search_kiosk_trans_ipad_Result">
-                <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
-                <ScalarProperty Name="hn_no" ColumnName="hn_no" />
-                <ScalarProperty Name="queue_no" ColumnName="queue_no" />
-                <ScalarProperty Name="slip_dtm_time" ColumnName="slip_dtm_time" />
-                <ScalarProperty Name="slip_dtm_date" ColumnName="slip_dtm_date" />
-                <ScalarProperty Name="slip_type_flag" ColumnName="slip_type_flag" />
-                <ScalarProperty Name="slip_type_detail" ColumnName="slip_type_detail" />
-                <ScalarProperty Name="flag_choose_right" ColumnName="flag_choose_right" />
-                <ScalarProperty Name="pateint_name" ColumnName="pateint_name" />
-                <ScalarProperty Name="transdetail_appoint_seq" ColumnName="transdetail_appoint_seq" />
-                <ScalarProperty Name="appoint_date" ColumnName="appoint_date" />
-                <ScalarProperty Name="appoint_time_start" ColumnName="appoint_time_start" />
-                <ScalarProperty Name="appoint_time_end" ColumnName="appoint_time_end" />
-                <ScalarProperty Name="appoint_clinic_name" ColumnName="appoint_clinic_name" />
-                <ScalarProperty Name="appoint_clinic_location" ColumnName="appoint_clinic_location" />
-                <ScalarProperty Name="transdetail_missappoint_seq" ColumnName="transdetail_missappoint_seq" />
-                <ScalarProperty Name="missappoint_date" ColumnName="missappoint_date" />
-                <ScalarProperty Name="missappoint_time_start" ColumnName="missappoint_time_start" />
-                <ScalarProperty Name="missappoint_time_end" ColumnName="missappoint_time_end" />
-                <ScalarProperty Name="missappoint_clinic_name" ColumnName="missappoint_clinic_name" />
-                <ScalarProperty Name="missappoint_clinic_location" ColumnName="missappoint_clinic_location" />
-                <ScalarProperty Name="transdetail_clinic_choose_seq" ColumnName="transdetail_clinic_choose_seq" />
-                <ScalarProperty Name="clinic_desc" ColumnName="clinic_desc" />
-                <ScalarProperty Name="flag_clinic_quota_full" ColumnName="flag_clinic_quota_full" />
-                <ScalarProperty Name="flag_is_quota_full" ColumnName="flag_is_quota_full" />
-                <ScalarProperty Name="clinic_type" ColumnName="clinic_type" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="q_expr_sel_kiosk_com_cat_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_sel_kiosk_com_cat_ipad">
             <ResultMapping>
               <ComplexTypeMapping TypeName="Kiosk_Chula_iPadModel.q_expr_sel_kiosk_com_cat_ipad_Result">

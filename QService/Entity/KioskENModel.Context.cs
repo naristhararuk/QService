@@ -15,10 +15,10 @@ namespace QService.Entity
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Kiosk_Chula_iPadEntities : DbContext
+    public partial class KioskChulaiPadEntities : DbContext
     {
-        public Kiosk_Chula_iPadEntities()
-            : base("name=Kiosk_Chula_iPadEntities")
+        public KioskChulaiPadEntities()
+            : base("name=KioskChulaiPadEntities")
         {
         }
     
@@ -279,27 +279,6 @@ namespace QService.Entity
                 new ObjectParameter("crtd_by", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("q_expr_ins_kiosk_transhead_ipad", slip_typeParameter, slip_type_detailParameter, slip_type_flagParameter, register_dateParameter, register_timeParameter, out_timeParameter, building_codeParameter, floorParameter, zoneParameter, locat_codeParameter, locat_nameParameter, com_codeParameter, computer_codeParameter, computer_nameParameter, kiosk_group_codeParameter, time_typeParameter, idcard_noParameter, hn_noParameter, pateint_nameParameter, pateint_dobParameter, patient_file_location_typeParameter, patient_file_location_codeParameter, patient_file_location_nameParameter, patient_file_asofParameter, queue_noParameter, flag_queueParameter, queue_statusParameter, pateint_flagParameter, flag_change_rightParameter, flag_choose_rightParameter, flag_remark_rightParameter, print_resultParameter, crtd_byParameter);
-        }
-    
-        public virtual ObjectResult<q_expr_search_kiosk_trans_ipad_Result> q_expr_search_kiosk_trans_ipad(string hn_no, string queue_no, string cur_date, Nullable<int> missappoint_month_not_exceed)
-        {
-            var hn_noParameter = hn_no != null ?
-                new ObjectParameter("hn_no", hn_no) :
-                new ObjectParameter("hn_no", typeof(string));
-    
-            var queue_noParameter = queue_no != null ?
-                new ObjectParameter("queue_no", queue_no) :
-                new ObjectParameter("queue_no", typeof(string));
-    
-            var cur_dateParameter = cur_date != null ?
-                new ObjectParameter("cur_date", cur_date) :
-                new ObjectParameter("cur_date", typeof(string));
-    
-            var missappoint_month_not_exceedParameter = missappoint_month_not_exceed.HasValue ?
-                new ObjectParameter("missappoint_month_not_exceed", missappoint_month_not_exceed) :
-                new ObjectParameter("missappoint_month_not_exceed", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<q_expr_search_kiosk_trans_ipad_Result>("q_expr_search_kiosk_trans_ipad", hn_noParameter, queue_noParameter, cur_dateParameter, missappoint_month_not_exceedParameter);
         }
     
         public virtual ObjectResult<q_expr_sel_kiosk_com_cat_ipad_Result> q_expr_sel_kiosk_com_cat_ipad(string computer_name)

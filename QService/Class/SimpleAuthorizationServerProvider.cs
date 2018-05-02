@@ -21,7 +21,7 @@ namespace QService.Class
         {
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
-            using (Kiosk_Chula_iPadEntities db = new Kiosk_Chula_iPadEntities())
+            using (KioskChulaiPadEntities db = new KioskChulaiPadEntities())
             {
                 if (db != null)
                 {

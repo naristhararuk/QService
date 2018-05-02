@@ -79,10 +79,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/04/2018 10:03:39</publishTime>
     </File>
     <File Include="bin/QService.dll">
-      <publishTime>04/04/2018 13:52:08</publishTime>
+      <publishTime>04/04/2018 16:28:21</publishTime>
     </File>
     <File Include="bin/QService.XmlSerializers.dll">
-      <publishTime>04/04/2018 13:52:14</publishTime>
+      <publishTime>04/04/2018 16:28:23</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>04/04/2018 10:02:56</publishTime>
@@ -136,7 +136,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/04/2018 10:02:56</publishTime>
     </File>
     <File Include="Entity/KioskENModel.edmx.diagram">
-      <publishTime>04/04/2018 10:57:53</publishTime>
+      <publishTime>04/04/2018 16:24:42</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>04/04/2018 10:02:54</publishTime>
@@ -154,7 +154,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/04/2018 11:01:27</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/04/2018 13:52:15</publishTime>
+      <publishTime>04/04/2018 16:28:24</publishTime>
     </File>
   </ItemGroup>
 </Project>
