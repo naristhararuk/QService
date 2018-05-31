@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreateQ_NoHN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_type_detail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_type_flag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_kiosk_location_desc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_crtd_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateQ_NoHNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateQ_NoHNResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickStatusQ_Nurse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="q_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status_clinic_scanning" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status_send_clinic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nurse_channel_comp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nurse_user_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickStatusQ_NurseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickStatusQ_NurseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SlipSeq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SlipSeqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_SlipSeqResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+    </s:schema>
+  </wsdl:types>
+
+  <wsdl:message name="CreateQ_NoHNSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateQ_NoHN" />
+  </wsdl:message>
+  <wsdl:message name="CreateQ_NoHNSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateQ_NoHNResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_ClickStatusQ_NurseSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateQ_ClickStatusQ_Nurse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_ClickStatusQ_NurseSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateQ_ClickStatusQ_NurseResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_SlipSeqSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateQ_SlipSeq" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_SlipSeqSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateQ_SlipSeqResponse" />
+  </wsdl:message>
+
+  <wsdl:portType name="WS_KioskQSoap">
+
+    <wsdl:operation name="CreateQ_NoHN">
+      <wsdl:input message="tns:CreateQ_NoHNSoapIn" />
+      <wsdl:output message="tns:CreateQ_NoHNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_ClickStatusQ_Nurse">
+      <wsdl:input message="tns:UpdateQ_ClickStatusQ_NurseSoapIn" />
+      <wsdl:output message="tns:UpdateQ_ClickStatusQ_NurseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_SlipSeq">
+      <wsdl:input message="tns:UpdateQ_SlipSeqSoapIn" />
+      <wsdl:output message="tns:UpdateQ_SlipSeqSoapOut" />
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+  <wsdl:binding name="WS_KioskQSoap" type="tns:WS_KioskQSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+
+    <wsdl:operation name="CreateQ_NoHN">
+      <soap:operation soapAction="http://tempuri.org/CreateQ_NoHN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="UpdateQ_ClickStatusQ_Nurse">
+      <soap:operation soapAction="http://tempuri.org/UpdateQ_ClickStatusQ_Nurse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:operation name="UpdateQ_SlipSeq">
+      <soap12:operation soapAction="http://tempuri.org/UpdateQ_SlipSeq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+  <wsdl:service name="WS_KioskQ">
+    <wsdl:port name="WS_KioskQSoap" binding="tns:WS_KioskQSoap">
+      <soap:address location="http://localhost:46474/WS_KioskQ.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_KioskQSoap12" binding="tns:WS_KioskQSoap12">
+      <soap12:address location="http://localhost:46474/WS_KioskQ.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

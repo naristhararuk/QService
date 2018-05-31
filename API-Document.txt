@@ -1,0 +1,133 @@
+================================================================
+API NAME : Get Token
+REQUEST
+----------------------------------------------------------------
+URL : "http://chula-service.somee.com/QService/token"
+METHOD : "POST"
+HEADER
+Content-Type : "application/x-www-form-urlencoded"
+BODY
+{
+	"username": "ipad01",
+	"password":"1234",
+	"grant_type" : "password"
+}
+
+RESPONSE
+----------------------------------------------------------------
+{
+    "access_token": "KiLRvyVUxAXAhUL6N73O5xCaTQFd0kp4mQHrVVgr1WVQb7AuOLDZ7XLtsIevazNSfIwA7DqVsKySOEKjFY39pBirNleg6w9gB-gMaYlZIVJghYmIiNre6BcqzmLhJ-ZQSgiKWS5dEwNkZ9WeVq6xj8_2wwEIXibS_ms-CxVrfPbODn0myNY-7otI2qdQtUUeKKfeOD3ytJPv8L5X8PRSiLQPCUp37bGjizmS2QSYiRG4QqP2Ci-oCPleyZER49MESH7Nm7iaiosH_IqMno-doQ",
+    "token_type": "bearer",
+    "expires_in": 86399
+}
+================================================================
+
+================================================================
+API NAME : Search Patient
+REQUEST
+----------------------------------------------------------------
+URL : "http://chula-service.somee.com/QService/api/SelectTranshead/"
+METHOD : "POST"
+
+HEADER
+Authorization : "bearer KiLRvyVUxAXAhUL6N73O5xCaTQFd0kp4mQHrVVgr1WVQb7AuOLDZ7XLtsIevazNSfIwA7DqVsKySOEKjFY39pBirNleg6w9gB-gMaYlZIVJghYmIiNre6BcqzmLhJ-ZQSgiKWS5dEwNkZ9WeVq6xj8_2wwEIXibS_ms-CxVrfPbODn0myNY-7otI2qdQtUUeKKfeOD3ytJPv8L5X8PRSiLQPCUp37bGjizmS2QSYiRG4QqP2Ci-oCPleyZER49MESH7Nm7iaiosH_IqMno-doQ"
+Content-Type : "application/json"
+BODY
+{
+	"hn": "",
+	"queue_no":"J0004",
+	"cur_date" : "2018-03-20",
+	"missappoint" : 6
+}
+
+RESPONSE
+----------------------------------------------------------------
+[
+    {
+        "slip_seq": 1664970,
+        "hn_no": "12/57",
+        "pateint_name": "นายใหม สิงค์ขันธ์",
+        "queue_no": "J0004",
+        "slip_dtm_time": "12:18:34",
+        "slip_dtm_date": "2018-03-20T00:00:00",
+        "slip_type_detail": "14 ",
+        "slip_type_flag": "1",
+        "flag_choose_right": "1 ",
+        "transdetail_appoint_seq": 778157,
+        "appoint_date": "2018-03-20T00:00:00",
+        "appoint_time_start": "10:00:00",
+        "appoint_time_end": "11:30:00",
+        "appoint_clinic_name": "ผิวหนังทั่วไป",
+        "appoint_clinic_location": "ตึกภปร. ชั้น 2",
+        "transdetail_missappoint_seq": null,
+        "missappoint_date": null,
+        "missappoint_time_start": null,
+        "missappoint_time_end": null,
+        "missappoint_clinic_name": null,
+        "missappoint_clinic_location": null,
+        "transdetail_clinic_choose_seq": null,
+        "clinic_desc": null,
+        "flag_clinic_quota_full": null
+    },
+    {
+        "slip_seq": 1664970,
+        "hn_no": "12/57",
+        "pateint_name": "นายใหม สิงค์ขันธ์",
+        "queue_no": "J0004",
+        "slip_dtm_time": "12:18:34",
+        "slip_dtm_date": "2018-03-20T00:00:00",
+        "slip_type_detail": "14 ",
+        "slip_type_flag": "1",
+        "flag_choose_right": "1 ",
+        "transdetail_appoint_seq": 778158,
+        "appoint_date": "2018-03-20T00:00:00",
+        "appoint_time_start": "13:00:00",
+        "appoint_time_end": "13:15:00",
+        "appoint_clinic_name": "ฝังเข็ม",
+        "appoint_clinic_location": "ตึกภปร. ชั้น 10",
+        "transdetail_missappoint_seq": null,
+        "missappoint_date": null,
+        "missappoint_time_start": null,
+        "missappoint_time_end": null,
+        "missappoint_clinic_name": null,
+        "missappoint_clinic_location": null,
+        "transdetail_clinic_choose_seq": null,
+        "clinic_desc": null,
+        "flag_clinic_quota_full": null
+    }
+]
+================================================================
+
+================================================================
+API NAME : Change Q Express
+REQUEST
+----------------------------------------------------------------
+URL : "http://chula-service.somee.com/QService/api/Queue/GenQ"
+METHOD : "POST"
+
+HEADER
+Authorization : "bearer KiLRvyVUxAXAhUL6N73O5xCaTQFd0kp4mQHrVVgr1WVQb7AuOLDZ7XLtsIevazNSfIwA7DqVsKySOEKjFY39pBirNleg6w9gB-gMaYlZIVJghYmIiNre6BcqzmLhJ-ZQSgiKWS5dEwNkZ9WeVq6xj8_2wwEIXibS_ms-CxVrfPbODn0myNY-7otI2qdQtUUeKKfeOD3ytJPv8L5X8PRSiLQPCUp37bGjizmS2QSYiRG4QqP2Ci-oCPleyZER49MESH7Nm7iaiosH_IqMno-doQ"
+Content-Type : "application/json"
+BODY
+
+{
+	"com_name": "IPAD001",
+	"regis_date":"2018-05-07 17:11:11.010",
+	"slip_seq" : "1664970",
+	"slip_type_detail" : "14",
+	"slip_type_flag" : "1",
+	"crtd_by" : "ipad01"
+}
+
+RESPONSE
+----------------------------------------------------------------
+
+[
+    {
+        "patient_name": "นายใหม สิงค์ขันธ์",
+        "queue_no": "J0004",
+        "queue_no_express": "9J0004",
+        "hn_no": "57000012"
+    }
+]
+================================================================
