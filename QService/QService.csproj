@@ -131,6 +131,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Cors, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
       <Private>True</Private>
@@ -182,13 +183,38 @@
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <EntityDeploy Include="Entity\KioskENModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KioskENModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entity\KioskENModel.edmx.diagram">
+      <DependentUpon>KioskENModel.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\QService.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Service References\CUKioskService\WS_KioskQ.wsdl" />
+    <None Include="Service References\QChulaService\WS_KioskQ.wsdl" />
     <None Include="Web References\GenQService\GenQueue.disco" />
-    <Content Include="Web.config" />
+    <None Include="Service References\QChulaService\configuration91.svcinfo" />
+    <None Include="Service References\QChulaService\configuration.svcinfo" />
+    <None Include="Service References\QChulaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CUKioskService\WS_KioskQ.disco" />
+    <None Include="Service References\CUKioskService\configuration91.svcinfo" />
+    <None Include="Service References\CUKioskService\configuration.svcinfo" />
+    <None Include="Service References\CUKioskService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web References\GenQService\GenQueue.wsdl" />
     <Content Include="Web References\GenQService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -198,10 +224,10 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Class\AuthRepository.cs" />
-    <Compile Include="Class\CallSoap.cs" />
     <Compile Include="Class\Helper.cs" />
     <Compile Include="Class\SimpleAuthorizationServerProvider.cs" />
     <Compile Include="Controllers\QueueController.cs" />
+    <Compile Include="Controllers\SelectTransheadController.cs" />
     <Compile Include="Entity\KioskENModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,6 +273,9 @@
     <Compile Include="Entity\kiosk_transdetail_MissAppoint.cs">
       <DependentUpon>KioskENModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\kiosk_transdetail_right.cs">
+      <DependentUpon>KioskENModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\kiosk_transhead.cs">
       <DependentUpon>KioskENModel.tt</DependentUpon>
     </Compile>
@@ -254,9 +283,6 @@
       <DependentUpon>KioskENModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\kiosk_user_group.cs">
-      <DependentUpon>KioskENModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entity\q_expr_search_kiosk_trans_ipad_Result.cs">
       <DependentUpon>KioskENModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\q_expr_sel_kiosk_com_cat_ipad_Result.cs">
@@ -268,13 +294,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\SearchParamModel.cs" />
+    <Compile Include="Models\QueueModel.cs" />
+    <Compile Include="Models\SelectTransheadModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CUKioskService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\QChulaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="Web References\GenQService\Reference.cs">
@@ -288,13 +325,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Entity\KioskENModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>KioskENModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Entity\KioskENModel.edmx.diagram">
-      <DependentUpon>KioskENModel.edmx</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -307,9 +337,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />
@@ -326,6 +353,13 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QService_GenQService_GenQueue</CachedSettingsPropName>
     </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CUKioskService\" />
+    <WCFMetadataStorage Include="Service References\QChulaService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

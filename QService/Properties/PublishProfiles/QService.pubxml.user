@@ -10,151 +10,154 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
-      <publishTime>04/04/2018 10:03:03</publishTime>
+      <publishTime>04/04/0932 10:03:03</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
-      <publishTime>04/04/2018 10:03:03</publishTime>
+      <publishTime>04/04/0932 10:03:03</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>04/04/2018 10:31:18</publishTime>
+      <publishTime>04/04/0932 10:31:18</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>04/04/2018 10:31:18</publishTime>
+      <publishTime>04/04/0932 10:31:18</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
-      <publishTime>04/04/2018 10:02:59</publishTime>
+      <publishTime>04/04/0932 10:02:59</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.DependencyCollector.dll">
-      <publishTime>04/04/2018 10:03:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
-      <publishTime>04/04/2018 10:03:01</publishTime>
+      <publishTime>04/04/0932 10:03:01</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
-      <publishTime>04/04/2018 10:03:01</publishTime>
+      <publishTime>04/04/0932 10:03:01</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Web.dll">
-      <publishTime>04/04/2018 10:03:02</publishTime>
+      <publishTime>04/04/0932 10:03:02</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.WindowsServer.dll">
-      <publishTime>04/04/2018 10:03:02</publishTime>
+      <publishTime>04/04/0932 10:03:02</publishTime>
     </File>
     <File Include="bin/Microsoft.ApplicationInsights.dll">
-      <publishTime>04/04/2018 10:02:58</publishTime>
+      <publishTime>04/04/0932 10:02:58</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>04/04/2018 10:31:22</publishTime>
+      <publishTime>04/04/0932 10:31:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>04/04/2018 10:31:23</publishTime>
+      <publishTime>04/04/0932 10:31:23</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>04/04/2018 10:33:36</publishTime>
+      <publishTime>04/04/0932 10:33:36</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/0932 10:02:56</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Cors.dll">
-      <publishTime>04/04/2018 10:28:29</publishTime>
+      <publishTime>04/04/0932 10:28:29</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
-      <publishTime>04/04/2018 10:03:40</publishTime>
+      <publishTime>04/04/0932 10:03:40</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
-      <publishTime>04/04/2018 10:40:48</publishTime>
+      <publishTime>04/04/0932 10:40:48</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
-      <publishTime>04/04/2018 10:33:35</publishTime>
+      <publishTime>04/04/0932 10:33:35</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.dll">
-      <publishTime>04/04/2018 10:33:34</publishTime>
+      <publishTime>04/04/0932 10:33:34</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
-      <publishTime>04/04/2018 10:33:35</publishTime>
+      <publishTime>04/04/0932 10:33:35</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>04/04/2018 10:02:55</publishTime>
+      <publishTime>04/04/0932 10:02:55</publishTime>
     </File>
     <File Include="bin/Owin.dll">
-      <publishTime>04/04/2018 10:03:39</publishTime>
+      <publishTime>04/04/0932 10:03:39</publishTime>
     </File>
     <File Include="bin/QService.dll">
-      <publishTime>04/04/2018 16:28:21</publishTime>
+      <publishTime>05/07/2018 18:46:29</publishTime>
     </File>
     <File Include="bin/QService.XmlSerializers.dll">
-      <publishTime>04/04/2018 16:28:23</publishTime>
+      <publishTime>05/07/2018 18:46:30</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/1475 10:02:56</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
-      <publishTime>04/04/2018 10:37:38</publishTime>
+      <publishTime>04/04/0932 10:37:38</publishTime>
     </File>
     <File Include="bin/System.Web.Cors.dll">
-      <publishTime>04/04/2018 10:28:28</publishTime>
+      <publishTime>04/04/0932 10:28:28</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
-      <publishTime>04/04/2018 10:37:38</publishTime>
+      <publishTime>04/04/0932 10:37:38</publishTime>
     </File>
     <File Include="bin/System.Web.Http.Owin.dll">
-      <publishTime>04/04/2018 10:37:39</publishTime>
+      <publishTime>04/04/0932 10:37:39</publishTime>
     </File>
     <File Include="bin/System.Web.Http.WebHost.dll">
-      <publishTime>04/04/2018 10:02:56</publishTime>
+      <publishTime>04/04/0932 10:02:56</publishTime>
     </File>
     <File Include="Entity/KioskENModel.edmx.diagram">
-      <publishTime>04/04/2018 16:24:42</publishTime>
+      <publishTime>05/07/0932 11:20:35</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>04/04/2018 10:02:54</publishTime>
+      <publishTime>04/04/0932 10:02:54</publishTime>
+    </File>
+    <File Include="Index.aspx">
+      <publishTime>05/03/2018 02:47:10</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>04/04/2018 10:40:48</publishTime>
+      <publishTime>04/04/0932 10:40:48</publishTime>
     </File>
     <File Include="scripts/ai.0.15.0-build58334.js">
-      <publishTime>04/04/2018 10:03:03</publishTime>
+      <publishTime>04/04/0932 10:03:03</publishTime>
     </File>
     <File Include="scripts/ai.0.15.0-build58334.min.js">
-      <publishTime>04/04/2018 10:03:03</publishTime>
+      <publishTime>04/04/0932 10:03:03</publishTime>
     </File>
     <File Include="Web References/GenQService/Reference.map">
-      <publishTime>04/04/2018 11:01:27</publishTime>
+      <publishTime>04/04/0932 11:01:27</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/04/2018 16:28:24</publishTime>
+      <publishTime>05/07/0932 16:49:22</publishTime>
     </File>
   </ItemGroup>
 </Project>

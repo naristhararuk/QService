@@ -218,6 +218,28 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
           <Property Name="last_chg_dttm" Type="datetime" />
           <Property Name="last_chg_by" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="kiosk_transdetail_right">
+          <Key>
+            <PropertyRef Name="transdetail_right_seq" />
+          </Key>
+          <Property Name="transdetail_right_seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="slip_seq" Type="int" Nullable="false" />
+          <Property Name="right_group_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="right_group_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="right_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="right_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="contact_type" Type="nvarchar" MaxLength="10" />
+          <Property Name="right_cont_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="right_cont_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="right_start_date" Type="datetime" />
+          <Property Name="right_e_date" Type="datetime" />
+          <Property Name="right_last_date" Type="datetime" />
+          <Property Name="crtd_dttm" Type="datetime" Nullable="false" />
+          <Property Name="crtd_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="datetime" />
+          <Property Name="last_chg_by" Type="nvarchar" MaxLength="50" />
+          <Property Name="right_type_code" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="kiosk_transhead">
           <Key>
             <PropertyRef Name="slip_seq" />
@@ -435,6 +457,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
           <EntitySet Name="kiosk_q_log" EntityType="Self.kiosk_q_log" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="kiosk_transdetail_appoint" EntityType="Self.kiosk_transdetail_appoint" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="kiosk_transdetail_clinic_choose" EntityType="Self.kiosk_transdetail_clinic_choose" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kiosk_transdetail_right" EntityType="Self.kiosk_transdetail_right" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="kiosk_transhead" EntityType="Self.kiosk_transhead" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="kiosk_user" EntityType="Self.kiosk_user" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="kiosk_user_group" EntityType="Self.kiosk_user_group" Schema="dbo" store:Type="Tables" />
@@ -667,6 +690,28 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
           <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
           <Property Name="last_chg_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="kiosk_transdetail_right">
+          <Key>
+            <PropertyRef Name="transdetail_right_seq" />
+          </Key>
+          <Property Name="transdetail_right_seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="slip_seq" Type="Int32" Nullable="false" />
+          <Property Name="right_group_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="right_group_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="right_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="right_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="contact_type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="right_cont_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="right_cont_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="right_start_date" Type="DateTime" Precision="3" />
+          <Property Name="right_e_date" Type="DateTime" Precision="3" />
+          <Property Name="right_last_date" Type="DateTime" Precision="3" />
+          <Property Name="crtd_dttm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="crtd_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_chg_dttm" Type="DateTime" Precision="3" />
+          <Property Name="last_chg_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="right_type_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="kiosk_transhead">
           <Key>
             <PropertyRef Name="slip_seq" />
@@ -834,7 +879,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Kiosk_Chula_iPadEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="KioskChulaiPadEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="kiosk_building" EntityType="Self.kiosk_building" />
           <EntitySet Name="kiosk_com" EntityType="Self.kiosk_com" />
           <EntitySet Name="kiosk_computer" EntityType="Self.kiosk_computer" />
@@ -844,6 +889,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
           <EntitySet Name="kiosk_q_log" EntityType="Self.kiosk_q_log" />
           <EntitySet Name="kiosk_transdetail_appoint" EntityType="Self.kiosk_transdetail_appoint" />
           <EntitySet Name="kiosk_transdetail_clinic_choose" EntityType="Self.kiosk_transdetail_clinic_choose" />
+          <EntitySet Name="kiosk_transdetail_right" EntityType="Self.kiosk_transdetail_right" />
           <EntitySet Name="kiosk_transhead" EntityType="Self.kiosk_transhead" />
           <EntitySet Name="kiosk_user" EntityType="Self.kiosk_user" />
           <EntitySet Name="kiosk_user_group" EntityType="Self.kiosk_user_group" />
@@ -958,8 +1004,12 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
           <Property Type="String" Name="queue_no" Nullable="true" MaxLength="5" />
           <Property Type="String" Name="slip_dtm_time" Nullable="true" MaxLength="8" />
           <Property Type="DateTime" Name="slip_dtm_date" Nullable="true" />
+          <Property Type="String" Name="slip_type_detail" Nullable="true" MaxLength="3" />
           <Property Type="String" Name="slip_type_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="slip_no" Nullable="false" MaxLength="25" />
           <Property Type="String" Name="flag_choose_right" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="pateint_name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="right_fullname" Nullable="true" MaxLength="201" />
           <Property Type="Int32" Name="transdetail_appoint_seq" Nullable="true" />
           <Property Type="DateTime" Name="appoint_date" Nullable="true" Precision="23" />
           <Property Type="Time" Name="appoint_time_start" Nullable="true" />
@@ -981,7 +1031,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Kiosk_Chula_iPadModelStoreContainer" CdmEntityContainer="Kiosk_Chula_iPadEntities">
+        <EntityContainerMapping StorageEntityContainer="Kiosk_Chula_iPadModelStoreContainer" CdmEntityContainer="KioskChulaiPadEntities">
           <EntitySetMapping Name="kiosk_building">
             <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_building">
               <MappingFragment StoreEntitySet="kiosk_building">
@@ -1162,6 +1212,29 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="kiosk_transdetail_right">
+            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_transdetail_right">
+              <MappingFragment StoreEntitySet="kiosk_transdetail_right">
+                <ScalarProperty Name="transdetail_right_seq" ColumnName="transdetail_right_seq" />
+                <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
+                <ScalarProperty Name="right_group_code" ColumnName="right_group_code" />
+                <ScalarProperty Name="right_group_name" ColumnName="right_group_name" />
+                <ScalarProperty Name="right_code" ColumnName="right_code" />
+                <ScalarProperty Name="right_name" ColumnName="right_name" />
+                <ScalarProperty Name="contact_type" ColumnName="contact_type" />
+                <ScalarProperty Name="right_cont_code" ColumnName="right_cont_code" />
+                <ScalarProperty Name="right_cont_name" ColumnName="right_cont_name" />
+                <ScalarProperty Name="right_start_date" ColumnName="right_start_date" />
+                <ScalarProperty Name="right_e_date" ColumnName="right_e_date" />
+                <ScalarProperty Name="right_last_date" ColumnName="right_last_date" />
+                <ScalarProperty Name="crtd_dttm" ColumnName="crtd_dttm" />
+                <ScalarProperty Name="crtd_by" ColumnName="crtd_by" />
+                <ScalarProperty Name="last_chg_dttm" ColumnName="last_chg_dttm" />
+                <ScalarProperty Name="last_chg_by" ColumnName="last_chg_by" />
+                <ScalarProperty Name="right_type_code" ColumnName="right_type_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="kiosk_transhead">
             <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_transhead">
               <MappingFragment StoreEntitySet="kiosk_transhead">
@@ -1318,8 +1391,12 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
                 <ScalarProperty Name="queue_no" ColumnName="queue_no" />
                 <ScalarProperty Name="slip_dtm_time" ColumnName="slip_dtm_time" />
                 <ScalarProperty Name="slip_dtm_date" ColumnName="slip_dtm_date" />
+                <ScalarProperty Name="slip_type_detail" ColumnName="slip_type_detail" />
                 <ScalarProperty Name="slip_type_flag" ColumnName="slip_type_flag" />
+                <ScalarProperty Name="slip_no" ColumnName="slip_no" />
                 <ScalarProperty Name="flag_choose_right" ColumnName="flag_choose_right" />
+                <ScalarProperty Name="pateint_name" ColumnName="pateint_name" />
+                <ScalarProperty Name="right_fullname" ColumnName="right_fullname" />
                 <ScalarProperty Name="transdetail_appoint_seq" ColumnName="transdetail_appoint_seq" />
                 <ScalarProperty Name="appoint_date" ColumnName="appoint_date" />
                 <ScalarProperty Name="appoint_time_start" ColumnName="appoint_time_start" />

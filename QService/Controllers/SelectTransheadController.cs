@@ -64,9 +64,12 @@ namespace QService.Controllers
                                        {
                                            slip_seq = x.slip_seq,
                                            hn_no = Helper.Utility.HNDisplay(x.hn_no),
+                                           pateint_name = x.pateint_name,
                                            queue_no = x.queue_no,
                                            slip_dtm_time = x.slip_dtm_time,
                                            slip_dtm_date = x.slip_dtm_date,
+                                           slip_type_detail = x.slip_type_detail,
+                                           slip_no = x.slip_no,
                                            slip_type_flag = x.slip_type_flag,
                                            flag_choose_right = x.flag_choose_right,
                                            transdetail_appoint_seq = x.transdetail_appoint_seq,

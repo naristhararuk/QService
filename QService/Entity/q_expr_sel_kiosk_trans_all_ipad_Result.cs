@@ -18,8 +18,12 @@ namespace QService.Entity
         public string queue_no { get; set; }
         public string slip_dtm_time { get; set; }
         public Nullable<System.DateTime> slip_dtm_date { get; set; }
+        public string slip_type_detail { get; set; }
         public string slip_type_flag { get; set; }
+        public string slip_no { get; set; }
         public string flag_choose_right { get; set; }
+        public string pateint_name { get; set; }
+        public string right_fullname { get; set; }
         public Nullable<int> transdetail_appoint_seq { get; set; }
         public Nullable<System.DateTime> appoint_date { get; set; }
         public Nullable<System.TimeSpan> appoint_time_start { get; set; }

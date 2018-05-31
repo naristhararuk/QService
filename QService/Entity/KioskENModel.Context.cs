@@ -36,6 +36,7 @@ namespace QService.Entity
         public virtual DbSet<kiosk_q_log> kiosk_q_log { get; set; }
         public virtual DbSet<kiosk_transdetail_appoint> kiosk_transdetail_appoint { get; set; }
         public virtual DbSet<kiosk_transdetail_clinic_choose> kiosk_transdetail_clinic_choose { get; set; }
+        public virtual DbSet<kiosk_transdetail_right> kiosk_transdetail_right { get; set; }
         public virtual DbSet<kiosk_transhead> kiosk_transhead { get; set; }
         public virtual DbSet<kiosk_user> kiosk_user { get; set; }
         public virtual DbSet<kiosk_user_group> kiosk_user_group { get; set; }

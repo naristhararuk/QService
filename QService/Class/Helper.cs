@@ -67,10 +67,17 @@ namespace QService.Class
             }
             public static string HNDisplay(string hn)
             {
-                if (hn.Length > 2)
-                    return hn.Substring(2, hn.Length - 2).TrimStart('0') + "/" + hn.Substring(0, 2);
+                if (hn != null)
+                {
+                    if (hn.Length > 2)
+                        return hn.Substring(2, hn.Length - 2).TrimStart('0') + "/" + hn.Substring(0, 2);
+                    else
+                        return hn;
+                }
                 else
-                    return hn;
+                {
+                    return string.Empty;
+                }
             }
         }
     }

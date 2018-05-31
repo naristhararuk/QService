@@ -16,6 +16,16 @@ namespace QService.Class
         {
             context.Validated();
         }
+        /*override response authen token for custom field*/
+        public override Task TokenEndpoint(OAuthTokenEndpointContext context)
+        {
+            foreach (KeyValuePair<string, string> property in context.Properties.Dictionary)
+            {
+                context.AdditionalResponseParameters.Add(property.Key, property.Value);
+            }
+
+            return Task.FromResult<object>(null);
+        }
         /* http://www.mukeshkumar.net/articles/web-api/token-based-authentication-in-web-api reference*/
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
@@ -31,11 +41,13 @@ namespace QService.Class
                         string encryppassword = Helper.Utility.Encrypt(context.Password, true); /*encrypt password*/
                         if (!string.IsNullOrEmpty(userlist.Where(x => x.username == context.UserName && x.password == encryppassword).FirstOrDefault().name))
                         {
+                            string displayname = userlist.Where(x => x.username == context.UserName && x.password == encryppassword).FirstOrDefault().name;
+                            int user_group_code = userlist.Where(x => x.username == context.UserName && x.password == encryppassword).FirstOrDefault().user_group_code;
                             identity.AddClaim(new Claim("Developer", "Naristhararuk"));
                             var props = new AuthenticationProperties(new Dictionary<string, string>
                             {
                                 { "userdisplayname",context.UserName },
-                                { "role","admin" }
+                                { "role",user_group_code.ToString() }
                             });
                             var ticket = new AuthenticationTicket(identity, props);
                             context.Validated(ticket);
