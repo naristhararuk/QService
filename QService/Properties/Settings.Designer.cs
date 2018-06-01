@@ -22,15 +22,5 @@ namespace QService.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost/GenQ/GenQueue.asmx")]
-        public string QService_GenQService_GenQueue {
-            get {
-                return ((string)(this["QService_GenQService_GenQueue"]));
-            }
-        }
     }
 }
