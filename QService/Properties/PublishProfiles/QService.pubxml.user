@@ -79,7 +79,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/04/2018 10:03:39</publishTime>
     </File>
     <File Include="bin/QService.dll">
-      <publishTime>06/01/2018 15:32:58</publishTime>
+      <publishTime>06/19/2018 15:16:29</publishTime>
     </File>
     <File Include="bin/QService.XmlSerializers.dll">
       <publishTime>05/07/2018 18:46:30</publishTime>
