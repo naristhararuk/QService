@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="05854fb1-7157-4681-b988-b7b82ce284b8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ee0acfc3-0c5a-4354-891c-145e4682aea0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://172.20.10.4/WSQ_Nurse/WS_KioskQ.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://cuservice.somee.com/WSQ/WS_KioskQ.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WS_KioskQ.wsdl" MetadataType="Wsdl" ID="f1dd125f-f9ff-4096-9482-7f0786c9c7f9" SourceId="1" SourceUrl="http://172.20.10.4/WSQ_Nurse/WS_KioskQ.asmx?wsdl" />
-    <MetadataFile FileName="WS_KioskQ.disco" MetadataType="Disco" ID="789eb837-e72a-4134-9355-98d9424910f9" SourceId="1" SourceUrl="http://172.20.10.4/WSQ_Nurse/WS_KioskQ.asmx?disco" />
+    <MetadataFile FileName="WS_KioskQ.wsdl" MetadataType="Wsdl" ID="f9b2b94b-1316-4f48-8dcc-a9ff61476199" SourceId="1" SourceUrl="http://cuservice.somee.com/WSQ/WS_KioskQ.asmx?wsdl" />
+    <MetadataFile FileName="WS_KioskQ.disco" MetadataType="Disco" ID="eda1a5bd-e9eb-4f0b-b895-aa2e1bc8c8fa" SourceId="1" SourceUrl="http://cuservice.somee.com/WSQ/WS_KioskQ.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -1,7 +1,1513 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UpdateQ_CallQSound_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_comp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_CallQSound_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_CallQSound_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ShowQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_showq_comp_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ShowQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ShowQResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ShowQAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slip_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status_display" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ShowQAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ShowQAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ShowQAll2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slip_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status_display" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ShowQAll2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ShowQAll2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SoundQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SoundQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_SoundQResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SoundQ_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SoundQ_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_SoundQ_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SoundQ_nurse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SoundQ_nurseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_SoundQ_nurseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SlipSeq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SlipSeqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_SlipSeqResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SlipSeq_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_waiting_qno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_time_gen_waiting_qno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_SlipSeq_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_SlipSeq_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTranshead_QStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_last_chg_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTranshead_QStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTranshead_QStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTranshead_QExpress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slip_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queue_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="last_chg_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTranshead_QExpressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTranshead_QExpressResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQ_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQ_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQ_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQNoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQNo_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQNo_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQNo_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQCheckStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="q_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQCheckStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQCheckStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQNurseReport">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectQNurseReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQNurseReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type_call" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannel_nurse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannel_nurseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannel_nurseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannel_nurse_express">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queue_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannel_nurse_expressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannel_nurse_expressResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannel_nurse_com_cat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="computer_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannel_nurse_com_catResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannel_nurse_com_catResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannel_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_first_q" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannel_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannel_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQShowQResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQComp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_showq_comp_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQCompResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQShowQCompResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQComp_nurse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_showq_comp_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="com_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQComp_nurseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQShowQComp_nurseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectShowQAllComp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sound_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status_display" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="group_q" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectShowQAllCompResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectShowQAllCompResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQComp_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_showq_comp_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQComp_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQShowQComp_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQLastNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_showq_comp_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQLastNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQShowQLastNoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQLastNo_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_showq_comp_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQShowQLastNo_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQShowQLastNo_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQSoundQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQSoundQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQSoundQResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQSoundQ_nurse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQSoundQ_nurseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQSoundQ_nurseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQSoundQ_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQSoundQ_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQSoundQ_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQRecall">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="status_send_clinic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQRecallResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQRecallResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQRecall_Nurse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="status_send_clinic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="channel_nurse" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQRecall_NurseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQRecall_NurseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQRecall_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQRecall_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQRecall_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectComputer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectComputerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectComputerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectSlip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectSlipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectSlipResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectSlip_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectSlip_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectSlip_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQExpress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_queue_no_q" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQExpressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQExpressResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectPatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_queue_no_q" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectPatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectPatientResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_status_scanning" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelWResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelW_Nurse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_status_scanning" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelW_NurseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelW_NurseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelW_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_first_q" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelW_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelW_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteQChannelW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteQChannelWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteQChannelWResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteQChannelW_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteQChannelW_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteQChannelW_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelWAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelWAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelWAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelWAll_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_first_q" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQChannelWAll_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelWAll_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQID_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQID_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQID_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickCallQ_New">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_comp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_flag_queue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_action" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_qno_filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickCallQ_NewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickCallQ_NewResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickCallQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_comp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_flag_queue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_action" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_b_2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_c_10" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_e_4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_f_11" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_g_12" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_i_8" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickCallQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickCallQResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickCallQ_Nurse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status_nurse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_nurse_channel_comp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_nurse_channel_user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_nurse_channel_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_flag_queue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_action" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_b_2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_c_10" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_e_4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_f_11" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_g_12" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_i_8" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickCallQ_NurseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickCallQ_NurseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickStatusQ_Nurse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slip_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status_clinic_scanning" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status_send_clinic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nurse_channel_comp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nurse_user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sound_q" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickStatusQ_NurseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickStatusQ_NurseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_Nurse_Express">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slip_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nurse_express" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_Nurse_ExpressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_Nurse_ExpressResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickCallQ_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_comp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_flag_queue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_action" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_qno_filter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_first_q" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickCallQ_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickCallQ_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickCallQSound_P2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_comp_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_user_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_flag_queue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_action" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_qno_filter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_first_q" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQ_ClickCallQSound_P2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickCallQSound_P2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQRecall">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flag_status_recall" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateQRecallResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateQRecallResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectQNoExpress">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectQNoExpressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectQNoExpressResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDisplayText">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectDisplayTextResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectDisplayTextResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectRehabCase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_service_building_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_service_location_floor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectRehabCaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectRehabCaseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectWSQvstKiosk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_hn_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_queue_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_service_building_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_service_location_floor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectWSQvstKioskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectWSQvstKioskResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertjson_rgt_head">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_hn_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_trans_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_trans_start" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_trans_end" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_crtd_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertjson_rgt_headResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Insertjson_rgt_headResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Updatejson_rgt_head">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_json_reg_head_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_no_data_exec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_no_data_success" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_no_data_error" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_last_chg_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Updatejson_rgt_headResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Updatejson_rgt_headResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertjson_rgt_detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_json_reg_head_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_hn_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_transdetail_service_appoint_seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_vstdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_vsttime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_cliniclct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_dct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_nextdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_nexttime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_endtime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ptqno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_oappflag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_item_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_kiosk_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_kiosk_st" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_trans_status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_crtd_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertjson_rgt_detailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Insertjson_rgt_detailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="Insertjson_rgt_error">
         <s:complexType>
           <s:sequence>
@@ -273,1324 +1779,8 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="UpdateQ_CallQSound_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_comp_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_user_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_CallQSound_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_CallQSound_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ShowQ">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_showq_comp_name" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ShowQResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ShowQResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_SoundQ">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_SoundQResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_SoundQResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_SoundQ_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_SoundQ_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_SoundQ_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_SoundQ_nurse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_SoundQ_nurseResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_SoundQ_nurseResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_SlipSeq">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_SlipSeqResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_SlipSeqResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_SlipSeq_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_waiting_qno" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_time_gen_waiting_qno" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_SlipSeq_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_SlipSeq_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateTranshead_QStatus">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_last_chg_by" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateTranshead_QStatusResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateTranshead_QStatusResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateTranshead_QExpress">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="slip_seq" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="queue_status" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateTranshead_QExpressResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateTranshead_QExpressResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQ">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQ_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQ_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQ_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQNo">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_no" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQNoResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQNoResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQNo_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_no" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQNo_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQNo_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannel">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_type" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="type_call" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannelResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannel_nurse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannel_nurseResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannel_nurseResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannel_nurse_express">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="queue_no" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannel_nurse_expressResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannel_nurse_expressResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannel_nurse_com_cat">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="computer_name" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannel_nurse_com_catResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannel_nurse_com_catResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannel_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_type" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_first_q" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannel_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannel_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannelGroup">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_type" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannelGroupResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelGroupResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQShowQ">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQShowQResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQShowQResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQShowQComp">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_showq_comp_name" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQShowQCompResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQShowQCompResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQShowQComp_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_showq_comp_name" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQShowQComp_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQShowQComp_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQShowQLastNo">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_showq_comp_name" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQShowQLastNoResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQShowQLastNoResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQShowQLastNo_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_showq_comp_name" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQShowQLastNo_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQShowQLastNo_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQSoundQ">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQSoundQResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQSoundQResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQSoundQ_nurse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQSoundQ_nurseResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQSoundQ_nurseResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQSoundQ_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQSoundQ_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQSoundQ_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQRecall">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="status_send_clinic" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQRecallResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQRecallResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQRecall_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_group_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQRecall_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQRecall_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectComputer">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_type" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectComputerResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectComputerResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectSlip">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectSlipResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectSlipResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectSlip_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectSlip_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectSlip_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQExpress">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_queue_no_q" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQExpressResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQExpressResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectPatient">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_queue_no_q" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectPatientResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectPatientResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannelW">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_status_scanning" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannelWResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelWResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannelW_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_first_q" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannelW_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelW_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="DeleteQChannelW">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="DeleteQChannelWResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="DeleteQChannelWResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="DeleteQChannelW_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="DeleteQChannelW_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="DeleteQChannelW_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannelWAll">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannelWAllResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelWAllResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannelWAll_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_first_q" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQChannelWAll_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQChannelWAll_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQID">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQIDResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQIDResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQID_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQID_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQID_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ClickCallQ">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_comp_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_user_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_flag_queue" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_action" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_b_2" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_c_10" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_e_4" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_f_11" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_g_12" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_i_8" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ClickCallQResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickCallQResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ClickCallQ_Nurse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status_nurse" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_nurse_channel_comp_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_nurse_channel_user_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_nurse_channel_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_flag_queue" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_action" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_b_2" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_c_10" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_e_4" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_f_11" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_g_12" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_i_8" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ClickCallQ_NurseResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickCallQ_NurseResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ClickStatusQ_Nurse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="slip_seq" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="status_clinic_scanning" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="status_send_clinic" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="nurse_channel_comp_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="nurse_user_id" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ClickStatusQ_NurseResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickStatusQ_NurseResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ClickCallQ_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_comp_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_user_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_flag_queue" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_action" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_qno_filter" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_first_q" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ClickCallQ_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickCallQ_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ClickCallQSound_P2">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_comp_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_user_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_channel_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_flag_queue" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_action" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_qno_filter" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_first_q" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_sound_status" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateQ_ClickCallQSound_P2Response">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="UpdateQ_ClickCallQSound_P2Result">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectQNoExpress">
-        <s:complexType />
-      </s:element>
-      <s:element name="SelectQNoExpressResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectQNoExpressResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectDisplayText">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_comp_name" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectDisplayTextResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectDisplayTextResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectRehabCase">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_service_building_code" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_service_location_floor" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectRehabCaseResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectRehabCaseResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectWSQvstKiosk">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_hn_no" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_queue_no" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_q_id" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_service_building_code" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_service_location_floor" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="SelectWSQvstKioskResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SelectWSQvstKioskResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Insertjson_rgt_head">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_slip_seq" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_hn_no" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_trans_date" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_trans_start" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_trans_end" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_crtd_by" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Insertjson_rgt_headResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Insertjson_rgt_headResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Updatejson_rgt_head">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_json_reg_head_seq" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_no_data_exec" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_no_data_success" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_no_data_error" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_last_chg_by" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Updatejson_rgt_headResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Updatejson_rgt_headResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Insertjson_rgt_detail">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="p_json_reg_head_seq" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_hn_no" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_transdetail_service_appoint_seq" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_vstdate" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_vsttime" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_cliniclct" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_dct" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_nextdate" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_nexttime" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_endtime" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_ptqno" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_oappflag" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_item_no" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_kiosk_date" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_kiosk_st" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_trans_status" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="p_crtd_by" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="Insertjson_rgt_detailResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Insertjson_rgt_detailResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="Insertjson_rgt_errorSoapIn">
-    <wsdl:part name="parameters" element="tns:Insertjson_rgt_error" />
-  </wsdl:message>
-  <wsdl:message name="Insertjson_rgt_errorSoapOut">
-    <wsdl:part name="parameters" element="tns:Insertjson_rgt_errorResponse" />
-  </wsdl:message>
-  <wsdl:message name="CreateQ_NoHNSoapIn">
-    <wsdl:part name="parameters" element="tns:CreateQ_NoHN" />
-  </wsdl:message>
-  <wsdl:message name="CreateQ_NoHNSoapOut">
-    <wsdl:part name="parameters" element="tns:CreateQ_NoHNResponse" />
-  </wsdl:message>
-  <wsdl:message name="CreateQ_HNSoapIn">
-    <wsdl:part name="parameters" element="tns:CreateQ_HN" />
-  </wsdl:message>
-  <wsdl:message name="CreateQ_HNSoapOut">
-    <wsdl:part name="parameters" element="tns:CreateQ_HNResponse" />
-  </wsdl:message>
-  <wsdl:message name="Insert_KioskQLogSoapIn">
-    <wsdl:part name="parameters" element="tns:Insert_KioskQLog" />
-  </wsdl:message>
-  <wsdl:message name="Insert_KioskQLogSoapOut">
-    <wsdl:part name="parameters" element="tns:Insert_KioskQLogResponse" />
-  </wsdl:message>
-  <wsdl:message name="Insert_kioskTranshead_nurseSoapIn">
-    <wsdl:part name="parameters" element="tns:Insert_kioskTranshead_nurse" />
-  </wsdl:message>
-  <wsdl:message name="Insert_kioskTranshead_nurseSoapOut">
-    <wsdl:part name="parameters" element="tns:Insert_kioskTranshead_nurseResponse" />
-  </wsdl:message>
-  <wsdl:message name="Insert_Kiosk_map_qexpress_nurseSoapIn">
-    <wsdl:part name="parameters" element="tns:Insert_Kiosk_map_qexpress_nurse" />
-  </wsdl:message>
-  <wsdl:message name="Insert_Kiosk_map_qexpress_nurseSoapOut">
-    <wsdl:part name="parameters" element="tns:Insert_Kiosk_map_qexpress_nurseResponse" />
-  </wsdl:message>
-  <wsdl:message name="Insert_KioskQLog_Express_NurseSoapIn">
-    <wsdl:part name="parameters" element="tns:Insert_KioskQLog_Express_Nurse" />
-  </wsdl:message>
-  <wsdl:message name="Insert_KioskQLog_Express_NurseSoapOut">
-    <wsdl:part name="parameters" element="tns:Insert_KioskQLog_Express_NurseResponse" />
-  </wsdl:message>
-  <wsdl:message name="Insert_KioskQLog_P2SoapIn">
-    <wsdl:part name="parameters" element="tns:Insert_KioskQLog_P2" />
-  </wsdl:message>
-  <wsdl:message name="Insert_KioskQLog_P2SoapOut">
-    <wsdl:part name="parameters" element="tns:Insert_KioskQLog_P2Response" />
-  </wsdl:message>
-  <wsdl:message name="UpdateQ_CallQSoapIn">
-    <wsdl:part name="parameters" element="tns:UpdateQ_CallQ" />
-  </wsdl:message>
-  <wsdl:message name="UpdateQ_CallQSoapOut">
-    <wsdl:part name="parameters" element="tns:UpdateQ_CallQResponse" />
-  </wsdl:message>
-  <wsdl:message name="UpdateQ_CallQ_P2SoapIn">
-    <wsdl:part name="parameters" element="tns:UpdateQ_CallQ_P2" />
-  </wsdl:message>
-  <wsdl:message name="UpdateQ_CallQ_P2SoapOut">
-    <wsdl:part name="parameters" element="tns:UpdateQ_CallQ_P2Response" />
-  </wsdl:message>
   <wsdl:message name="UpdateQ_CallQSound_P2SoapIn">
     <wsdl:part name="parameters" element="tns:UpdateQ_CallQSound_P2" />
   </wsdl:message>
@@ -1602,6 +1792,18 @@
   </wsdl:message>
   <wsdl:message name="UpdateQ_ShowQSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateQ_ShowQResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_ShowQAllSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateQ_ShowQAll" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_ShowQAllSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateQ_ShowQAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_ShowQAll2SoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateQ_ShowQAll2" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_ShowQAll2SoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateQ_ShowQAll2Response" />
   </wsdl:message>
   <wsdl:message name="UpdateQ_SoundQSoapIn">
     <wsdl:part name="parameters" element="tns:UpdateQ_SoundQ" />
@@ -1669,6 +1871,18 @@
   <wsdl:message name="SelectQNo_P2SoapOut">
     <wsdl:part name="parameters" element="tns:SelectQNo_P2Response" />
   </wsdl:message>
+  <wsdl:message name="SelectQCheckStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectQCheckStatus" />
+  </wsdl:message>
+  <wsdl:message name="SelectQCheckStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectQCheckStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectQNurseReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectQNurseReport" />
+  </wsdl:message>
+  <wsdl:message name="SelectQNurseReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectQNurseReportResponse" />
+  </wsdl:message>
   <wsdl:message name="SelectQChannelSoapIn">
     <wsdl:part name="parameters" element="tns:SelectQChannel" />
   </wsdl:message>
@@ -1717,6 +1931,18 @@
   <wsdl:message name="SelectQShowQCompSoapOut">
     <wsdl:part name="parameters" element="tns:SelectQShowQCompResponse" />
   </wsdl:message>
+  <wsdl:message name="SelectQShowQComp_nurseSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectQShowQComp_nurse" />
+  </wsdl:message>
+  <wsdl:message name="SelectQShowQComp_nurseSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectQShowQComp_nurseResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectShowQAllCompSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectShowQAllComp" />
+  </wsdl:message>
+  <wsdl:message name="SelectShowQAllCompSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectShowQAllCompResponse" />
+  </wsdl:message>
   <wsdl:message name="SelectQShowQComp_P2SoapIn">
     <wsdl:part name="parameters" element="tns:SelectQShowQComp_P2" />
   </wsdl:message>
@@ -1758,6 +1984,12 @@
   </wsdl:message>
   <wsdl:message name="SelectQRecallSoapOut">
     <wsdl:part name="parameters" element="tns:SelectQRecallResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectQRecall_NurseSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectQRecall_Nurse" />
+  </wsdl:message>
+  <wsdl:message name="SelectQRecall_NurseSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectQRecall_NurseResponse" />
   </wsdl:message>
   <wsdl:message name="SelectQRecall_P2SoapIn">
     <wsdl:part name="parameters" element="tns:SelectQRecall_P2" />
@@ -1801,6 +2033,12 @@
   <wsdl:message name="SelectQChannelWSoapOut">
     <wsdl:part name="parameters" element="tns:SelectQChannelWResponse" />
   </wsdl:message>
+  <wsdl:message name="SelectQChannelW_NurseSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectQChannelW_Nurse" />
+  </wsdl:message>
+  <wsdl:message name="SelectQChannelW_NurseSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectQChannelW_NurseResponse" />
+  </wsdl:message>
   <wsdl:message name="SelectQChannelW_P2SoapIn">
     <wsdl:part name="parameters" element="tns:SelectQChannelW_P2" />
   </wsdl:message>
@@ -1843,6 +2081,12 @@
   <wsdl:message name="SelectQID_P2SoapOut">
     <wsdl:part name="parameters" element="tns:SelectQID_P2Response" />
   </wsdl:message>
+  <wsdl:message name="UpdateQ_ClickCallQ_NewSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateQ_ClickCallQ_New" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_ClickCallQ_NewSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateQ_ClickCallQ_NewResponse" />
+  </wsdl:message>
   <wsdl:message name="UpdateQ_ClickCallQSoapIn">
     <wsdl:part name="parameters" element="tns:UpdateQ_ClickCallQ" />
   </wsdl:message>
@@ -1861,6 +2105,12 @@
   <wsdl:message name="UpdateQ_ClickStatusQ_NurseSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateQ_ClickStatusQ_NurseResponse" />
   </wsdl:message>
+  <wsdl:message name="UpdateQ_Nurse_ExpressSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateQ_Nurse_Express" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_Nurse_ExpressSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateQ_Nurse_ExpressResponse" />
+  </wsdl:message>
   <wsdl:message name="UpdateQ_ClickCallQ_P2SoapIn">
     <wsdl:part name="parameters" element="tns:UpdateQ_ClickCallQ_P2" />
   </wsdl:message>
@@ -1872,6 +2122,12 @@
   </wsdl:message>
   <wsdl:message name="UpdateQ_ClickCallQSound_P2SoapOut">
     <wsdl:part name="parameters" element="tns:UpdateQ_ClickCallQSound_P2Response" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQRecallSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateQRecall" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQRecallSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateQRecallResponse" />
   </wsdl:message>
   <wsdl:message name="SelectQNoExpressSoapIn">
     <wsdl:part name="parameters" element="tns:SelectQNoExpress" />
@@ -1915,47 +2171,67 @@
   <wsdl:message name="Insertjson_rgt_detailSoapOut">
     <wsdl:part name="parameters" element="tns:Insertjson_rgt_detailResponse" />
   </wsdl:message>
+  <wsdl:message name="Insertjson_rgt_errorSoapIn">
+    <wsdl:part name="parameters" element="tns:Insertjson_rgt_error" />
+  </wsdl:message>
+  <wsdl:message name="Insertjson_rgt_errorSoapOut">
+    <wsdl:part name="parameters" element="tns:Insertjson_rgt_errorResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateQ_NoHNSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateQ_NoHN" />
+  </wsdl:message>
+  <wsdl:message name="CreateQ_NoHNSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateQ_NoHNResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateQ_HNSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateQ_HN" />
+  </wsdl:message>
+  <wsdl:message name="CreateQ_HNSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateQ_HNResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_KioskQLogSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_KioskQLog" />
+  </wsdl:message>
+  <wsdl:message name="Insert_KioskQLogSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_KioskQLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_kioskTranshead_nurseSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_kioskTranshead_nurse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_kioskTranshead_nurseSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_kioskTranshead_nurseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Kiosk_map_qexpress_nurseSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Kiosk_map_qexpress_nurse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Kiosk_map_qexpress_nurseSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_Kiosk_map_qexpress_nurseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_KioskQLog_Express_NurseSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_KioskQLog_Express_Nurse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_KioskQLog_Express_NurseSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_KioskQLog_Express_NurseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_KioskQLog_P2SoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_KioskQLog_P2" />
+  </wsdl:message>
+  <wsdl:message name="Insert_KioskQLog_P2SoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_KioskQLog_P2Response" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_CallQSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateQ_CallQ" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_CallQSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateQ_CallQResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_CallQ_P2SoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateQ_CallQ_P2" />
+  </wsdl:message>
+  <wsdl:message name="UpdateQ_CallQ_P2SoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateQ_CallQ_P2Response" />
+  </wsdl:message>
   <wsdl:portType name="WS_KioskQSoap">
-    <wsdl:operation name="Insertjson_rgt_error">
-      <wsdl:input message="tns:Insertjson_rgt_errorSoapIn" />
-      <wsdl:output message="tns:Insertjson_rgt_errorSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="CreateQ_NoHN">
-      <wsdl:input message="tns:CreateQ_NoHNSoapIn" />
-      <wsdl:output message="tns:CreateQ_NoHNSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="CreateQ_HN">
-      <wsdl:input message="tns:CreateQ_HNSoapIn" />
-      <wsdl:output message="tns:CreateQ_HNSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="Insert_KioskQLog">
-      <wsdl:input message="tns:Insert_KioskQLogSoapIn" />
-      <wsdl:output message="tns:Insert_KioskQLogSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="Insert_kioskTranshead_nurse">
-      <wsdl:input message="tns:Insert_kioskTranshead_nurseSoapIn" />
-      <wsdl:output message="tns:Insert_kioskTranshead_nurseSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="Insert_Kiosk_map_qexpress_nurse">
-      <wsdl:input message="tns:Insert_Kiosk_map_qexpress_nurseSoapIn" />
-      <wsdl:output message="tns:Insert_Kiosk_map_qexpress_nurseSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="Insert_KioskQLog_Express_Nurse">
-      <wsdl:input message="tns:Insert_KioskQLog_Express_NurseSoapIn" />
-      <wsdl:output message="tns:Insert_KioskQLog_Express_NurseSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="Insert_KioskQLog_P2">
-      <wsdl:input message="tns:Insert_KioskQLog_P2SoapIn" />
-      <wsdl:output message="tns:Insert_KioskQLog_P2SoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateQ_CallQ">
-      <wsdl:input message="tns:UpdateQ_CallQSoapIn" />
-      <wsdl:output message="tns:UpdateQ_CallQSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateQ_CallQ_P2">
-      <wsdl:input message="tns:UpdateQ_CallQ_P2SoapIn" />
-      <wsdl:output message="tns:UpdateQ_CallQ_P2SoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="UpdateQ_CallQSound_P2">
       <wsdl:input message="tns:UpdateQ_CallQSound_P2SoapIn" />
       <wsdl:output message="tns:UpdateQ_CallQSound_P2SoapOut" />
@@ -1963,6 +2239,14 @@
     <wsdl:operation name="UpdateQ_ShowQ">
       <wsdl:input message="tns:UpdateQ_ShowQSoapIn" />
       <wsdl:output message="tns:UpdateQ_ShowQSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_ShowQAll">
+      <wsdl:input message="tns:UpdateQ_ShowQAllSoapIn" />
+      <wsdl:output message="tns:UpdateQ_ShowQAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_ShowQAll2">
+      <wsdl:input message="tns:UpdateQ_ShowQAll2SoapIn" />
+      <wsdl:output message="tns:UpdateQ_ShowQAll2SoapOut" />
     </wsdl:operation>
     <wsdl:operation name="UpdateQ_SoundQ">
       <wsdl:input message="tns:UpdateQ_SoundQSoapIn" />
@@ -2008,6 +2292,14 @@
       <wsdl:input message="tns:SelectQNo_P2SoapIn" />
       <wsdl:output message="tns:SelectQNo_P2SoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="SelectQCheckStatus">
+      <wsdl:input message="tns:SelectQCheckStatusSoapIn" />
+      <wsdl:output message="tns:SelectQCheckStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectQNurseReport">
+      <wsdl:input message="tns:SelectQNurseReportSoapIn" />
+      <wsdl:output message="tns:SelectQNurseReportSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="SelectQChannel">
       <wsdl:input message="tns:SelectQChannelSoapIn" />
       <wsdl:output message="tns:SelectQChannelSoapOut" />
@@ -2040,6 +2332,14 @@
       <wsdl:input message="tns:SelectQShowQCompSoapIn" />
       <wsdl:output message="tns:SelectQShowQCompSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="SelectQShowQComp_nurse">
+      <wsdl:input message="tns:SelectQShowQComp_nurseSoapIn" />
+      <wsdl:output message="tns:SelectQShowQComp_nurseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectShowQAllComp">
+      <wsdl:input message="tns:SelectShowQAllCompSoapIn" />
+      <wsdl:output message="tns:SelectShowQAllCompSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="SelectQShowQComp_P2">
       <wsdl:input message="tns:SelectQShowQComp_P2SoapIn" />
       <wsdl:output message="tns:SelectQShowQComp_P2SoapOut" />
@@ -2067,6 +2367,10 @@
     <wsdl:operation name="SelectQRecall">
       <wsdl:input message="tns:SelectQRecallSoapIn" />
       <wsdl:output message="tns:SelectQRecallSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectQRecall_Nurse">
+      <wsdl:input message="tns:SelectQRecall_NurseSoapIn" />
+      <wsdl:output message="tns:SelectQRecall_NurseSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="SelectQRecall_P2">
       <wsdl:input message="tns:SelectQRecall_P2SoapIn" />
@@ -2096,6 +2400,10 @@
       <wsdl:input message="tns:SelectQChannelWSoapIn" />
       <wsdl:output message="tns:SelectQChannelWSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="SelectQChannelW_Nurse">
+      <wsdl:input message="tns:SelectQChannelW_NurseSoapIn" />
+      <wsdl:output message="tns:SelectQChannelW_NurseSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="SelectQChannelW_P2">
       <wsdl:input message="tns:SelectQChannelW_P2SoapIn" />
       <wsdl:output message="tns:SelectQChannelW_P2SoapOut" />
@@ -2124,6 +2432,10 @@
       <wsdl:input message="tns:SelectQID_P2SoapIn" />
       <wsdl:output message="tns:SelectQID_P2SoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="UpdateQ_ClickCallQ_New">
+      <wsdl:input message="tns:UpdateQ_ClickCallQ_NewSoapIn" />
+      <wsdl:output message="tns:UpdateQ_ClickCallQ_NewSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateQ_ClickCallQ">
       <wsdl:input message="tns:UpdateQ_ClickCallQSoapIn" />
       <wsdl:output message="tns:UpdateQ_ClickCallQSoapOut" />
@@ -2136,6 +2448,10 @@
       <wsdl:input message="tns:UpdateQ_ClickStatusQ_NurseSoapIn" />
       <wsdl:output message="tns:UpdateQ_ClickStatusQ_NurseSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="UpdateQ_Nurse_Express">
+      <wsdl:input message="tns:UpdateQ_Nurse_ExpressSoapIn" />
+      <wsdl:output message="tns:UpdateQ_Nurse_ExpressSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateQ_ClickCallQ_P2">
       <wsdl:input message="tns:UpdateQ_ClickCallQ_P2SoapIn" />
       <wsdl:output message="tns:UpdateQ_ClickCallQ_P2SoapOut" />
@@ -2143,6 +2459,10 @@
     <wsdl:operation name="UpdateQ_ClickCallQSound_P2">
       <wsdl:input message="tns:UpdateQ_ClickCallQSound_P2SoapIn" />
       <wsdl:output message="tns:UpdateQ_ClickCallQSound_P2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQRecall">
+      <wsdl:input message="tns:UpdateQRecallSoapIn" />
+      <wsdl:output message="tns:UpdateQRecallSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="SelectQNoExpress">
       <wsdl:input message="tns:SelectQNoExpressSoapIn" />
@@ -2172,99 +2492,49 @@
       <wsdl:input message="tns:Insertjson_rgt_detailSoapIn" />
       <wsdl:output message="tns:Insertjson_rgt_detailSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="Insertjson_rgt_error">
+      <wsdl:input message="tns:Insertjson_rgt_errorSoapIn" />
+      <wsdl:output message="tns:Insertjson_rgt_errorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateQ_NoHN">
+      <wsdl:input message="tns:CreateQ_NoHNSoapIn" />
+      <wsdl:output message="tns:CreateQ_NoHNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateQ_HN">
+      <wsdl:input message="tns:CreateQ_HNSoapIn" />
+      <wsdl:output message="tns:CreateQ_HNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_KioskQLog">
+      <wsdl:input message="tns:Insert_KioskQLogSoapIn" />
+      <wsdl:output message="tns:Insert_KioskQLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_kioskTranshead_nurse">
+      <wsdl:input message="tns:Insert_kioskTranshead_nurseSoapIn" />
+      <wsdl:output message="tns:Insert_kioskTranshead_nurseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Kiosk_map_qexpress_nurse">
+      <wsdl:input message="tns:Insert_Kiosk_map_qexpress_nurseSoapIn" />
+      <wsdl:output message="tns:Insert_Kiosk_map_qexpress_nurseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_KioskQLog_Express_Nurse">
+      <wsdl:input message="tns:Insert_KioskQLog_Express_NurseSoapIn" />
+      <wsdl:output message="tns:Insert_KioskQLog_Express_NurseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_KioskQLog_P2">
+      <wsdl:input message="tns:Insert_KioskQLog_P2SoapIn" />
+      <wsdl:output message="tns:Insert_KioskQLog_P2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_CallQ">
+      <wsdl:input message="tns:UpdateQ_CallQSoapIn" />
+      <wsdl:output message="tns:UpdateQ_CallQSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_CallQ_P2">
+      <wsdl:input message="tns:UpdateQ_CallQ_P2SoapIn" />
+      <wsdl:output message="tns:UpdateQ_CallQ_P2SoapOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WS_KioskQSoap" type="tns:WS_KioskQSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="Insertjson_rgt_error">
-      <soap:operation soapAction="http://tempuri.org/Insertjson_rgt_error" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CreateQ_NoHN">
-      <soap:operation soapAction="http://tempuri.org/CreateQ_NoHN" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CreateQ_HN">
-      <soap:operation soapAction="http://tempuri.org/CreateQ_HN" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Insert_KioskQLog">
-      <soap:operation soapAction="http://tempuri.org/Insert_KioskQLog" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Insert_kioskTranshead_nurse">
-      <soap:operation soapAction="http://tempuri.org/Insert_kioskTranshead_nurse" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Insert_Kiosk_map_qexpress_nurse">
-      <soap:operation soapAction="http://tempuri.org/Insert_Kiosk_map_qexpress_nurse" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Insert_KioskQLog_Express_Nurse">
-      <soap:operation soapAction="http://tempuri.org/Insert_KioskQLog_Express_Nurse" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Insert_KioskQLog_P2">
-      <soap:operation soapAction="http://tempuri.org/Insert_KioskQLog_P2" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateQ_CallQ">
-      <soap:operation soapAction="http://tempuri.org/UpdateQ_CallQ" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateQ_CallQ_P2">
-      <soap:operation soapAction="http://tempuri.org/UpdateQ_CallQ_P2" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="UpdateQ_CallQSound_P2">
       <soap:operation soapAction="http://tempuri.org/UpdateQ_CallQSound_P2" style="document" />
       <wsdl:input>
@@ -2276,6 +2546,24 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateQ_ShowQ">
       <soap:operation soapAction="http://tempuri.org/UpdateQ_ShowQ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_ShowQAll">
+      <soap:operation soapAction="http://tempuri.org/UpdateQ_ShowQAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_ShowQAll2">
+      <soap:operation soapAction="http://tempuri.org/UpdateQ_ShowQAll2" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2382,6 +2670,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectQCheckStatus">
+      <soap:operation soapAction="http://tempuri.org/SelectQCheckStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectQNurseReport">
+      <soap:operation soapAction="http://tempuri.org/SelectQNurseReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SelectQChannel">
       <soap:operation soapAction="http://tempuri.org/SelectQChannel" style="document" />
       <wsdl:input>
@@ -2454,6 +2760,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectQShowQComp_nurse">
+      <soap:operation soapAction="http://tempuri.org/SelectQShowQComp_nurse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectShowQAllComp">
+      <soap:operation soapAction="http://tempuri.org/SelectShowQAllComp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SelectQShowQComp_P2">
       <soap:operation soapAction="http://tempuri.org/SelectQShowQComp_P2" style="document" />
       <wsdl:input>
@@ -2510,6 +2834,15 @@
     </wsdl:operation>
     <wsdl:operation name="SelectQRecall">
       <soap:operation soapAction="http://tempuri.org/SelectQRecall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectQRecall_Nurse">
+      <soap:operation soapAction="http://tempuri.org/SelectQRecall_Nurse" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2580,6 +2913,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectQChannelW_Nurse">
+      <soap:operation soapAction="http://tempuri.org/SelectQChannelW_Nurse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SelectQChannelW_P2">
       <soap:operation soapAction="http://tempuri.org/SelectQChannelW_P2" style="document" />
       <wsdl:input>
@@ -2643,6 +2985,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="UpdateQ_ClickCallQ_New">
+      <soap:operation soapAction="http://tempuri.org/UpdateQ_ClickCallQ_New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateQ_ClickCallQ">
       <soap:operation soapAction="http://tempuri.org/UpdateQ_ClickCallQ" style="document" />
       <wsdl:input>
@@ -2670,6 +3021,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="UpdateQ_Nurse_Express">
+      <soap:operation soapAction="http://tempuri.org/UpdateQ_Nurse_Express" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateQ_ClickCallQ_P2">
       <soap:operation soapAction="http://tempuri.org/UpdateQ_ClickCallQ_P2" style="document" />
       <wsdl:input>
@@ -2681,6 +3041,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateQ_ClickCallQSound_P2">
       <soap:operation soapAction="http://tempuri.org/UpdateQ_ClickCallQSound_P2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQRecall">
+      <soap:operation soapAction="http://tempuri.org/UpdateQRecall" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2751,99 +3120,99 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="WS_KioskQSoap12" type="tns:WS_KioskQSoap">
-    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="Insertjson_rgt_error">
-      <soap12:operation soapAction="http://tempuri.org/Insertjson_rgt_error" style="document" />
+      <soap:operation soapAction="http://tempuri.org/Insertjson_rgt_error" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateQ_NoHN">
-      <soap12:operation soapAction="http://tempuri.org/CreateQ_NoHN" style="document" />
+      <soap:operation soapAction="http://tempuri.org/CreateQ_NoHN" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateQ_HN">
-      <soap12:operation soapAction="http://tempuri.org/CreateQ_HN" style="document" />
+      <soap:operation soapAction="http://tempuri.org/CreateQ_HN" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Insert_KioskQLog">
-      <soap12:operation soapAction="http://tempuri.org/Insert_KioskQLog" style="document" />
+      <soap:operation soapAction="http://tempuri.org/Insert_KioskQLog" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Insert_kioskTranshead_nurse">
-      <soap12:operation soapAction="http://tempuri.org/Insert_kioskTranshead_nurse" style="document" />
+      <soap:operation soapAction="http://tempuri.org/Insert_kioskTranshead_nurse" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Insert_Kiosk_map_qexpress_nurse">
-      <soap12:operation soapAction="http://tempuri.org/Insert_Kiosk_map_qexpress_nurse" style="document" />
+      <soap:operation soapAction="http://tempuri.org/Insert_Kiosk_map_qexpress_nurse" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Insert_KioskQLog_Express_Nurse">
-      <soap12:operation soapAction="http://tempuri.org/Insert_KioskQLog_Express_Nurse" style="document" />
+      <soap:operation soapAction="http://tempuri.org/Insert_KioskQLog_Express_Nurse" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Insert_KioskQLog_P2">
-      <soap12:operation soapAction="http://tempuri.org/Insert_KioskQLog_P2" style="document" />
+      <soap:operation soapAction="http://tempuri.org/Insert_KioskQLog_P2" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UpdateQ_CallQ">
-      <soap12:operation soapAction="http://tempuri.org/UpdateQ_CallQ" style="document" />
+      <soap:operation soapAction="http://tempuri.org/UpdateQ_CallQ" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UpdateQ_CallQ_P2">
-      <soap12:operation soapAction="http://tempuri.org/UpdateQ_CallQ_P2" style="document" />
+      <soap:operation soapAction="http://tempuri.org/UpdateQ_CallQ_P2" style="document" />
       <wsdl:input>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap12:body use="literal" />
+        <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_KioskQSoap12" type="tns:WS_KioskQSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="UpdateQ_CallQSound_P2">
       <soap12:operation soapAction="http://tempuri.org/UpdateQ_CallQSound_P2" style="document" />
       <wsdl:input>
@@ -2855,6 +3224,24 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateQ_ShowQ">
       <soap12:operation soapAction="http://tempuri.org/UpdateQ_ShowQ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_ShowQAll">
+      <soap12:operation soapAction="http://tempuri.org/UpdateQ_ShowQAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_ShowQAll2">
+      <soap12:operation soapAction="http://tempuri.org/UpdateQ_ShowQAll2" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2961,6 +3348,24 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectQCheckStatus">
+      <soap12:operation soapAction="http://tempuri.org/SelectQCheckStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectQNurseReport">
+      <soap12:operation soapAction="http://tempuri.org/SelectQNurseReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SelectQChannel">
       <soap12:operation soapAction="http://tempuri.org/SelectQChannel" style="document" />
       <wsdl:input>
@@ -3033,6 +3438,24 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectQShowQComp_nurse">
+      <soap12:operation soapAction="http://tempuri.org/SelectQShowQComp_nurse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectShowQAllComp">
+      <soap12:operation soapAction="http://tempuri.org/SelectShowQAllComp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SelectQShowQComp_P2">
       <soap12:operation soapAction="http://tempuri.org/SelectQShowQComp_P2" style="document" />
       <wsdl:input>
@@ -3089,6 +3512,15 @@
     </wsdl:operation>
     <wsdl:operation name="SelectQRecall">
       <soap12:operation soapAction="http://tempuri.org/SelectQRecall" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectQRecall_Nurse">
+      <soap12:operation soapAction="http://tempuri.org/SelectQRecall_Nurse" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -3159,6 +3591,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectQChannelW_Nurse">
+      <soap12:operation soapAction="http://tempuri.org/SelectQChannelW_Nurse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SelectQChannelW_P2">
       <soap12:operation soapAction="http://tempuri.org/SelectQChannelW_P2" style="document" />
       <wsdl:input>
@@ -3222,6 +3663,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="UpdateQ_ClickCallQ_New">
+      <soap12:operation soapAction="http://tempuri.org/UpdateQ_ClickCallQ_New" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateQ_ClickCallQ">
       <soap12:operation soapAction="http://tempuri.org/UpdateQ_ClickCallQ" style="document" />
       <wsdl:input>
@@ -3249,6 +3699,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="UpdateQ_Nurse_Express">
+      <soap12:operation soapAction="http://tempuri.org/UpdateQ_Nurse_Express" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateQ_ClickCallQ_P2">
       <soap12:operation soapAction="http://tempuri.org/UpdateQ_ClickCallQ_P2" style="document" />
       <wsdl:input>
@@ -3260,6 +3719,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateQ_ClickCallQSound_P2">
       <soap12:operation soapAction="http://tempuri.org/UpdateQ_ClickCallQSound_P2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQRecall">
+      <soap12:operation soapAction="http://tempuri.org/UpdateQRecall" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -3330,13 +3798,103 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Insertjson_rgt_error">
+      <soap12:operation soapAction="http://tempuri.org/Insertjson_rgt_error" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateQ_NoHN">
+      <soap12:operation soapAction="http://tempuri.org/CreateQ_NoHN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateQ_HN">
+      <soap12:operation soapAction="http://tempuri.org/CreateQ_HN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_KioskQLog">
+      <soap12:operation soapAction="http://tempuri.org/Insert_KioskQLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_kioskTranshead_nurse">
+      <soap12:operation soapAction="http://tempuri.org/Insert_kioskTranshead_nurse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Kiosk_map_qexpress_nurse">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Kiosk_map_qexpress_nurse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_KioskQLog_Express_Nurse">
+      <soap12:operation soapAction="http://tempuri.org/Insert_KioskQLog_Express_Nurse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_KioskQLog_P2">
+      <soap12:operation soapAction="http://tempuri.org/Insert_KioskQLog_P2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_CallQ">
+      <soap12:operation soapAction="http://tempuri.org/UpdateQ_CallQ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQ_CallQ_P2">
+      <soap12:operation soapAction="http://tempuri.org/UpdateQ_CallQ_P2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="WS_KioskQ">
     <wsdl:port name="WS_KioskQSoap" binding="tns:WS_KioskQSoap">
-      <soap:address location="http://172.20.10.4/WSQ_Nurse/WS_KioskQ.asmx" />
+      <soap:address location="http://cuservice.somee.com/WSQ/WS_KioskQ.asmx" />
     </wsdl:port>
     <wsdl:port name="WS_KioskQSoap12" binding="tns:WS_KioskQSoap12">
-      <soap12:address location="http://172.20.10.4/WSQ_Nurse/WS_KioskQ.asmx" />
+      <soap12:address location="http://cuservice.somee.com/WSQ/WS_KioskQ.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

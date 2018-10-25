@@ -23,6 +23,7 @@ namespace QService.Entity
         public string slip_no { get; set; }
         public string flag_choose_right { get; set; }
         public string pateint_name { get; set; }
+        public string flag_lab_xray { get; set; }
         public string right_fullname { get; set; }
         public Nullable<int> transdetail_appoint_seq { get; set; }
         public Nullable<System.DateTime> appoint_date { get; set; }

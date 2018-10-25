@@ -86,7 +86,8 @@ namespace QService.Controllers
                                            missappoint_clinic_location = x.missappoint_clinic_location,
                                            transdetail_clinic_choose_seq = x.transdetail_clinic_choose_seq,
                                            clinic_desc = x.clinic_desc,
-                                           flag_clinic_quota_full = x.flag_clinic_quota_full
+                                           flag_clinic_quota_full = x.flag_clinic_quota_full,
+                                           flag_lab_xray = x.flag_lab_xray
                                        });
                             HttpResponseMessage result = Request.CreateResponse(HttpStatusCode.OK, res.ToList());
                             return result;

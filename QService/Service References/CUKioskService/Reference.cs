@@ -16,6 +16,495 @@ namespace QService.CUKioskService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CUKioskService.WS_KioskQSoap")]
     public interface WS_KioskQSoap {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_CallQSound_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_CallQSound_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_CallQSound_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_CallQSound_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ShowQ", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_ShowQ(string p_q_id, string p_q_status, string p_showq_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ShowQ", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ShowQAsync(string p_q_id, string p_q_status, string p_showq_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ShowQAll", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_ShowQAll(string slip_seq, string status_display);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ShowQAll", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ShowQAllAsync(string slip_seq, string status_display);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ShowQAll2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_ShowQAll2(string slip_seq, string status_display);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ShowQAll2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ShowQAll2Async(string slip_seq, string status_display);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_SoundQ(string p_q_id, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQAsync(string p_q_id, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_SoundQ_P2(string p_q_id, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQ_P2Async(string p_q_id, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ_nurse", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_SoundQ_nurse(string p_slip_seq, string p_sound_status, string p_channel_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ_nurse", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQ_nurseAsync(string p_slip_seq, string p_sound_status, string p_channel_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SlipSeq", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_SlipSeq(string p_q_id, string p_slip_seq);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SlipSeq", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SlipSeqAsync(string p_q_id, string p_slip_seq);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SlipSeq_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_SlipSeq_P2(string p_q_id, string p_slip_seq, string p_waiting_qno, string p_time_gen_waiting_qno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SlipSeq_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SlipSeq_P2Async(string p_q_id, string p_slip_seq, string p_waiting_qno, string p_time_gen_waiting_qno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTranshead_QStatus", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateTranshead_QStatus(string p_slip_seq, string p_q_status, string p_last_chg_by);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTranshead_QStatus", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateTranshead_QStatusAsync(string p_slip_seq, string p_q_status, string p_last_chg_by);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTranshead_QExpress", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateTranshead_QExpress(string slip_seq, string queue_status, string last_chg_by);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTranshead_QExpress", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateTranshead_QExpressAsync(string slip_seq, string queue_status, string last_chg_by);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQ", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQ(string p_q_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQ", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQAsync(string p_q_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQ_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQ_P2(string p_q_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQ_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQ_P2Async(string p_q_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNo", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQNo(string p_q_no);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNo", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQNoAsync(string p_q_no);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNo_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQNo_P2(string p_q_no);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNo_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQNo_P2Async(string p_q_no);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQCheckStatus", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQCheckStatus(string q_no);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQCheckStatus", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQCheckStatusAsync(string q_no);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNurseReport", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQNurseReport();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNurseReport", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQNurseReportAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQChannel(string p_comp_name, string p_q_status, string p_comp_type, string type_call);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelAsync(string p_comp_name, string p_q_status, string p_comp_type, string type_call);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQChannel_nurse(string p_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurseAsync(string p_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse_express", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQChannel_nurse_express(string queue_no);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse_express", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurse_expressAsync(string queue_no);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse_com_cat", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQChannel_nurse_com_cat(string computer_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse_com_cat", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurse_com_catAsync(string computer_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQChannel_P2(string p_comp_name, string p_q_status, string p_comp_type, string p_first_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_P2Async(string p_comp_name, string p_q_status, string p_comp_type, string p_first_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelGroup", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQChannelGroup(string p_comp_name, string p_q_status, string p_comp_type, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelGroup", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelGroupAsync(string p_comp_name, string p_q_status, string p_comp_type, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQ", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQShowQ(string p_q_status, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQ", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQAsync(string p_q_status, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQComp", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQShowQComp(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQComp", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQCompAsync(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQComp_nurse", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQShowQComp_nurse(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status, string com_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQComp_nurse", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQComp_nurseAsync(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status, string com_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectShowQAllComp", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectShowQAllComp(string q_status, string sound_status, string status_display, string group_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectShowQAllComp", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectShowQAllCompAsync(string q_status, string sound_status, string status_display, string group_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQComp_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQShowQComp_P2(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQComp_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQComp_P2Async(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQLastNo", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQShowQLastNo(string p_channel_group_id, string p_showq_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQLastNo", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQLastNoAsync(string p_channel_group_id, string p_showq_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQLastNo_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQShowQLastNo_P2(string p_channel_group_id, string p_showq_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQLastNo_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQLastNo_P2Async(string p_channel_group_id, string p_showq_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQSoundQ(string p_q_status, string p_sound_status, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQAsync(string p_q_status, string p_sound_status, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ_nurse", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQSoundQ_nurse(string p_q_status, string p_sound_status, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ_nurse", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQ_nurseAsync(string p_q_status, string p_sound_status, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQSoundQ_P2(string p_q_status, string p_sound_status, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQ_P2Async(string p_q_status, string p_sound_status, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQRecall", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQRecall(string status_send_clinic, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQRecall", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQRecallAsync(string status_send_clinic, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQRecall_Nurse", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQRecall_Nurse(string status_send_clinic, string p_channel_group_id, string channel_nurse);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQRecall_Nurse", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQRecall_NurseAsync(string status_send_clinic, string p_channel_group_id, string channel_nurse);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQRecall_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQRecall_P2(string p_channel_status, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQRecall_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQRecall_P2Async(string p_channel_status, string p_channel_group_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectComputer", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectComputer(string p_comp_name, string p_comp_type);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectComputer", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectComputerAsync(string p_comp_name, string p_comp_type);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectSlip", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectSlip(string p_slip_seq);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectSlip", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectSlipAsync(string p_slip_seq);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectSlip_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectSlip_P2(string p_slip_seq);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectSlip_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectSlip_P2Async(string p_slip_seq);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQExpress", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQExpress(string p_queue_no_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQExpress", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQExpressAsync(string p_queue_no_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectPatient", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectPatient(string p_queue_no_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectPatient", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectPatientAsync(string p_queue_no_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelW", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQChannelW(string p_comp_name, string p_status_scanning);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelW", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAsync(string p_comp_name, string p_status_scanning);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelW_Nurse", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQChannelW_Nurse(string p_comp_name, string p_status_scanning);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelW_Nurse", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelW_NurseAsync(string p_comp_name, string p_status_scanning);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelW_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQChannelW_P2(string p_comp_name, string p_first_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelW_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelW_P2Async(string p_comp_name, string p_first_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteQChannelW", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet DeleteQChannelW(string p_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteQChannelW", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> DeleteQChannelWAsync(string p_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteQChannelW_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet DeleteQChannelW_P2(string p_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteQChannelW_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> DeleteQChannelW_P2Async(string p_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelWAll", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQChannelWAll(string p_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelWAll", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAllAsync(string p_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelWAll_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQChannelWAll_P2(string p_comp_name, string p_first_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelWAll_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAll_P2Async(string p_comp_name, string p_first_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQID", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQID(string p_q_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQID", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQIDAsync(string p_q_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQID_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQID_P2(string p_q_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQID_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQID_P2Async(string p_q_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ_New", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_ClickCallQ_New(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ_New", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQ_NewAsync(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_ClickCallQ(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQAsync(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ_Nurse", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_ClickCallQ_Nurse(string p_q_id, string p_q_status_nurse, string p_nurse_channel_comp_id, string p_nurse_channel_user_id, string p_nurse_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ_Nurse", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQ_NurseAsync(string p_q_id, string p_q_status_nurse, string p_nurse_channel_comp_id, string p_nurse_channel_user_id, string p_nurse_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickStatusQ_Nurse", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_ClickStatusQ_Nurse(string slip_seq, string q_status, string status_clinic_scanning, string status_send_clinic, string nurse_channel_comp_id, string nurse_user_id, string sound_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickStatusQ_Nurse", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickStatusQ_NurseAsync(string slip_seq, string q_status, string status_clinic_scanning, string status_send_clinic, string nurse_channel_comp_id, string nurse_user_id, string sound_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_Nurse_Express", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_Nurse_Express(string slip_seq, string nurse_express);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_Nurse_Express", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_Nurse_ExpressAsync(string slip_seq, string nurse_express);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_ClickCallQ_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQ_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQSound_P2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQ_ClickCallQSound_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQSound_P2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQSound_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q, string p_sound_status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQRecall", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet UpdateQRecall(string q_id, string flag_status_recall);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQRecall", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQRecallAsync(string q_id, string flag_status_recall);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNoExpress", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectQNoExpress();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNoExpress", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectQNoExpressAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectDisplayText", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectDisplayText(string p_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectDisplayText", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectDisplayTextAsync(string p_comp_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectRehabCase", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectRehabCase(string p_slip_seq, string p_service_building_code, string p_service_location_floor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectRehabCase", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectRehabCaseAsync(string p_slip_seq, string p_service_building_code, string p_service_location_floor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectWSQvstKiosk", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet SelectWSQvstKiosk(string p_slip_seq, string p_hn_no, string p_queue_no, string p_q_id, string p_service_building_code, string p_service_location_floor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectWSQvstKiosk", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SelectWSQvstKioskAsync(string p_slip_seq, string p_hn_no, string p_queue_no, string p_q_id, string p_service_building_code, string p_service_location_floor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Insertjson_rgt_head", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet Insertjson_rgt_head(string p_slip_seq, string p_hn_no, string p_trans_date, string p_trans_start, string p_trans_end, string p_crtd_by);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Insertjson_rgt_head", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> Insertjson_rgt_headAsync(string p_slip_seq, string p_hn_no, string p_trans_date, string p_trans_start, string p_trans_end, string p_crtd_by);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Updatejson_rgt_head", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet Updatejson_rgt_head(string p_json_reg_head_seq, string p_no_data_exec, string p_no_data_success, string p_no_data_error, string p_last_chg_by);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Updatejson_rgt_head", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> Updatejson_rgt_headAsync(string p_json_reg_head_seq, string p_no_data_exec, string p_no_data_success, string p_no_data_error, string p_last_chg_by);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Insertjson_rgt_detail", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet Insertjson_rgt_detail(
+                    string p_json_reg_head_seq, 
+                    string p_hn_no, 
+                    string p_transdetail_service_appoint_seq, 
+                    string p_vstdate, 
+                    string p_vsttime, 
+                    string p_cliniclct, 
+                    string p_dct, 
+                    string p_nextdate, 
+                    string p_nexttime, 
+                    string p_endtime, 
+                    string p_ptqno, 
+                    string p_oappflag, 
+                    string p_item_no, 
+                    string p_kiosk_date, 
+                    string p_kiosk_st, 
+                    string p_trans_status, 
+                    string p_crtd_by);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Insertjson_rgt_detail", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> Insertjson_rgt_detailAsync(
+                    string p_json_reg_head_seq, 
+                    string p_hn_no, 
+                    string p_transdetail_service_appoint_seq, 
+                    string p_vstdate, 
+                    string p_vsttime, 
+                    string p_cliniclct, 
+                    string p_dct, 
+                    string p_nextdate, 
+                    string p_nexttime, 
+                    string p_endtime, 
+                    string p_ptqno, 
+                    string p_oappflag, 
+                    string p_item_no, 
+                    string p_kiosk_date, 
+                    string p_kiosk_st, 
+                    string p_trans_status, 
+                    string p_crtd_by);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Insertjson_rgt_error", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet Insertjson_rgt_error(string p_json_reg_head_seq, string p_json_reg_detail_seq, string p_trans_date, string p_trans_start, string p_round_error, string p_error_msg, string p_crtd_by);
@@ -137,418 +626,6 @@ namespace QService.CUKioskService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_CallQ_P2", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_CallQ_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_CallQSound_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_CallQSound_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_CallQSound_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_CallQSound_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ShowQ", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_ShowQ(string p_q_id, string p_q_status, string p_showq_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ShowQ", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ShowQAsync(string p_q_id, string p_q_status, string p_showq_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_SoundQ(string p_q_id, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQAsync(string p_q_id, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_SoundQ_P2(string p_q_id, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQ_P2Async(string p_q_id, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ_nurse", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_SoundQ_nurse(string p_slip_seq, string p_sound_status, string p_channel_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SoundQ_nurse", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQ_nurseAsync(string p_slip_seq, string p_sound_status, string p_channel_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SlipSeq", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_SlipSeq(string p_q_id, string p_slip_seq);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SlipSeq", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SlipSeqAsync(string p_q_id, string p_slip_seq);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SlipSeq_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_SlipSeq_P2(string p_q_id, string p_slip_seq, string p_waiting_qno, string p_time_gen_waiting_qno);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_SlipSeq_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SlipSeq_P2Async(string p_q_id, string p_slip_seq, string p_waiting_qno, string p_time_gen_waiting_qno);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTranshead_QStatus", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateTranshead_QStatus(string p_slip_seq, string p_q_status, string p_last_chg_by);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTranshead_QStatus", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateTranshead_QStatusAsync(string p_slip_seq, string p_q_status, string p_last_chg_by);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTranshead_QExpress", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateTranshead_QExpress(string slip_seq, string queue_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTranshead_QExpress", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateTranshead_QExpressAsync(string slip_seq, string queue_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQ", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQ(string p_q_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQ", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQAsync(string p_q_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQ_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQ_P2(string p_q_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQ_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQ_P2Async(string p_q_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNo", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQNo(string p_q_no);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNo", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQNoAsync(string p_q_no);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNo_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQNo_P2(string p_q_no);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNo_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQNo_P2Async(string p_q_no);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQChannel(string p_comp_name, string p_q_status, string p_comp_type, string type_call);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelAsync(string p_comp_name, string p_q_status, string p_comp_type, string type_call);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQChannel_nurse(string p_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurseAsync(string p_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse_express", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQChannel_nurse_express(string queue_no);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse_express", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurse_expressAsync(string queue_no);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse_com_cat", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQChannel_nurse_com_cat(string computer_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_nurse_com_cat", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurse_com_catAsync(string computer_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQChannel_P2(string p_comp_name, string p_q_status, string p_comp_type, string p_first_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannel_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_P2Async(string p_comp_name, string p_q_status, string p_comp_type, string p_first_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelGroup", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQChannelGroup(string p_comp_name, string p_q_status, string p_comp_type, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelGroup", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelGroupAsync(string p_comp_name, string p_q_status, string p_comp_type, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQ", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQShowQ(string p_q_status, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQ", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQAsync(string p_q_status, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQComp", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQShowQComp(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQComp", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQCompAsync(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQComp_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQShowQComp_P2(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQComp_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQComp_P2Async(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQLastNo", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQShowQLastNo(string p_channel_group_id, string p_showq_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQLastNo", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQLastNoAsync(string p_channel_group_id, string p_showq_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQLastNo_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQShowQLastNo_P2(string p_channel_group_id, string p_showq_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQShowQLastNo_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQLastNo_P2Async(string p_channel_group_id, string p_showq_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQSoundQ(string p_q_status, string p_sound_status, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQAsync(string p_q_status, string p_sound_status, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ_nurse", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQSoundQ_nurse(string p_q_status, string p_sound_status, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ_nurse", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQ_nurseAsync(string p_q_status, string p_sound_status, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQSoundQ_P2(string p_q_status, string p_sound_status, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQSoundQ_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQ_P2Async(string p_q_status, string p_sound_status, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQRecall", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQRecall(string status_send_clinic, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQRecall", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQRecallAsync(string status_send_clinic, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQRecall_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQRecall_P2(string p_channel_status, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQRecall_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQRecall_P2Async(string p_channel_status, string p_channel_group_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectComputer", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectComputer(string p_comp_name, string p_comp_type);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectComputer", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectComputerAsync(string p_comp_name, string p_comp_type);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectSlip", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectSlip(string p_slip_seq);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectSlip", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectSlipAsync(string p_slip_seq);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectSlip_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectSlip_P2(string p_slip_seq);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectSlip_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectSlip_P2Async(string p_slip_seq);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQExpress", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQExpress(string p_queue_no_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQExpress", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQExpressAsync(string p_queue_no_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectPatient", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectPatient(string p_queue_no_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectPatient", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectPatientAsync(string p_queue_no_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelW", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQChannelW(string p_comp_name, string p_status_scanning);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelW", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAsync(string p_comp_name, string p_status_scanning);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelW_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQChannelW_P2(string p_comp_name, string p_first_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelW_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelW_P2Async(string p_comp_name, string p_first_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteQChannelW", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet DeleteQChannelW(string p_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteQChannelW", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> DeleteQChannelWAsync(string p_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteQChannelW_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet DeleteQChannelW_P2(string p_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteQChannelW_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> DeleteQChannelW_P2Async(string p_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelWAll", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQChannelWAll(string p_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelWAll", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAllAsync(string p_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelWAll_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQChannelWAll_P2(string p_comp_name, string p_first_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQChannelWAll_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAll_P2Async(string p_comp_name, string p_first_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQID", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQID(string p_q_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQID", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQIDAsync(string p_q_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQID_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQID_P2(string p_q_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQID_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQID_P2Async(string p_q_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_ClickCallQ(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQAsync(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ_Nurse", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_ClickCallQ_Nurse(string p_q_id, string p_q_status_nurse, string p_nurse_channel_comp_id, string p_nurse_channel_user_id, string p_nurse_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ_Nurse", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQ_NurseAsync(string p_q_id, string p_q_status_nurse, string p_nurse_channel_comp_id, string p_nurse_channel_user_id, string p_nurse_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickStatusQ_Nurse", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_ClickStatusQ_Nurse(string slip_seq, string q_status, string status_clinic_scanning, string status_send_clinic, string nurse_channel_comp_id, string nurse_user_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickStatusQ_Nurse", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickStatusQ_NurseAsync(string slip_seq, string q_status, string status_clinic_scanning, string status_send_clinic, string nurse_channel_comp_id, string nurse_user_id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_ClickCallQ_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQ_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQ_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQSound_P2", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet UpdateQ_ClickCallQSound_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateQ_ClickCallQSound_P2", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQSound_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q, string p_sound_status);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNoExpress", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectQNoExpress();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectQNoExpress", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectQNoExpressAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectDisplayText", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectDisplayText(string p_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectDisplayText", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectDisplayTextAsync(string p_comp_name);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectRehabCase", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectRehabCase(string p_slip_seq, string p_service_building_code, string p_service_location_floor);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectRehabCase", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectRehabCaseAsync(string p_slip_seq, string p_service_building_code, string p_service_location_floor);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectWSQvstKiosk", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet SelectWSQvstKiosk(string p_slip_seq, string p_hn_no, string p_queue_no, string p_q_id, string p_service_building_code, string p_service_location_floor);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SelectWSQvstKiosk", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SelectWSQvstKioskAsync(string p_slip_seq, string p_hn_no, string p_queue_no, string p_q_id, string p_service_building_code, string p_service_location_floor);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Insertjson_rgt_head", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet Insertjson_rgt_head(string p_slip_seq, string p_hn_no, string p_trans_date, string p_trans_start, string p_trans_end, string p_crtd_by);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Insertjson_rgt_head", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Insertjson_rgt_headAsync(string p_slip_seq, string p_hn_no, string p_trans_date, string p_trans_start, string p_trans_end, string p_crtd_by);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Updatejson_rgt_head", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet Updatejson_rgt_head(string p_json_reg_head_seq, string p_no_data_exec, string p_no_data_success, string p_no_data_error, string p_last_chg_by);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Updatejson_rgt_head", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Updatejson_rgt_headAsync(string p_json_reg_head_seq, string p_no_data_exec, string p_no_data_success, string p_no_data_error, string p_last_chg_by);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Insertjson_rgt_detail", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet Insertjson_rgt_detail(
-                    string p_json_reg_head_seq, 
-                    string p_hn_no, 
-                    string p_transdetail_service_appoint_seq, 
-                    string p_vstdate, 
-                    string p_vsttime, 
-                    string p_cliniclct, 
-                    string p_dct, 
-                    string p_nextdate, 
-                    string p_nexttime, 
-                    string p_endtime, 
-                    string p_ptqno, 
-                    string p_oappflag, 
-                    string p_item_no, 
-                    string p_kiosk_date, 
-                    string p_kiosk_st, 
-                    string p_trans_status, 
-                    string p_crtd_by);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Insertjson_rgt_detail", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> Insertjson_rgt_detailAsync(
-                    string p_json_reg_head_seq, 
-                    string p_hn_no, 
-                    string p_transdetail_service_appoint_seq, 
-                    string p_vstdate, 
-                    string p_vsttime, 
-                    string p_cliniclct, 
-                    string p_dct, 
-                    string p_nextdate, 
-                    string p_nexttime, 
-                    string p_endtime, 
-                    string p_ptqno, 
-                    string p_oappflag, 
-                    string p_item_no, 
-                    string p_kiosk_date, 
-                    string p_kiosk_st, 
-                    string p_trans_status, 
-                    string p_crtd_by);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -576,6 +653,560 @@ namespace QService.CUKioskService {
         
         public WS_KioskQSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public System.Data.DataSet UpdateQ_CallQSound_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_sound_status) {
+            return base.Channel.UpdateQ_CallQSound_P2(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_sound_status);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_CallQSound_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_sound_status) {
+            return base.Channel.UpdateQ_CallQSound_P2Async(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_sound_status);
+        }
+        
+        public System.Data.DataSet UpdateQ_ShowQ(string p_q_id, string p_q_status, string p_showq_comp_name) {
+            return base.Channel.UpdateQ_ShowQ(p_q_id, p_q_status, p_showq_comp_name);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ShowQAsync(string p_q_id, string p_q_status, string p_showq_comp_name) {
+            return base.Channel.UpdateQ_ShowQAsync(p_q_id, p_q_status, p_showq_comp_name);
+        }
+        
+        public System.Data.DataSet UpdateQ_ShowQAll(string slip_seq, string status_display) {
+            return base.Channel.UpdateQ_ShowQAll(slip_seq, status_display);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ShowQAllAsync(string slip_seq, string status_display) {
+            return base.Channel.UpdateQ_ShowQAllAsync(slip_seq, status_display);
+        }
+        
+        public System.Data.DataSet UpdateQ_ShowQAll2(string slip_seq, string status_display) {
+            return base.Channel.UpdateQ_ShowQAll2(slip_seq, status_display);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ShowQAll2Async(string slip_seq, string status_display) {
+            return base.Channel.UpdateQ_ShowQAll2Async(slip_seq, status_display);
+        }
+        
+        public System.Data.DataSet UpdateQ_SoundQ(string p_q_id, string p_sound_status) {
+            return base.Channel.UpdateQ_SoundQ(p_q_id, p_sound_status);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQAsync(string p_q_id, string p_sound_status) {
+            return base.Channel.UpdateQ_SoundQAsync(p_q_id, p_sound_status);
+        }
+        
+        public System.Data.DataSet UpdateQ_SoundQ_P2(string p_q_id, string p_sound_status) {
+            return base.Channel.UpdateQ_SoundQ_P2(p_q_id, p_sound_status);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQ_P2Async(string p_q_id, string p_sound_status) {
+            return base.Channel.UpdateQ_SoundQ_P2Async(p_q_id, p_sound_status);
+        }
+        
+        public System.Data.DataSet UpdateQ_SoundQ_nurse(string p_slip_seq, string p_sound_status, string p_channel_status) {
+            return base.Channel.UpdateQ_SoundQ_nurse(p_slip_seq, p_sound_status, p_channel_status);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQ_nurseAsync(string p_slip_seq, string p_sound_status, string p_channel_status) {
+            return base.Channel.UpdateQ_SoundQ_nurseAsync(p_slip_seq, p_sound_status, p_channel_status);
+        }
+        
+        public System.Data.DataSet UpdateQ_SlipSeq(string p_q_id, string p_slip_seq) {
+            return base.Channel.UpdateQ_SlipSeq(p_q_id, p_slip_seq);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SlipSeqAsync(string p_q_id, string p_slip_seq) {
+            return base.Channel.UpdateQ_SlipSeqAsync(p_q_id, p_slip_seq);
+        }
+        
+        public System.Data.DataSet UpdateQ_SlipSeq_P2(string p_q_id, string p_slip_seq, string p_waiting_qno, string p_time_gen_waiting_qno) {
+            return base.Channel.UpdateQ_SlipSeq_P2(p_q_id, p_slip_seq, p_waiting_qno, p_time_gen_waiting_qno);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SlipSeq_P2Async(string p_q_id, string p_slip_seq, string p_waiting_qno, string p_time_gen_waiting_qno) {
+            return base.Channel.UpdateQ_SlipSeq_P2Async(p_q_id, p_slip_seq, p_waiting_qno, p_time_gen_waiting_qno);
+        }
+        
+        public System.Data.DataSet UpdateTranshead_QStatus(string p_slip_seq, string p_q_status, string p_last_chg_by) {
+            return base.Channel.UpdateTranshead_QStatus(p_slip_seq, p_q_status, p_last_chg_by);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateTranshead_QStatusAsync(string p_slip_seq, string p_q_status, string p_last_chg_by) {
+            return base.Channel.UpdateTranshead_QStatusAsync(p_slip_seq, p_q_status, p_last_chg_by);
+        }
+        
+        public System.Data.DataSet UpdateTranshead_QExpress(string slip_seq, string queue_status, string last_chg_by) {
+            return base.Channel.UpdateTranshead_QExpress(slip_seq, queue_status, last_chg_by);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateTranshead_QExpressAsync(string slip_seq, string queue_status, string last_chg_by) {
+            return base.Channel.UpdateTranshead_QExpressAsync(slip_seq, queue_status, last_chg_by);
+        }
+        
+        public System.Data.DataSet SelectQ(string p_q_id) {
+            return base.Channel.SelectQ(p_q_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQAsync(string p_q_id) {
+            return base.Channel.SelectQAsync(p_q_id);
+        }
+        
+        public System.Data.DataSet SelectQ_P2(string p_q_id) {
+            return base.Channel.SelectQ_P2(p_q_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQ_P2Async(string p_q_id) {
+            return base.Channel.SelectQ_P2Async(p_q_id);
+        }
+        
+        public System.Data.DataSet SelectQNo(string p_q_no) {
+            return base.Channel.SelectQNo(p_q_no);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQNoAsync(string p_q_no) {
+            return base.Channel.SelectQNoAsync(p_q_no);
+        }
+        
+        public System.Data.DataSet SelectQNo_P2(string p_q_no) {
+            return base.Channel.SelectQNo_P2(p_q_no);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQNo_P2Async(string p_q_no) {
+            return base.Channel.SelectQNo_P2Async(p_q_no);
+        }
+        
+        public System.Data.DataSet SelectQCheckStatus(string q_no) {
+            return base.Channel.SelectQCheckStatus(q_no);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQCheckStatusAsync(string q_no) {
+            return base.Channel.SelectQCheckStatusAsync(q_no);
+        }
+        
+        public System.Data.DataSet SelectQNurseReport() {
+            return base.Channel.SelectQNurseReport();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQNurseReportAsync() {
+            return base.Channel.SelectQNurseReportAsync();
+        }
+        
+        public System.Data.DataSet SelectQChannel(string p_comp_name, string p_q_status, string p_comp_type, string type_call) {
+            return base.Channel.SelectQChannel(p_comp_name, p_q_status, p_comp_type, type_call);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelAsync(string p_comp_name, string p_q_status, string p_comp_type, string type_call) {
+            return base.Channel.SelectQChannelAsync(p_comp_name, p_q_status, p_comp_type, type_call);
+        }
+        
+        public System.Data.DataSet SelectQChannel_nurse(string p_comp_name) {
+            return base.Channel.SelectQChannel_nurse(p_comp_name);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurseAsync(string p_comp_name) {
+            return base.Channel.SelectQChannel_nurseAsync(p_comp_name);
+        }
+        
+        public System.Data.DataSet SelectQChannel_nurse_express(string queue_no) {
+            return base.Channel.SelectQChannel_nurse_express(queue_no);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurse_expressAsync(string queue_no) {
+            return base.Channel.SelectQChannel_nurse_expressAsync(queue_no);
+        }
+        
+        public System.Data.DataSet SelectQChannel_nurse_com_cat(string computer_name) {
+            return base.Channel.SelectQChannel_nurse_com_cat(computer_name);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurse_com_catAsync(string computer_name) {
+            return base.Channel.SelectQChannel_nurse_com_catAsync(computer_name);
+        }
+        
+        public System.Data.DataSet SelectQChannel_P2(string p_comp_name, string p_q_status, string p_comp_type, string p_first_q) {
+            return base.Channel.SelectQChannel_P2(p_comp_name, p_q_status, p_comp_type, p_first_q);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_P2Async(string p_comp_name, string p_q_status, string p_comp_type, string p_first_q) {
+            return base.Channel.SelectQChannel_P2Async(p_comp_name, p_q_status, p_comp_type, p_first_q);
+        }
+        
+        public System.Data.DataSet SelectQChannelGroup(string p_comp_name, string p_q_status, string p_comp_type, string p_channel_group_id) {
+            return base.Channel.SelectQChannelGroup(p_comp_name, p_q_status, p_comp_type, p_channel_group_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelGroupAsync(string p_comp_name, string p_q_status, string p_comp_type, string p_channel_group_id) {
+            return base.Channel.SelectQChannelGroupAsync(p_comp_name, p_q_status, p_comp_type, p_channel_group_id);
+        }
+        
+        public System.Data.DataSet SelectQShowQ(string p_q_status, string p_channel_group_id) {
+            return base.Channel.SelectQShowQ(p_q_status, p_channel_group_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQAsync(string p_q_status, string p_channel_group_id) {
+            return base.Channel.SelectQShowQAsync(p_q_status, p_channel_group_id);
+        }
+        
+        public System.Data.DataSet SelectQShowQComp(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status) {
+            return base.Channel.SelectQShowQComp(p_q_status, p_channel_group_id, p_showq_comp_name, p_sound_status);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQCompAsync(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status) {
+            return base.Channel.SelectQShowQCompAsync(p_q_status, p_channel_group_id, p_showq_comp_name, p_sound_status);
+        }
+        
+        public System.Data.DataSet SelectQShowQComp_nurse(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status, string com_id) {
+            return base.Channel.SelectQShowQComp_nurse(p_q_status, p_channel_group_id, p_showq_comp_name, p_sound_status, com_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQComp_nurseAsync(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status, string com_id) {
+            return base.Channel.SelectQShowQComp_nurseAsync(p_q_status, p_channel_group_id, p_showq_comp_name, p_sound_status, com_id);
+        }
+        
+        public System.Data.DataSet SelectShowQAllComp(string q_status, string sound_status, string status_display, string group_q) {
+            return base.Channel.SelectShowQAllComp(q_status, sound_status, status_display, group_q);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectShowQAllCompAsync(string q_status, string sound_status, string status_display, string group_q) {
+            return base.Channel.SelectShowQAllCompAsync(q_status, sound_status, status_display, group_q);
+        }
+        
+        public System.Data.DataSet SelectQShowQComp_P2(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status) {
+            return base.Channel.SelectQShowQComp_P2(p_q_status, p_channel_group_id, p_showq_comp_name, p_sound_status);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQComp_P2Async(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status) {
+            return base.Channel.SelectQShowQComp_P2Async(p_q_status, p_channel_group_id, p_showq_comp_name, p_sound_status);
+        }
+        
+        public System.Data.DataSet SelectQShowQLastNo(string p_channel_group_id, string p_showq_comp_name) {
+            return base.Channel.SelectQShowQLastNo(p_channel_group_id, p_showq_comp_name);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQLastNoAsync(string p_channel_group_id, string p_showq_comp_name) {
+            return base.Channel.SelectQShowQLastNoAsync(p_channel_group_id, p_showq_comp_name);
+        }
+        
+        public System.Data.DataSet SelectQShowQLastNo_P2(string p_channel_group_id, string p_showq_comp_name) {
+            return base.Channel.SelectQShowQLastNo_P2(p_channel_group_id, p_showq_comp_name);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQLastNo_P2Async(string p_channel_group_id, string p_showq_comp_name) {
+            return base.Channel.SelectQShowQLastNo_P2Async(p_channel_group_id, p_showq_comp_name);
+        }
+        
+        public System.Data.DataSet SelectQSoundQ(string p_q_status, string p_sound_status, string p_channel_group_id) {
+            return base.Channel.SelectQSoundQ(p_q_status, p_sound_status, p_channel_group_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQAsync(string p_q_status, string p_sound_status, string p_channel_group_id) {
+            return base.Channel.SelectQSoundQAsync(p_q_status, p_sound_status, p_channel_group_id);
+        }
+        
+        public System.Data.DataSet SelectQSoundQ_nurse(string p_q_status, string p_sound_status, string p_channel_group_id) {
+            return base.Channel.SelectQSoundQ_nurse(p_q_status, p_sound_status, p_channel_group_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQ_nurseAsync(string p_q_status, string p_sound_status, string p_channel_group_id) {
+            return base.Channel.SelectQSoundQ_nurseAsync(p_q_status, p_sound_status, p_channel_group_id);
+        }
+        
+        public System.Data.DataSet SelectQSoundQ_P2(string p_q_status, string p_sound_status, string p_channel_group_id) {
+            return base.Channel.SelectQSoundQ_P2(p_q_status, p_sound_status, p_channel_group_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQ_P2Async(string p_q_status, string p_sound_status, string p_channel_group_id) {
+            return base.Channel.SelectQSoundQ_P2Async(p_q_status, p_sound_status, p_channel_group_id);
+        }
+        
+        public System.Data.DataSet SelectQRecall(string status_send_clinic, string p_channel_group_id) {
+            return base.Channel.SelectQRecall(status_send_clinic, p_channel_group_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQRecallAsync(string status_send_clinic, string p_channel_group_id) {
+            return base.Channel.SelectQRecallAsync(status_send_clinic, p_channel_group_id);
+        }
+        
+        public System.Data.DataSet SelectQRecall_Nurse(string status_send_clinic, string p_channel_group_id, string channel_nurse) {
+            return base.Channel.SelectQRecall_Nurse(status_send_clinic, p_channel_group_id, channel_nurse);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQRecall_NurseAsync(string status_send_clinic, string p_channel_group_id, string channel_nurse) {
+            return base.Channel.SelectQRecall_NurseAsync(status_send_clinic, p_channel_group_id, channel_nurse);
+        }
+        
+        public System.Data.DataSet SelectQRecall_P2(string p_channel_status, string p_channel_group_id) {
+            return base.Channel.SelectQRecall_P2(p_channel_status, p_channel_group_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQRecall_P2Async(string p_channel_status, string p_channel_group_id) {
+            return base.Channel.SelectQRecall_P2Async(p_channel_status, p_channel_group_id);
+        }
+        
+        public System.Data.DataSet SelectComputer(string p_comp_name, string p_comp_type) {
+            return base.Channel.SelectComputer(p_comp_name, p_comp_type);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectComputerAsync(string p_comp_name, string p_comp_type) {
+            return base.Channel.SelectComputerAsync(p_comp_name, p_comp_type);
+        }
+        
+        public System.Data.DataSet SelectSlip(string p_slip_seq) {
+            return base.Channel.SelectSlip(p_slip_seq);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectSlipAsync(string p_slip_seq) {
+            return base.Channel.SelectSlipAsync(p_slip_seq);
+        }
+        
+        public System.Data.DataSet SelectSlip_P2(string p_slip_seq) {
+            return base.Channel.SelectSlip_P2(p_slip_seq);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectSlip_P2Async(string p_slip_seq) {
+            return base.Channel.SelectSlip_P2Async(p_slip_seq);
+        }
+        
+        public System.Data.DataSet SelectQExpress(string p_queue_no_q) {
+            return base.Channel.SelectQExpress(p_queue_no_q);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQExpressAsync(string p_queue_no_q) {
+            return base.Channel.SelectQExpressAsync(p_queue_no_q);
+        }
+        
+        public System.Data.DataSet SelectPatient(string p_queue_no_q) {
+            return base.Channel.SelectPatient(p_queue_no_q);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectPatientAsync(string p_queue_no_q) {
+            return base.Channel.SelectPatientAsync(p_queue_no_q);
+        }
+        
+        public System.Data.DataSet SelectQChannelW(string p_comp_name, string p_status_scanning) {
+            return base.Channel.SelectQChannelW(p_comp_name, p_status_scanning);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAsync(string p_comp_name, string p_status_scanning) {
+            return base.Channel.SelectQChannelWAsync(p_comp_name, p_status_scanning);
+        }
+        
+        public System.Data.DataSet SelectQChannelW_Nurse(string p_comp_name, string p_status_scanning) {
+            return base.Channel.SelectQChannelW_Nurse(p_comp_name, p_status_scanning);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelW_NurseAsync(string p_comp_name, string p_status_scanning) {
+            return base.Channel.SelectQChannelW_NurseAsync(p_comp_name, p_status_scanning);
+        }
+        
+        public System.Data.DataSet SelectQChannelW_P2(string p_comp_name, string p_first_q) {
+            return base.Channel.SelectQChannelW_P2(p_comp_name, p_first_q);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelW_P2Async(string p_comp_name, string p_first_q) {
+            return base.Channel.SelectQChannelW_P2Async(p_comp_name, p_first_q);
+        }
+        
+        public System.Data.DataSet DeleteQChannelW(string p_comp_name) {
+            return base.Channel.DeleteQChannelW(p_comp_name);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> DeleteQChannelWAsync(string p_comp_name) {
+            return base.Channel.DeleteQChannelWAsync(p_comp_name);
+        }
+        
+        public System.Data.DataSet DeleteQChannelW_P2(string p_comp_name) {
+            return base.Channel.DeleteQChannelW_P2(p_comp_name);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> DeleteQChannelW_P2Async(string p_comp_name) {
+            return base.Channel.DeleteQChannelW_P2Async(p_comp_name);
+        }
+        
+        public System.Data.DataSet SelectQChannelWAll(string p_comp_name) {
+            return base.Channel.SelectQChannelWAll(p_comp_name);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAllAsync(string p_comp_name) {
+            return base.Channel.SelectQChannelWAllAsync(p_comp_name);
+        }
+        
+        public System.Data.DataSet SelectQChannelWAll_P2(string p_comp_name, string p_first_q) {
+            return base.Channel.SelectQChannelWAll_P2(p_comp_name, p_first_q);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAll_P2Async(string p_comp_name, string p_first_q) {
+            return base.Channel.SelectQChannelWAll_P2Async(p_comp_name, p_first_q);
+        }
+        
+        public System.Data.DataSet SelectQID(string p_q_id) {
+            return base.Channel.SelectQID(p_q_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQIDAsync(string p_q_id) {
+            return base.Channel.SelectQIDAsync(p_q_id);
+        }
+        
+        public System.Data.DataSet SelectQID_P2(string p_q_id) {
+            return base.Channel.SelectQID_P2(p_q_id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQID_P2Async(string p_q_id) {
+            return base.Channel.SelectQID_P2Async(p_q_id);
+        }
+        
+        public System.Data.DataSet UpdateQ_ClickCallQ_New(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter) {
+            return base.Channel.UpdateQ_ClickCallQ_New(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_qno_filter);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQ_NewAsync(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter) {
+            return base.Channel.UpdateQ_ClickCallQ_NewAsync(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_qno_filter);
+        }
+        
+        public System.Data.DataSet UpdateQ_ClickCallQ(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8) {
+            return base.Channel.UpdateQ_ClickCallQ(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_b_2, p_c_10, p_e_4, p_f_11, p_g_12, p_i_8);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQAsync(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8) {
+            return base.Channel.UpdateQ_ClickCallQAsync(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_b_2, p_c_10, p_e_4, p_f_11, p_g_12, p_i_8);
+        }
+        
+        public System.Data.DataSet UpdateQ_ClickCallQ_Nurse(string p_q_id, string p_q_status_nurse, string p_nurse_channel_comp_id, string p_nurse_channel_user_id, string p_nurse_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8) {
+            return base.Channel.UpdateQ_ClickCallQ_Nurse(p_q_id, p_q_status_nurse, p_nurse_channel_comp_id, p_nurse_channel_user_id, p_nurse_channel_status, p_flag_queue, p_q_action, p_b_2, p_c_10, p_e_4, p_f_11, p_g_12, p_i_8);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQ_NurseAsync(string p_q_id, string p_q_status_nurse, string p_nurse_channel_comp_id, string p_nurse_channel_user_id, string p_nurse_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8) {
+            return base.Channel.UpdateQ_ClickCallQ_NurseAsync(p_q_id, p_q_status_nurse, p_nurse_channel_comp_id, p_nurse_channel_user_id, p_nurse_channel_status, p_flag_queue, p_q_action, p_b_2, p_c_10, p_e_4, p_f_11, p_g_12, p_i_8);
+        }
+        
+        public System.Data.DataSet UpdateQ_ClickStatusQ_Nurse(string slip_seq, string q_status, string status_clinic_scanning, string status_send_clinic, string nurse_channel_comp_id, string nurse_user_id, string sound_q) {
+            return base.Channel.UpdateQ_ClickStatusQ_Nurse(slip_seq, q_status, status_clinic_scanning, status_send_clinic, nurse_channel_comp_id, nurse_user_id, sound_q);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickStatusQ_NurseAsync(string slip_seq, string q_status, string status_clinic_scanning, string status_send_clinic, string nurse_channel_comp_id, string nurse_user_id, string sound_q) {
+            return base.Channel.UpdateQ_ClickStatusQ_NurseAsync(slip_seq, q_status, status_clinic_scanning, status_send_clinic, nurse_channel_comp_id, nurse_user_id, sound_q);
+        }
+        
+        public System.Data.DataSet UpdateQ_Nurse_Express(string slip_seq, string nurse_express) {
+            return base.Channel.UpdateQ_Nurse_Express(slip_seq, nurse_express);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_Nurse_ExpressAsync(string slip_seq, string nurse_express) {
+            return base.Channel.UpdateQ_Nurse_ExpressAsync(slip_seq, nurse_express);
+        }
+        
+        public System.Data.DataSet UpdateQ_ClickCallQ_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q) {
+            return base.Channel.UpdateQ_ClickCallQ_P2(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_qno_filter, p_first_q);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQ_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q) {
+            return base.Channel.UpdateQ_ClickCallQ_P2Async(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_qno_filter, p_first_q);
+        }
+        
+        public System.Data.DataSet UpdateQ_ClickCallQSound_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q, string p_sound_status) {
+            return base.Channel.UpdateQ_ClickCallQSound_P2(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_qno_filter, p_first_q, p_sound_status);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQSound_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q, string p_sound_status) {
+            return base.Channel.UpdateQ_ClickCallQSound_P2Async(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_qno_filter, p_first_q, p_sound_status);
+        }
+        
+        public System.Data.DataSet UpdateQRecall(string q_id, string flag_status_recall) {
+            return base.Channel.UpdateQRecall(q_id, flag_status_recall);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQRecallAsync(string q_id, string flag_status_recall) {
+            return base.Channel.UpdateQRecallAsync(q_id, flag_status_recall);
+        }
+        
+        public System.Data.DataSet SelectQNoExpress() {
+            return base.Channel.SelectQNoExpress();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQNoExpressAsync() {
+            return base.Channel.SelectQNoExpressAsync();
+        }
+        
+        public System.Data.DataSet SelectDisplayText(string p_comp_name) {
+            return base.Channel.SelectDisplayText(p_comp_name);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectDisplayTextAsync(string p_comp_name) {
+            return base.Channel.SelectDisplayTextAsync(p_comp_name);
+        }
+        
+        public System.Data.DataSet SelectRehabCase(string p_slip_seq, string p_service_building_code, string p_service_location_floor) {
+            return base.Channel.SelectRehabCase(p_slip_seq, p_service_building_code, p_service_location_floor);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectRehabCaseAsync(string p_slip_seq, string p_service_building_code, string p_service_location_floor) {
+            return base.Channel.SelectRehabCaseAsync(p_slip_seq, p_service_building_code, p_service_location_floor);
+        }
+        
+        public System.Data.DataSet SelectWSQvstKiosk(string p_slip_seq, string p_hn_no, string p_queue_no, string p_q_id, string p_service_building_code, string p_service_location_floor) {
+            return base.Channel.SelectWSQvstKiosk(p_slip_seq, p_hn_no, p_queue_no, p_q_id, p_service_building_code, p_service_location_floor);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SelectWSQvstKioskAsync(string p_slip_seq, string p_hn_no, string p_queue_no, string p_q_id, string p_service_building_code, string p_service_location_floor) {
+            return base.Channel.SelectWSQvstKioskAsync(p_slip_seq, p_hn_no, p_queue_no, p_q_id, p_service_building_code, p_service_location_floor);
+        }
+        
+        public System.Data.DataSet Insertjson_rgt_head(string p_slip_seq, string p_hn_no, string p_trans_date, string p_trans_start, string p_trans_end, string p_crtd_by) {
+            return base.Channel.Insertjson_rgt_head(p_slip_seq, p_hn_no, p_trans_date, p_trans_start, p_trans_end, p_crtd_by);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> Insertjson_rgt_headAsync(string p_slip_seq, string p_hn_no, string p_trans_date, string p_trans_start, string p_trans_end, string p_crtd_by) {
+            return base.Channel.Insertjson_rgt_headAsync(p_slip_seq, p_hn_no, p_trans_date, p_trans_start, p_trans_end, p_crtd_by);
+        }
+        
+        public System.Data.DataSet Updatejson_rgt_head(string p_json_reg_head_seq, string p_no_data_exec, string p_no_data_success, string p_no_data_error, string p_last_chg_by) {
+            return base.Channel.Updatejson_rgt_head(p_json_reg_head_seq, p_no_data_exec, p_no_data_success, p_no_data_error, p_last_chg_by);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> Updatejson_rgt_headAsync(string p_json_reg_head_seq, string p_no_data_exec, string p_no_data_success, string p_no_data_error, string p_last_chg_by) {
+            return base.Channel.Updatejson_rgt_headAsync(p_json_reg_head_seq, p_no_data_exec, p_no_data_success, p_no_data_error, p_last_chg_by);
+        }
+        
+        public System.Data.DataSet Insertjson_rgt_detail(
+                    string p_json_reg_head_seq, 
+                    string p_hn_no, 
+                    string p_transdetail_service_appoint_seq, 
+                    string p_vstdate, 
+                    string p_vsttime, 
+                    string p_cliniclct, 
+                    string p_dct, 
+                    string p_nextdate, 
+                    string p_nexttime, 
+                    string p_endtime, 
+                    string p_ptqno, 
+                    string p_oappflag, 
+                    string p_item_no, 
+                    string p_kiosk_date, 
+                    string p_kiosk_st, 
+                    string p_trans_status, 
+                    string p_crtd_by) {
+            return base.Channel.Insertjson_rgt_detail(p_json_reg_head_seq, p_hn_no, p_transdetail_service_appoint_seq, p_vstdate, p_vsttime, p_cliniclct, p_dct, p_nextdate, p_nexttime, p_endtime, p_ptqno, p_oappflag, p_item_no, p_kiosk_date, p_kiosk_st, p_trans_status, p_crtd_by);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> Insertjson_rgt_detailAsync(
+                    string p_json_reg_head_seq, 
+                    string p_hn_no, 
+                    string p_transdetail_service_appoint_seq, 
+                    string p_vstdate, 
+                    string p_vsttime, 
+                    string p_cliniclct, 
+                    string p_dct, 
+                    string p_nextdate, 
+                    string p_nexttime, 
+                    string p_endtime, 
+                    string p_ptqno, 
+                    string p_oappflag, 
+                    string p_item_no, 
+                    string p_kiosk_date, 
+                    string p_kiosk_st, 
+                    string p_trans_status, 
+                    string p_crtd_by) {
+            return base.Channel.Insertjson_rgt_detailAsync(p_json_reg_head_seq, p_hn_no, p_transdetail_service_appoint_seq, p_vstdate, p_vsttime, p_cliniclct, p_dct, p_nextdate, p_nexttime, p_endtime, p_ptqno, p_oappflag, p_item_no, p_kiosk_date, p_kiosk_st, p_trans_status, p_crtd_by);
         }
         
         public System.Data.DataSet Insertjson_rgt_error(string p_json_reg_head_seq, string p_json_reg_detail_seq, string p_trans_date, string p_trans_start, string p_round_error, string p_error_msg, string p_crtd_by) {
@@ -708,472 +1339,6 @@ namespace QService.CUKioskService {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_CallQ_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status) {
             return base.Channel.UpdateQ_CallQ_P2Async(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status);
-        }
-        
-        public System.Data.DataSet UpdateQ_CallQSound_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_sound_status) {
-            return base.Channel.UpdateQ_CallQSound_P2(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_sound_status);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_CallQSound_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_sound_status) {
-            return base.Channel.UpdateQ_CallQSound_P2Async(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_sound_status);
-        }
-        
-        public System.Data.DataSet UpdateQ_ShowQ(string p_q_id, string p_q_status, string p_showq_comp_name) {
-            return base.Channel.UpdateQ_ShowQ(p_q_id, p_q_status, p_showq_comp_name);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ShowQAsync(string p_q_id, string p_q_status, string p_showq_comp_name) {
-            return base.Channel.UpdateQ_ShowQAsync(p_q_id, p_q_status, p_showq_comp_name);
-        }
-        
-        public System.Data.DataSet UpdateQ_SoundQ(string p_q_id, string p_sound_status) {
-            return base.Channel.UpdateQ_SoundQ(p_q_id, p_sound_status);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQAsync(string p_q_id, string p_sound_status) {
-            return base.Channel.UpdateQ_SoundQAsync(p_q_id, p_sound_status);
-        }
-        
-        public System.Data.DataSet UpdateQ_SoundQ_P2(string p_q_id, string p_sound_status) {
-            return base.Channel.UpdateQ_SoundQ_P2(p_q_id, p_sound_status);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQ_P2Async(string p_q_id, string p_sound_status) {
-            return base.Channel.UpdateQ_SoundQ_P2Async(p_q_id, p_sound_status);
-        }
-        
-        public System.Data.DataSet UpdateQ_SoundQ_nurse(string p_slip_seq, string p_sound_status, string p_channel_status) {
-            return base.Channel.UpdateQ_SoundQ_nurse(p_slip_seq, p_sound_status, p_channel_status);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SoundQ_nurseAsync(string p_slip_seq, string p_sound_status, string p_channel_status) {
-            return base.Channel.UpdateQ_SoundQ_nurseAsync(p_slip_seq, p_sound_status, p_channel_status);
-        }
-        
-        public System.Data.DataSet UpdateQ_SlipSeq(string p_q_id, string p_slip_seq) {
-            return base.Channel.UpdateQ_SlipSeq(p_q_id, p_slip_seq);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SlipSeqAsync(string p_q_id, string p_slip_seq) {
-            return base.Channel.UpdateQ_SlipSeqAsync(p_q_id, p_slip_seq);
-        }
-        
-        public System.Data.DataSet UpdateQ_SlipSeq_P2(string p_q_id, string p_slip_seq, string p_waiting_qno, string p_time_gen_waiting_qno) {
-            return base.Channel.UpdateQ_SlipSeq_P2(p_q_id, p_slip_seq, p_waiting_qno, p_time_gen_waiting_qno);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_SlipSeq_P2Async(string p_q_id, string p_slip_seq, string p_waiting_qno, string p_time_gen_waiting_qno) {
-            return base.Channel.UpdateQ_SlipSeq_P2Async(p_q_id, p_slip_seq, p_waiting_qno, p_time_gen_waiting_qno);
-        }
-        
-        public System.Data.DataSet UpdateTranshead_QStatus(string p_slip_seq, string p_q_status, string p_last_chg_by) {
-            return base.Channel.UpdateTranshead_QStatus(p_slip_seq, p_q_status, p_last_chg_by);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateTranshead_QStatusAsync(string p_slip_seq, string p_q_status, string p_last_chg_by) {
-            return base.Channel.UpdateTranshead_QStatusAsync(p_slip_seq, p_q_status, p_last_chg_by);
-        }
-        
-        public System.Data.DataSet UpdateTranshead_QExpress(string slip_seq, string queue_status) {
-            return base.Channel.UpdateTranshead_QExpress(slip_seq, queue_status);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateTranshead_QExpressAsync(string slip_seq, string queue_status) {
-            return base.Channel.UpdateTranshead_QExpressAsync(slip_seq, queue_status);
-        }
-        
-        public System.Data.DataSet SelectQ(string p_q_id) {
-            return base.Channel.SelectQ(p_q_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQAsync(string p_q_id) {
-            return base.Channel.SelectQAsync(p_q_id);
-        }
-        
-        public System.Data.DataSet SelectQ_P2(string p_q_id) {
-            return base.Channel.SelectQ_P2(p_q_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQ_P2Async(string p_q_id) {
-            return base.Channel.SelectQ_P2Async(p_q_id);
-        }
-        
-        public System.Data.DataSet SelectQNo(string p_q_no) {
-            return base.Channel.SelectQNo(p_q_no);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQNoAsync(string p_q_no) {
-            return base.Channel.SelectQNoAsync(p_q_no);
-        }
-        
-        public System.Data.DataSet SelectQNo_P2(string p_q_no) {
-            return base.Channel.SelectQNo_P2(p_q_no);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQNo_P2Async(string p_q_no) {
-            return base.Channel.SelectQNo_P2Async(p_q_no);
-        }
-        
-        public System.Data.DataSet SelectQChannel(string p_comp_name, string p_q_status, string p_comp_type, string type_call) {
-            return base.Channel.SelectQChannel(p_comp_name, p_q_status, p_comp_type, type_call);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelAsync(string p_comp_name, string p_q_status, string p_comp_type, string type_call) {
-            return base.Channel.SelectQChannelAsync(p_comp_name, p_q_status, p_comp_type, type_call);
-        }
-        
-        public System.Data.DataSet SelectQChannel_nurse(string p_comp_name) {
-            return base.Channel.SelectQChannel_nurse(p_comp_name);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurseAsync(string p_comp_name) {
-            return base.Channel.SelectQChannel_nurseAsync(p_comp_name);
-        }
-        
-        public System.Data.DataSet SelectQChannel_nurse_express(string queue_no) {
-            return base.Channel.SelectQChannel_nurse_express(queue_no);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurse_expressAsync(string queue_no) {
-            return base.Channel.SelectQChannel_nurse_expressAsync(queue_no);
-        }
-        
-        public System.Data.DataSet SelectQChannel_nurse_com_cat(string computer_name) {
-            return base.Channel.SelectQChannel_nurse_com_cat(computer_name);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_nurse_com_catAsync(string computer_name) {
-            return base.Channel.SelectQChannel_nurse_com_catAsync(computer_name);
-        }
-        
-        public System.Data.DataSet SelectQChannel_P2(string p_comp_name, string p_q_status, string p_comp_type, string p_first_q) {
-            return base.Channel.SelectQChannel_P2(p_comp_name, p_q_status, p_comp_type, p_first_q);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannel_P2Async(string p_comp_name, string p_q_status, string p_comp_type, string p_first_q) {
-            return base.Channel.SelectQChannel_P2Async(p_comp_name, p_q_status, p_comp_type, p_first_q);
-        }
-        
-        public System.Data.DataSet SelectQChannelGroup(string p_comp_name, string p_q_status, string p_comp_type, string p_channel_group_id) {
-            return base.Channel.SelectQChannelGroup(p_comp_name, p_q_status, p_comp_type, p_channel_group_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelGroupAsync(string p_comp_name, string p_q_status, string p_comp_type, string p_channel_group_id) {
-            return base.Channel.SelectQChannelGroupAsync(p_comp_name, p_q_status, p_comp_type, p_channel_group_id);
-        }
-        
-        public System.Data.DataSet SelectQShowQ(string p_q_status, string p_channel_group_id) {
-            return base.Channel.SelectQShowQ(p_q_status, p_channel_group_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQAsync(string p_q_status, string p_channel_group_id) {
-            return base.Channel.SelectQShowQAsync(p_q_status, p_channel_group_id);
-        }
-        
-        public System.Data.DataSet SelectQShowQComp(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status) {
-            return base.Channel.SelectQShowQComp(p_q_status, p_channel_group_id, p_showq_comp_name, p_sound_status);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQCompAsync(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status) {
-            return base.Channel.SelectQShowQCompAsync(p_q_status, p_channel_group_id, p_showq_comp_name, p_sound_status);
-        }
-        
-        public System.Data.DataSet SelectQShowQComp_P2(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status) {
-            return base.Channel.SelectQShowQComp_P2(p_q_status, p_channel_group_id, p_showq_comp_name, p_sound_status);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQComp_P2Async(string p_q_status, string p_channel_group_id, string p_showq_comp_name, string p_sound_status) {
-            return base.Channel.SelectQShowQComp_P2Async(p_q_status, p_channel_group_id, p_showq_comp_name, p_sound_status);
-        }
-        
-        public System.Data.DataSet SelectQShowQLastNo(string p_channel_group_id, string p_showq_comp_name) {
-            return base.Channel.SelectQShowQLastNo(p_channel_group_id, p_showq_comp_name);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQLastNoAsync(string p_channel_group_id, string p_showq_comp_name) {
-            return base.Channel.SelectQShowQLastNoAsync(p_channel_group_id, p_showq_comp_name);
-        }
-        
-        public System.Data.DataSet SelectQShowQLastNo_P2(string p_channel_group_id, string p_showq_comp_name) {
-            return base.Channel.SelectQShowQLastNo_P2(p_channel_group_id, p_showq_comp_name);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQShowQLastNo_P2Async(string p_channel_group_id, string p_showq_comp_name) {
-            return base.Channel.SelectQShowQLastNo_P2Async(p_channel_group_id, p_showq_comp_name);
-        }
-        
-        public System.Data.DataSet SelectQSoundQ(string p_q_status, string p_sound_status, string p_channel_group_id) {
-            return base.Channel.SelectQSoundQ(p_q_status, p_sound_status, p_channel_group_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQAsync(string p_q_status, string p_sound_status, string p_channel_group_id) {
-            return base.Channel.SelectQSoundQAsync(p_q_status, p_sound_status, p_channel_group_id);
-        }
-        
-        public System.Data.DataSet SelectQSoundQ_nurse(string p_q_status, string p_sound_status, string p_channel_group_id) {
-            return base.Channel.SelectQSoundQ_nurse(p_q_status, p_sound_status, p_channel_group_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQ_nurseAsync(string p_q_status, string p_sound_status, string p_channel_group_id) {
-            return base.Channel.SelectQSoundQ_nurseAsync(p_q_status, p_sound_status, p_channel_group_id);
-        }
-        
-        public System.Data.DataSet SelectQSoundQ_P2(string p_q_status, string p_sound_status, string p_channel_group_id) {
-            return base.Channel.SelectQSoundQ_P2(p_q_status, p_sound_status, p_channel_group_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQSoundQ_P2Async(string p_q_status, string p_sound_status, string p_channel_group_id) {
-            return base.Channel.SelectQSoundQ_P2Async(p_q_status, p_sound_status, p_channel_group_id);
-        }
-        
-        public System.Data.DataSet SelectQRecall(string status_send_clinic, string p_channel_group_id) {
-            return base.Channel.SelectQRecall(status_send_clinic, p_channel_group_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQRecallAsync(string status_send_clinic, string p_channel_group_id) {
-            return base.Channel.SelectQRecallAsync(status_send_clinic, p_channel_group_id);
-        }
-        
-        public System.Data.DataSet SelectQRecall_P2(string p_channel_status, string p_channel_group_id) {
-            return base.Channel.SelectQRecall_P2(p_channel_status, p_channel_group_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQRecall_P2Async(string p_channel_status, string p_channel_group_id) {
-            return base.Channel.SelectQRecall_P2Async(p_channel_status, p_channel_group_id);
-        }
-        
-        public System.Data.DataSet SelectComputer(string p_comp_name, string p_comp_type) {
-            return base.Channel.SelectComputer(p_comp_name, p_comp_type);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectComputerAsync(string p_comp_name, string p_comp_type) {
-            return base.Channel.SelectComputerAsync(p_comp_name, p_comp_type);
-        }
-        
-        public System.Data.DataSet SelectSlip(string p_slip_seq) {
-            return base.Channel.SelectSlip(p_slip_seq);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectSlipAsync(string p_slip_seq) {
-            return base.Channel.SelectSlipAsync(p_slip_seq);
-        }
-        
-        public System.Data.DataSet SelectSlip_P2(string p_slip_seq) {
-            return base.Channel.SelectSlip_P2(p_slip_seq);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectSlip_P2Async(string p_slip_seq) {
-            return base.Channel.SelectSlip_P2Async(p_slip_seq);
-        }
-        
-        public System.Data.DataSet SelectQExpress(string p_queue_no_q) {
-            return base.Channel.SelectQExpress(p_queue_no_q);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQExpressAsync(string p_queue_no_q) {
-            return base.Channel.SelectQExpressAsync(p_queue_no_q);
-        }
-        
-        public System.Data.DataSet SelectPatient(string p_queue_no_q) {
-            return base.Channel.SelectPatient(p_queue_no_q);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectPatientAsync(string p_queue_no_q) {
-            return base.Channel.SelectPatientAsync(p_queue_no_q);
-        }
-        
-        public System.Data.DataSet SelectQChannelW(string p_comp_name, string p_status_scanning) {
-            return base.Channel.SelectQChannelW(p_comp_name, p_status_scanning);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAsync(string p_comp_name, string p_status_scanning) {
-            return base.Channel.SelectQChannelWAsync(p_comp_name, p_status_scanning);
-        }
-        
-        public System.Data.DataSet SelectQChannelW_P2(string p_comp_name, string p_first_q) {
-            return base.Channel.SelectQChannelW_P2(p_comp_name, p_first_q);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelW_P2Async(string p_comp_name, string p_first_q) {
-            return base.Channel.SelectQChannelW_P2Async(p_comp_name, p_first_q);
-        }
-        
-        public System.Data.DataSet DeleteQChannelW(string p_comp_name) {
-            return base.Channel.DeleteQChannelW(p_comp_name);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> DeleteQChannelWAsync(string p_comp_name) {
-            return base.Channel.DeleteQChannelWAsync(p_comp_name);
-        }
-        
-        public System.Data.DataSet DeleteQChannelW_P2(string p_comp_name) {
-            return base.Channel.DeleteQChannelW_P2(p_comp_name);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> DeleteQChannelW_P2Async(string p_comp_name) {
-            return base.Channel.DeleteQChannelW_P2Async(p_comp_name);
-        }
-        
-        public System.Data.DataSet SelectQChannelWAll(string p_comp_name) {
-            return base.Channel.SelectQChannelWAll(p_comp_name);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAllAsync(string p_comp_name) {
-            return base.Channel.SelectQChannelWAllAsync(p_comp_name);
-        }
-        
-        public System.Data.DataSet SelectQChannelWAll_P2(string p_comp_name, string p_first_q) {
-            return base.Channel.SelectQChannelWAll_P2(p_comp_name, p_first_q);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQChannelWAll_P2Async(string p_comp_name, string p_first_q) {
-            return base.Channel.SelectQChannelWAll_P2Async(p_comp_name, p_first_q);
-        }
-        
-        public System.Data.DataSet SelectQID(string p_q_id) {
-            return base.Channel.SelectQID(p_q_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQIDAsync(string p_q_id) {
-            return base.Channel.SelectQIDAsync(p_q_id);
-        }
-        
-        public System.Data.DataSet SelectQID_P2(string p_q_id) {
-            return base.Channel.SelectQID_P2(p_q_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQID_P2Async(string p_q_id) {
-            return base.Channel.SelectQID_P2Async(p_q_id);
-        }
-        
-        public System.Data.DataSet UpdateQ_ClickCallQ(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8) {
-            return base.Channel.UpdateQ_ClickCallQ(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_b_2, p_c_10, p_e_4, p_f_11, p_g_12, p_i_8);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQAsync(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8) {
-            return base.Channel.UpdateQ_ClickCallQAsync(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_b_2, p_c_10, p_e_4, p_f_11, p_g_12, p_i_8);
-        }
-        
-        public System.Data.DataSet UpdateQ_ClickCallQ_Nurse(string p_q_id, string p_q_status_nurse, string p_nurse_channel_comp_id, string p_nurse_channel_user_id, string p_nurse_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8) {
-            return base.Channel.UpdateQ_ClickCallQ_Nurse(p_q_id, p_q_status_nurse, p_nurse_channel_comp_id, p_nurse_channel_user_id, p_nurse_channel_status, p_flag_queue, p_q_action, p_b_2, p_c_10, p_e_4, p_f_11, p_g_12, p_i_8);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQ_NurseAsync(string p_q_id, string p_q_status_nurse, string p_nurse_channel_comp_id, string p_nurse_channel_user_id, string p_nurse_channel_status, string p_flag_queue, string p_q_action, string p_b_2, string p_c_10, string p_e_4, string p_f_11, string p_g_12, string p_i_8) {
-            return base.Channel.UpdateQ_ClickCallQ_NurseAsync(p_q_id, p_q_status_nurse, p_nurse_channel_comp_id, p_nurse_channel_user_id, p_nurse_channel_status, p_flag_queue, p_q_action, p_b_2, p_c_10, p_e_4, p_f_11, p_g_12, p_i_8);
-        }
-        
-        public System.Data.DataSet UpdateQ_ClickStatusQ_Nurse(string slip_seq, string q_status, string status_clinic_scanning, string status_send_clinic, string nurse_channel_comp_id, string nurse_user_id) {
-            return base.Channel.UpdateQ_ClickStatusQ_Nurse(slip_seq, q_status, status_clinic_scanning, status_send_clinic, nurse_channel_comp_id, nurse_user_id);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickStatusQ_NurseAsync(string slip_seq, string q_status, string status_clinic_scanning, string status_send_clinic, string nurse_channel_comp_id, string nurse_user_id) {
-            return base.Channel.UpdateQ_ClickStatusQ_NurseAsync(slip_seq, q_status, status_clinic_scanning, status_send_clinic, nurse_channel_comp_id, nurse_user_id);
-        }
-        
-        public System.Data.DataSet UpdateQ_ClickCallQ_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q) {
-            return base.Channel.UpdateQ_ClickCallQ_P2(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_qno_filter, p_first_q);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQ_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q) {
-            return base.Channel.UpdateQ_ClickCallQ_P2Async(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_qno_filter, p_first_q);
-        }
-        
-        public System.Data.DataSet UpdateQ_ClickCallQSound_P2(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q, string p_sound_status) {
-            return base.Channel.UpdateQ_ClickCallQSound_P2(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_qno_filter, p_first_q, p_sound_status);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> UpdateQ_ClickCallQSound_P2Async(string p_q_id, string p_q_status, string p_channel_comp_id, string p_channel_user_id, string p_channel_status, string p_flag_queue, string p_q_action, string p_qno_filter, string p_first_q, string p_sound_status) {
-            return base.Channel.UpdateQ_ClickCallQSound_P2Async(p_q_id, p_q_status, p_channel_comp_id, p_channel_user_id, p_channel_status, p_flag_queue, p_q_action, p_qno_filter, p_first_q, p_sound_status);
-        }
-        
-        public System.Data.DataSet SelectQNoExpress() {
-            return base.Channel.SelectQNoExpress();
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectQNoExpressAsync() {
-            return base.Channel.SelectQNoExpressAsync();
-        }
-        
-        public System.Data.DataSet SelectDisplayText(string p_comp_name) {
-            return base.Channel.SelectDisplayText(p_comp_name);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectDisplayTextAsync(string p_comp_name) {
-            return base.Channel.SelectDisplayTextAsync(p_comp_name);
-        }
-        
-        public System.Data.DataSet SelectRehabCase(string p_slip_seq, string p_service_building_code, string p_service_location_floor) {
-            return base.Channel.SelectRehabCase(p_slip_seq, p_service_building_code, p_service_location_floor);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectRehabCaseAsync(string p_slip_seq, string p_service_building_code, string p_service_location_floor) {
-            return base.Channel.SelectRehabCaseAsync(p_slip_seq, p_service_building_code, p_service_location_floor);
-        }
-        
-        public System.Data.DataSet SelectWSQvstKiosk(string p_slip_seq, string p_hn_no, string p_queue_no, string p_q_id, string p_service_building_code, string p_service_location_floor) {
-            return base.Channel.SelectWSQvstKiosk(p_slip_seq, p_hn_no, p_queue_no, p_q_id, p_service_building_code, p_service_location_floor);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> SelectWSQvstKioskAsync(string p_slip_seq, string p_hn_no, string p_queue_no, string p_q_id, string p_service_building_code, string p_service_location_floor) {
-            return base.Channel.SelectWSQvstKioskAsync(p_slip_seq, p_hn_no, p_queue_no, p_q_id, p_service_building_code, p_service_location_floor);
-        }
-        
-        public System.Data.DataSet Insertjson_rgt_head(string p_slip_seq, string p_hn_no, string p_trans_date, string p_trans_start, string p_trans_end, string p_crtd_by) {
-            return base.Channel.Insertjson_rgt_head(p_slip_seq, p_hn_no, p_trans_date, p_trans_start, p_trans_end, p_crtd_by);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> Insertjson_rgt_headAsync(string p_slip_seq, string p_hn_no, string p_trans_date, string p_trans_start, string p_trans_end, string p_crtd_by) {
-            return base.Channel.Insertjson_rgt_headAsync(p_slip_seq, p_hn_no, p_trans_date, p_trans_start, p_trans_end, p_crtd_by);
-        }
-        
-        public System.Data.DataSet Updatejson_rgt_head(string p_json_reg_head_seq, string p_no_data_exec, string p_no_data_success, string p_no_data_error, string p_last_chg_by) {
-            return base.Channel.Updatejson_rgt_head(p_json_reg_head_seq, p_no_data_exec, p_no_data_success, p_no_data_error, p_last_chg_by);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> Updatejson_rgt_headAsync(string p_json_reg_head_seq, string p_no_data_exec, string p_no_data_success, string p_no_data_error, string p_last_chg_by) {
-            return base.Channel.Updatejson_rgt_headAsync(p_json_reg_head_seq, p_no_data_exec, p_no_data_success, p_no_data_error, p_last_chg_by);
-        }
-        
-        public System.Data.DataSet Insertjson_rgt_detail(
-                    string p_json_reg_head_seq, 
-                    string p_hn_no, 
-                    string p_transdetail_service_appoint_seq, 
-                    string p_vstdate, 
-                    string p_vsttime, 
-                    string p_cliniclct, 
-                    string p_dct, 
-                    string p_nextdate, 
-                    string p_nexttime, 
-                    string p_endtime, 
-                    string p_ptqno, 
-                    string p_oappflag, 
-                    string p_item_no, 
-                    string p_kiosk_date, 
-                    string p_kiosk_st, 
-                    string p_trans_status, 
-                    string p_crtd_by) {
-            return base.Channel.Insertjson_rgt_detail(p_json_reg_head_seq, p_hn_no, p_transdetail_service_appoint_seq, p_vstdate, p_vsttime, p_cliniclct, p_dct, p_nextdate, p_nexttime, p_endtime, p_ptqno, p_oappflag, p_item_no, p_kiosk_date, p_kiosk_st, p_trans_status, p_crtd_by);
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> Insertjson_rgt_detailAsync(
-                    string p_json_reg_head_seq, 
-                    string p_hn_no, 
-                    string p_transdetail_service_appoint_seq, 
-                    string p_vstdate, 
-                    string p_vsttime, 
-                    string p_cliniclct, 
-                    string p_dct, 
-                    string p_nextdate, 
-                    string p_nexttime, 
-                    string p_endtime, 
-                    string p_ptqno, 
-                    string p_oappflag, 
-                    string p_item_no, 
-                    string p_kiosk_date, 
-                    string p_kiosk_st, 
-                    string p_trans_status, 
-                    string p_crtd_by) {
-            return base.Channel.Insertjson_rgt_detailAsync(p_json_reg_head_seq, p_hn_no, p_transdetail_service_appoint_seq, p_vstdate, p_vsttime, p_cliniclct, p_dct, p_nextdate, p_nexttime, p_endtime, p_ptqno, p_oappflag, p_item_no, p_kiosk_date, p_kiosk_st, p_trans_status, p_crtd_by);
         }
     }
 }

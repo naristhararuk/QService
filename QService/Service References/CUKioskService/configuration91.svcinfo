@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="MaVBxGYsBbZk7cnIucmNzpAvtN4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="wGLDYdSigP+2E2yvPA0JYc1a7zM=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="WS_KioskQSoap">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="WS_KioskQSoap" contract="CUKioskService.WS_KioskQSoap" bindingType="basicHttpBinding" address="http://172.20.10.4/WSQ_Nurse/WS_KioskQ.asmx" bindingConfiguration="WS_KioskQSoap">
+    <endpoint name="WS_KioskQSoap" contract="CUKioskService.WS_KioskQSoap" bindingType="basicHttpBinding" address="http://cuservice.somee.com/WSQ/WS_KioskQ.asmx" bindingConfiguration="WS_KioskQSoap">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://172.20.10.4/WSQ_Nurse/WS_KioskQ.asmx</serializedValue>
+          <serializedValue>http://cuservice.somee.com/WSQ/WS_KioskQ.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Kiosk_Chula_iPadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="KioskChulaiPadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="kiosk_building">
           <Key>
             <PropertyRef Name="building_code" />
@@ -178,7 +178,7 @@
           <Property Name="last_chg_by" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'KioskChulaiPad.dbo.kiosk_transdetail_MissAppoint' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="kiosk_transdetail_MissAppoint">
           <Key>
             <PropertyRef Name="transdetail_missappoint_seq" />
@@ -447,7 +447,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
           <Parameter Name="queue_status" Type="char" Mode="In" />
           <Parameter Name="last_chg_by" Type="nvarchar" Mode="In" />
         </Function>
-        <EntityContainer Name="Kiosk_Chula_iPadModelStoreContainer">
+        <EntityContainer Name="KioskChulaiPadModelStoreContainer">
           <EntitySet Name="kiosk_building" EntityType="Self.kiosk_building" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="kiosk_com" EntityType="Self.kiosk_com" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="kiosk_computer" EntityType="Self.kiosk_computer" Schema="dbo" store:Type="Tables" />
@@ -513,7 +513,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Kiosk_Chula_iPadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="KioskChulaiPadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="kiosk_building">
           <Key>
             <PropertyRef Name="building_code" />
@@ -969,10 +969,10 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             <Parameter Name="print_result" Mode="In" Type="String" />
             <Parameter Name="crtd_by" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="q_expr_sel_kiosk_com_cat_ipad" ReturnType="Collection(Kiosk_Chula_iPadModel.q_expr_sel_kiosk_com_cat_ipad_Result)">
+          <FunctionImport Name="q_expr_sel_kiosk_com_cat_ipad" ReturnType="Collection(KioskChulaiPadModel.q_expr_sel_kiosk_com_cat_ipad_Result)">
             <Parameter Name="computer_name" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="q_expr_sel_kiosk_trans_all_ipad" ReturnType="Collection(Kiosk_Chula_iPadModel.q_expr_sel_kiosk_trans_all_ipad_Result)">
+          <FunctionImport Name="q_expr_sel_kiosk_trans_all_ipad" ReturnType="Collection(KioskChulaiPadModel.q_expr_sel_kiosk_trans_all_ipad_Result)">
             <Parameter Name="hn_no" Mode="In" Type="String" />
             <Parameter Name="queue_no" Mode="In" Type="String" />
             <Parameter Name="cur_date" Mode="In" Type="String" />
@@ -1009,6 +1009,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
           <Property Type="String" Name="slip_no" Nullable="false" MaxLength="25" />
           <Property Type="String" Name="flag_choose_right" Nullable="true" MaxLength="2" />
           <Property Type="String" Name="pateint_name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="flag_lab_xray" Nullable="true" MaxLength="1" />
           <Property Type="String" Name="right_fullname" Nullable="true" MaxLength="201" />
           <Property Type="Int32" Name="transdetail_appoint_seq" Nullable="true" />
           <Property Type="DateTime" Name="appoint_date" Nullable="true" Precision="23" />
@@ -1031,9 +1032,9 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Kiosk_Chula_iPadModelStoreContainer" CdmEntityContainer="KioskChulaiPadEntities">
+        <EntityContainerMapping StorageEntityContainer="KioskChulaiPadModelStoreContainer" CdmEntityContainer="KioskChulaiPadEntities">
           <EntitySetMapping Name="kiosk_building">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_building">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_building">
               <MappingFragment StoreEntitySet="kiosk_building">
                 <ScalarProperty Name="building_code" ColumnName="building_code" />
                 <ScalarProperty Name="building_name" ColumnName="building_name" />
@@ -1046,7 +1047,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_com">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_com">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_com">
               <MappingFragment StoreEntitySet="kiosk_com">
                 <ScalarProperty Name="com_code" ColumnName="com_code" />
                 <ScalarProperty Name="locat_code" ColumnName="locat_code" />
@@ -1070,7 +1071,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_computer">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_computer">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_computer">
               <MappingFragment StoreEntitySet="kiosk_computer">
                 <ScalarProperty Name="computer_code" ColumnName="computer_code" />
                 <ScalarProperty Name="com_name" ColumnName="com_name" />
@@ -1087,7 +1088,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_control">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_control">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_control">
               <MappingFragment StoreEntitySet="kiosk_control">
                 <ScalarProperty Name="locat_code" ColumnName="locat_code" />
                 <ScalarProperty Name="year" ColumnName="year" />
@@ -1100,7 +1101,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_locat">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_locat">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_locat">
               <MappingFragment StoreEntitySet="kiosk_locat">
                 <ScalarProperty Name="locat_code" ColumnName="locat_code" />
                 <ScalarProperty Name="locat_type_code" ColumnName="locat_type_code" />
@@ -1119,7 +1120,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_map_qexpress">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_map_qexpress">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_map_qexpress">
               <MappingFragment StoreEntitySet="kiosk_map_qexpress">
                 <ScalarProperty Name="map_qexpress_seq" ColumnName="map_qexpress_seq" />
                 <ScalarProperty Name="slip_no_qexpress" ColumnName="slip_no_qexpress" />
@@ -1136,7 +1137,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_q_log">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_q_log">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_q_log">
               <MappingFragment StoreEntitySet="kiosk_q_log">
                 <ScalarProperty Name="q_log_seq" ColumnName="q_log_seq" />
                 <ScalarProperty Name="q_trans_dtm" ColumnName="q_trans_dtm" />
@@ -1155,7 +1156,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_transdetail_appoint">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_transdetail_appoint">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_transdetail_appoint">
               <MappingFragment StoreEntitySet="kiosk_transdetail_appoint">
                 <ScalarProperty Name="transdetail_appoint_seq" ColumnName="transdetail_appoint_seq" />
                 <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
@@ -1192,7 +1193,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_transdetail_clinic_choose">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_transdetail_clinic_choose">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_transdetail_clinic_choose">
               <MappingFragment StoreEntitySet="kiosk_transdetail_clinic_choose">
                 <ScalarProperty Name="transdetail_clinic_choose_seq" ColumnName="transdetail_clinic_choose_seq" />
                 <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
@@ -1213,7 +1214,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_transdetail_right">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_transdetail_right">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_transdetail_right">
               <MappingFragment StoreEntitySet="kiosk_transdetail_right">
                 <ScalarProperty Name="transdetail_right_seq" ColumnName="transdetail_right_seq" />
                 <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
@@ -1236,7 +1237,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_transhead">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_transhead">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_transhead">
               <MappingFragment StoreEntitySet="kiosk_transhead">
                 <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
                 <ScalarProperty Name="slip_no" ColumnName="slip_no" />
@@ -1295,7 +1296,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_user">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_user">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_user">
               <MappingFragment StoreEntitySet="kiosk_user">
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="password" ColumnName="password" />
@@ -1313,7 +1314,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_user_group">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_user_group">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_user_group">
               <MappingFragment StoreEntitySet="kiosk_user_group">
                 <ScalarProperty Name="user_group_code" ColumnName="user_group_code" />
                 <ScalarProperty Name="user_group_name" ColumnName="user_group_name" />
@@ -1329,7 +1330,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kiosk_transdetail_MissAppoint">
-            <EntityTypeMapping TypeName="Kiosk_Chula_iPadModel.kiosk_transdetail_MissAppoint">
+            <EntityTypeMapping TypeName="KioskChulaiPadModel.kiosk_transdetail_MissAppoint">
               <MappingFragment StoreEntitySet="kiosk_transdetail_MissAppoint">
                 <ScalarProperty Name="transdetail_missappoint_seq" ColumnName="transdetail_missappoint_seq" />
                 <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
@@ -1365,13 +1366,13 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_map_qexpress_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_ins_kiosk_map_qexpress_ipad" />
-          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_qExpress_log_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_ins_kiosk_qExpress_log_ipad" />
-          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_transdetail_right" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_ins_kiosk_transdetail_right" />
-          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_transhead_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_ins_kiosk_transhead_ipad" />
-          <FunctionImportMapping FunctionImportName="q_expr_sel_kiosk_com_cat_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_sel_kiosk_com_cat_ipad">
+          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_map_qexpress_ipad" FunctionName="KioskChulaiPadModel.Store.q_expr_ins_kiosk_map_qexpress_ipad" />
+          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_qExpress_log_ipad" FunctionName="KioskChulaiPadModel.Store.q_expr_ins_kiosk_qExpress_log_ipad" />
+          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_transdetail_right" FunctionName="KioskChulaiPadModel.Store.q_expr_ins_kiosk_transdetail_right" />
+          <FunctionImportMapping FunctionImportName="q_expr_ins_kiosk_transhead_ipad" FunctionName="KioskChulaiPadModel.Store.q_expr_ins_kiosk_transhead_ipad" />
+          <FunctionImportMapping FunctionImportName="q_expr_sel_kiosk_com_cat_ipad" FunctionName="KioskChulaiPadModel.Store.q_expr_sel_kiosk_com_cat_ipad">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="Kiosk_Chula_iPadModel.q_expr_sel_kiosk_com_cat_ipad_Result">
+              <ComplexTypeMapping TypeName="KioskChulaiPadModel.q_expr_sel_kiosk_com_cat_ipad_Result">
                 <ScalarProperty Name="building_code" ColumnName="building_code" />
                 <ScalarProperty Name="floor" ColumnName="floor" />
                 <ScalarProperty Name="zone" ColumnName="zone" />
@@ -1383,9 +1384,9 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="q_expr_sel_kiosk_trans_all_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_sel_kiosk_trans_all_ipad">
+          <FunctionImportMapping FunctionImportName="q_expr_sel_kiosk_trans_all_ipad" FunctionName="KioskChulaiPadModel.Store.q_expr_sel_kiosk_trans_all_ipad">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="Kiosk_Chula_iPadModel.q_expr_sel_kiosk_trans_all_ipad_Result">
+              <ComplexTypeMapping TypeName="KioskChulaiPadModel.q_expr_sel_kiosk_trans_all_ipad_Result">
                 <ScalarProperty Name="slip_seq" ColumnName="slip_seq" />
                 <ScalarProperty Name="hn_no" ColumnName="hn_no" />
                 <ScalarProperty Name="queue_no" ColumnName="queue_no" />
@@ -1396,6 +1397,7 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
                 <ScalarProperty Name="slip_no" ColumnName="slip_no" />
                 <ScalarProperty Name="flag_choose_right" ColumnName="flag_choose_right" />
                 <ScalarProperty Name="pateint_name" ColumnName="pateint_name" />
+                <ScalarProperty Name="flag_lab_xray" ColumnName="flag_lab_xray" />
                 <ScalarProperty Name="right_fullname" ColumnName="right_fullname" />
                 <ScalarProperty Name="transdetail_appoint_seq" ColumnName="transdetail_appoint_seq" />
                 <ScalarProperty Name="appoint_date" ColumnName="appoint_date" />
@@ -1415,8 +1417,8 @@ warning 6002: The table/view 'Kiosk_Chula_iPad.dbo.kiosk_transdetail_MissAppoint
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="q_expr_sel_login_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_sel_login_ipad" />
-          <FunctionImportMapping FunctionImportName="q_expr_upd_kiosk_transhead_queue_status_ipad" FunctionName="Kiosk_Chula_iPadModel.Store.q_expr_upd_kiosk_transhead_queue_status_ipad" />
+          <FunctionImportMapping FunctionImportName="q_expr_sel_login_ipad" FunctionName="KioskChulaiPadModel.Store.q_expr_sel_login_ipad" />
+          <FunctionImportMapping FunctionImportName="q_expr_upd_kiosk_transhead_queue_status_ipad" FunctionName="KioskChulaiPadModel.Store.q_expr_upd_kiosk_transhead_queue_status_ipad" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

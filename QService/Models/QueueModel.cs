@@ -48,6 +48,7 @@ namespace QService.Models
         public string status_clinic_scanning { get; set; }
         public string status_send_clinic { get; set; }
         public string nurse_channel_comp_id { get; set; }
+        public string status_voice_call { get; set; }
         /*===============================================================*/
         public string crtd_by { get; set; }
     }
@@ -81,5 +82,9 @@ namespace QService.Models
         public string com_code { get; set; }
         public int computer_code { get; set; }
         public string kiosk_group_code { get; set; }
+    }
+    public class q_express_Result
+    {
+        public string qexpress { get; set; }
     }
 }

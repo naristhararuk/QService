@@ -10,6 +10,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Web.Http;
+using QService.CUKioskService;
 
 namespace QService.Controllers
 {
@@ -93,19 +94,25 @@ namespace QService.Controllers
             try
             {
                 string slip_seq = param.slip_seq.ToString();
-                bool updateqstatus = UpdateQ_ClickStatusQ_Nurse(param, slip_seq);
-                if (updateqstatus)
+                if (UpdateQ_ClickStatusQ_Nurse(param, slip_seq))
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, "ส่งตรวจไปยังช่องบริการ 1-5 เรียบร้อย");
+                    if (UpdateQShowQAll2_Check(slip_seq, "N"))
+                    {
+                        return this.Request.CreateResponse<string>(HttpStatusCode.OK, "ส่งตรวจไปยังช่องบริการ 1-5 เรียบร้อย");
+                    }
+                    else
+                    {
+                        return this.Request.CreateResponse<string>(HttpStatusCode.BadRequest, "problem when call service UpdateQShowQAll2 !!");
+                    }
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.BadRequest, "problem when call service StatusQ_Nurse !!");
-                }
+                    return this.Request.CreateResponse<string>(HttpStatusCode.BadRequest, "problem when call service UpdateQ_ClickStatusQ_Nurse normal queue !!");
+                } 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+                return this.Request.CreateResponse<string>(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
@@ -120,10 +127,12 @@ namespace QService.Controllers
                 //select db.q_expr_sel_kiosk_com_cat_ipad
                 //========param computer_name = 'IPAD001'
                 List<InsFlowGenQueueComModel> inscom = SelectComKiosk(param.com_name);
-                List<QueueExpressResultModel> expressresult = new List<QueueExpressResultModel>();
+                //List<QueueExpressResultModel> expressresult = new List<QueueExpressResultModel>();
                 List<PatientTransheadModel> patient = SelectPatientTranshead(param.slip_seq);
-                QueueExpressResultModel Models = new QueueExpressResultModel();
-                List<kiosk_transhead> tranheadresult;
+                //QueueExpressResultModel expressResultModel = new QueueExpressResultModel();
+
+                List<q_express_Result> resultq9 = new List<q_express_Result>();
+                q_express_Result qresultmodel = new q_express_Result();
                 /*====update queue status======*/
                 //update db.q_expr_upd_kiosk_transhead_queue_status_ipad
                 //========param queue_status = 'C' ,slip_seq  ,last_chg_by
@@ -153,7 +162,7 @@ namespace QService.Controllers
                         //========param queue_status = 'C' ,slip_seq  ,last_chg_by
                         if (InsertTranshead(param, patient, inscom,q9))
                         {
-                            tranheadresult = GetLastTransHead(param, patient, q9);
+                            List<kiosk_transhead> tranheadresult = GetLastTransHead(param, patient, q9);
 
                             if (tranheadresult.Count > 0)
                             {
@@ -162,51 +171,76 @@ namespace QService.Controllers
                                     //insert db.q_expr_ins_kiosk_qExpress_log_ipad
                                     if (InsertLogQueue(param, patient, inscom, q9))
                                     {
-                                        Models.queue_no = patient[0].queue_no;
-                                        Models.queue_no_express = q9;
-                                        Models.patient_name = patient[0].pateint_name;
-                                        Models.hn_no = patient[0].hn_no;
-                                        expressresult.Add(Models); //add to list
-
+                                        //expressResultModel.queue_no = patient[0].queue_no;
+                                        //expressResultModel.queue_no_express = q9;
+                                        //expressResultModel.patient_name = patient[0].pateint_name;
+                                        //expressResultModel.hn_no = patient[0].hn_no;
+                                        //expressresult.Add(expressResultModel); //add to list
                                         //call service q 
                                         string slip_seq_new = tranheadresult[0].slip_seq.ToString();
                                         bool updateqstatus = UpdateQ_ClickStatusQ_Nurse(param, slip_seq_new);
                                         if (updateqstatus)
                                         {
-                                            return Request.CreateResponse(HttpStatusCode.OK, q9);
+                                            if (this.UpdateQShowQAll2_Check(slip_seq_new, "N"))
+                                            {
+                                                qresultmodel.qexpress = q9;
+                                                resultq9.Add(qresultmodel);
+                                                return Request.CreateResponse(HttpStatusCode.OK, resultq9.ToList());
+                                            }
+                                            else
+                                            {
+                                                qresultmodel.qexpress = "problem when call service UpdateQShowQAll2_Check !!";
+                                                resultq9.Add(qresultmodel);
+                                                return Request.CreateResponse(HttpStatusCode.BadRequest, resultq9.ToList());
+                                            }
                                         }
                                         else
                                         {
-                                            return Request.CreateResponse(HttpStatusCode.BadRequest, "problem when call service StatusQ_Nurse !!");
+                                            qresultmodel.qexpress = "problem when call service UpdateQ_ClickStatusQ_Nurse !!";
+                                            resultq9.Add(qresultmodel);
+                                            return Request.CreateResponse(HttpStatusCode.BadRequest, resultq9.ToList());
                                         }
                                     }
                                     else
                                     {
-                                         return Request.CreateResponse(HttpStatusCode.BadRequest, "problem when insert log queue !!");
+                                        qresultmodel.qexpress = "problem when insert log queue !!";
+                                        resultq9.Add(qresultmodel);
+                                        return Request.CreateResponse(HttpStatusCode.BadRequest, resultq9.ToList());
                                     }
                                 }
                                 else
                                 {
-                                    return Request.CreateResponse(HttpStatusCode.BadRequest, "problem when update map queue !!");
+                                    qresultmodel.qexpress = "problem when update map queue !!";
+                                    resultq9.Add(qresultmodel);
+                                    return Request.CreateResponse(HttpStatusCode.BadRequest, resultq9.ToList());
                                 }
                             }
                             else
                             {
-                                return Request.CreateResponse(HttpStatusCode.BadRequest, "problem when select old transhead !!");
+                                qresultmodel.qexpress = "problem when select old transhead !!";
+                                resultq9.Add(qresultmodel);
+                                return Request.CreateResponse(HttpStatusCode.BadRequest, resultq9.ToList());
                             }
                         }
                         else
                         {
-                            return Request.CreateResponse(HttpStatusCode.BadRequest, "problem when insert transhead !!");
+                            qresultmodel.qexpress = "problem when insert transhead !!";
+                            resultq9.Add(qresultmodel);
+                            return Request.CreateResponse(HttpStatusCode.BadRequest, resultq9.ToList());
                         }
                     }
-                    else {
-                        return Request.CreateResponse(HttpStatusCode.BadRequest, "problem when select computer or device name !!");
+                    else
+                    {
+                        qresultmodel.qexpress = "problem when select computer or device name !!";
+                        resultq9.Add(qresultmodel);
+                        return Request.CreateResponse(HttpStatusCode.BadRequest, resultq9.ToList());
                     }
                 }
                 else
                 {
-                    return Request.CreateResponse(HttpStatusCode.BadRequest, "problem when update queue status !!" + updateresult);
+                    qresultmodel.qexpress = "problem when update queue status !!" + updateresult;
+                    resultq9.Add(qresultmodel);
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, resultq9.ToList());
                 }
             }
             catch (Exception ex)
@@ -520,7 +554,7 @@ namespace QService.Controllers
             string result = "";
             CUKioskService.WS_KioskQSoapClient ws = new CUKioskService.WS_KioskQSoapClient();
             //QChulaService.WS_KioskQSoapClient ws = new QChulaService.WS_KioskQSoapClient();
-            DataSet ds = ws.UpdateQ_ClickStatusQ_Nurse(slip_seq, param.q_status, param.status_clinic_scanning, param.status_send_clinic, param.nurse_channel_comp_id, param.crtd_by);
+            DataSet ds = ws.UpdateQ_ClickStatusQ_Nurse(slip_seq, param.q_status, param.status_clinic_scanning, param.status_send_clinic, param.nurse_channel_comp_id, param.crtd_by, param.status_voice_call);
             if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             {
                 result = ds.Tables[0].Rows[0]["ws_result"].ToString();
@@ -531,6 +565,11 @@ namespace QService.Controllers
             else {
                 return false;
             }
+        }
+        private bool UpdateQShowQAll2_Check(string slip_seq, string status)
+        {
+            DataSet dataSet = new WS_KioskQSoapClient().UpdateQ_ShowQAll2(slip_seq, status);
+            return dataSet != null && dataSet.Tables.Count > 0 && (dataSet.Tables[0].Rows.Count > 0 && dataSet.Tables[0].Rows[0]["ws_result"].ToString() == "S");
         }
         #endregion METHOD
     }
